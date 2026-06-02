@@ -29,6 +29,7 @@ class OpenAIProvider:
         model: str | None = None,
         temperature: float = 0.0,
         tool_choice: Any | None = None,
+        max_tokens: int | None = None,
     ) -> ModelResponse:
         try:
             from openai import OpenAI
@@ -49,6 +50,8 @@ class OpenAIProvider:
             kwargs["tools"] = tools
         if tool_choice is not None:
             kwargs["tool_choice"] = tool_choice
+        if max_tokens is not None:
+            kwargs["max_tokens"] = max_tokens
 
         resp = client.chat.completions.create(**kwargs)
         msg = resp.choices[0].message

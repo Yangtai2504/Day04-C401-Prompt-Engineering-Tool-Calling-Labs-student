@@ -17,6 +17,9 @@ from .policy.tool import search_company_policy
 from .social_search.tool import search_tweets
 from .send.tool import send_telegram
 from .lookup.tool import web_search
+from .summarize.tool import extract_key_points
+from .trending.tool import get_trending
+from .cite.tool import format_citation
 
 
 # NOTE (starter_v0): tool names here are intentionally vague. These keys are the
@@ -35,6 +38,9 @@ TOOL_FUNCTIONS = {
     "policy": search_company_policy,
     "papers": arxiv_search,
     "paper_text": get_arxiv_paper_text,
+    "summarize": extract_key_points,
+    "trending": get_trending,
+    "cite": format_citation,
 }
 
 

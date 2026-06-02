@@ -1,0 +1,195 @@
+{
+  "transcript_id": "ui_20260602T154826572075",
+  "version": "v3",
+  "artifact_version": "v3+p26553067786f+t40092ba19a62",
+  "prompt_hash": "26553067786f01fe3cffc2af306fabc649c625840c56fe16e4beff5a67cd32d1",
+  "tools_hash": "40092ba19a623787ae6919faf7124778244cbad953799ac021e08f61cf727627",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Hôm nay trending gì",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số chủ đề đang trending hôm nay:\n\n1. **Prince William Defuses Trump's Royal Humiliation**  \n   Prince William và Donald Trump đang thu hút sự chú ý sau khi có báo cáo về một khoảnh khắc căng thẳng giữa họ. William đã can thiệp để giảm bớt sự xấu hổ của Trump trong một cuộc gặp gỡ nổi bật. [Xem thêm](https://x.com/ViralWavesX/status/2061413914748109227)  \n   - **Nguồn:** @ViralWavesX  \n   - **Lượt thích:** 1003, **Retweet:** 109, **Lượt xem:** 523730\n\n2. **Andrew Tate has over 21 million Bitcoin**  \n   Andrew Tate được cho là sở hữu hơn 21 triệu Bitcoin. [Xem thêm](https://x.com/TrendingBitcoin/status/2061569227031540026)  \n   - **Nguồn:** @TrendingBitcoin  \n   - **Lượt thích:** 22, **Retweet:** 5, **Lượt xem:** 3762\n\n3. **BREAKING: Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS**  \n   Cựu Đại tá Douglas Macgregor cảnh báo về tình hình kinh tế nghiêm trọng nếu chiến tranh ở Trung Đông tiếp tục. [Xem thêm](https://x.com/911NewsBreaks/status/2061499703540257108)  \n   - **Nguồn:** @911NewsBreaks  \n   - **Lượt thích:** 509, **Retweet:** 107, **Lượt xem:** 35909\n\n4. **Manon trending and she’s not even attending the AMAs**  \n   Manon đang trở thành tâm điểm chú ý mặc dù không tham dự AMAs. [Xem thêm](https://x.com/junezlvr/status/2059069674449412227)  \n   - **Nguồn:** @junezlvr  \n   - **Lượt thích:** 3739, **Retweet:** 365, **Lượt xem:** 25058\n\n5. **HOW TO 10× YOUR MONEY — MICHAEL SAYLOR**  \n   Michael Saylor chia sẻ cách để tăng gấp 10 lần số tiền của bạn, nhấn mạnh vào Bitcoin. [Xem thêm](https://x.com/TrendingBitcoin/status/2061539027308646537)  \n   - **Nguồn:** @TrendingBitcoin  \n   - **Lượt thích:** 135, **Retweet:** 16, **Lượt xem:** 7796\n\nNếu bạn cần thêm thông tin về một chủ đề cụ thể nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "trending",
+                "search_type": "Top",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "trending",
+                "search_type": "Top",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "query": "trending",
+                "search_type": "Top",
+                "items": [
+                  {
+                    "title": "Prince William Defuses Trump's Royal",
+                    "summary": "Prince William Defuses Trump's Royal\nHumiliation by Confronting Donald Trump Prince William and Donald Trump are trending after reports of a tense royal moment where William allegedly stepped in to defuse Trump's humiliation during a high-profile encounter. https://t.co/EmjXGwC4TJ",
+                    "url": "https://x.com/ViralWavesX/status/2061413914748109227",
+                    "source": "@ViralWavesX",
+                    "date": "Mon Jun 01 11:45:51 +0000 2026",
+                    "metrics": {
+                      "favorites": 1003,
+                      "retweets": 109,
+                      "views": "523730"
+                    }
+                  },
+                  {
+                    "title": "Andrew Tate has over 21 million Bitcoin 🤦🏻‍♂️ ",
+                    "summary": "Andrew Tate has over 21 million Bitcoin 🤦🏻‍♂️ \n\n- SKY News https://t.co/7r0qKEzVTH",
+                    "url": "https://x.com/TrendingBitcoin/status/2061569227031540026",
+                    "source": "@TrendingBitcoin",
+                    "date": "Mon Jun 01 22:03:00 +0000 2026",
+                    "metrics": {
+                      "favorites": 22,
+                      "retweets": 5,
+                      "views": "3762"
+                    }
+                  },
+                  {
+                    "title": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.",
+                    "summary": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on. https://t.co/G3antoc1DJ",
+                    "url": "https://x.com/911NewsBreaks/status/2061499703540257108",
+                    "source": "@911NewsBreaks",
+                    "date": "Mon Jun 01 17:26:44 +0000 2026",
+                    "metrics": {
+                      "favorites": 509,
+                      "retweets": 107,
+                      "views": "35909"
+                    }
+                  },
+                  {
+                    "title": "Manon trending and she’s not even attending the AMAs iktr https://t.co/5aw07ry8Qj",
+                    "summary": "Manon trending and she’s not even attending the AMAs iktr https://t.co/5aw07ry8Qj",
+                    "url": "https://x.com/junezlvr/status/2059069674449412227",
+                    "source": "@junezlvr",
+                    "date": "Tue May 26 00:30:40 +0000 2026",
+                    "metrics": {
+                      "favorites": 3739,
+                      "retweets": 365,
+                      "views": "25058"
+                    }
+                  },
+                  {
+                    "title": "HOW TO 10× YOUR MONEY — MICHAEL SAYLOR",
+                    "summary": "HOW TO 10× YOUR MONEY — MICHAEL SAYLOR\n\nBUY SOMETHING THAT:\n\n1. EVERYONE IN THE WORLD NEEDS.\n2. NOBODY IN THE WORLD CAN STOP.\n3. ALMOST NOBODY TRULY UNDERSTANDS.\n\nTEN YEARS AGO, IT WAS AMAZON AND APPLE.\nTODAY, IT’S BITCOIN. https://t.co/L700d1PWmt",
+                    "url": "https://x.com/TrendingBitcoin/status/2061539027308646537",
+                    "source": "@TrendingBitcoin",
+                    "date": "Mon Jun 01 20:03:00 +0000 2026",
+                    "metrics": {
+                      "favorites": 135,
+                      "retweets": 16,
+                      "views": "7796"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số chủ đề đang trending hôm nay:\n\n1. **Prince William Defuses Trump's Royal Humiliation**  \n   Prince William và Donald Trump đang thu hút sự chú ý sau khi có báo cáo về một khoảnh khắc căng thẳng giữa họ. William đã can thiệp để giảm bớt sự xấu hổ của Trump trong một cuộc gặp gỡ nổi bật. [Xem thêm](https://x.com/ViralWavesX/status/2061413914748109227)  \n   - **Nguồn:** @ViralWavesX  \n   - **Lượt thích:** 1003, **Retweet:** 109, **Lượt xem:** 523730\n\n2. **Andrew Tate has over 21 million Bitcoin**  \n   Andrew Tate được cho là sở hữu hơn 21 triệu Bitcoin. [Xem thêm](https://x.com/TrendingBitcoin/status/2061569227031540026)  \n   - **Nguồn:** @TrendingBitcoin  \n   - **Lượt thích:** 22, **Retweet:** 5, **Lượt xem:** 3762\n\n3. **BREAKING: Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS**  \n   Cựu Đại tá Douglas Macgregor cảnh báo về tình hình kinh tế nghiêm trọng nếu chiến tranh ở Trung Đông tiếp tục. [Xem thêm](https://x.com/911NewsBreaks/status/2061499703540257108)  \n   - **Nguồn:** @911NewsBreaks  \n   - **Lượt thích:** 509, **Retweet:** 107, **Lượt xem:** 35909\n\n4. **Manon trending and she’s not even attending the AMAs**  \n   Manon đang trở thành tâm điểm chú ý mặc dù không tham dự AMAs. [Xem thêm](https://x.com/junezlvr/status/2059069674449412227)  \n   - **Nguồn:** @junezlvr  \n   - **Lượt thích:** 3739, **Retweet:** 365, **Lượt xem:** 25058\n\n5. **HOW TO 10× YOUR MONEY — MICHAEL SAYLOR**  \n   Michael Saylor chia sẻ cách để tăng gấp 10 lần số tiền của bạn, nhấn mạnh vào Bitcoin. [Xem thêm](https://x.com/TrendingBitcoin/status/2061539027308646537)  \n   - **Nguồn:** @TrendingBitcoin  \n   - **Lượt thích:** 135, **Retweet:** 16, **Lượt xem:** 7796\n\nNếu bạn cần thêm thông tin về một chủ đề cụ thể nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "trending",
+            "search_type": "Top",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "trending",
+            "search_type": "Top",
+            "items": [
+              {
+                "title": "Prince William Defuses Trump's Royal",
+                "summary": "Prince William Defuses Trump's Royal\nHumiliation by Confronting Donald Trump Prince William and Donald Trump are trending after reports of a tense royal moment where William allegedly stepped in to defuse Trump's humiliation during a high-profile encounter. https://t.co/EmjXGwC4TJ",
+                "url": "https://x.com/ViralWavesX/status/2061413914748109227",
+                "source": "@ViralWavesX",
+                "date": "Mon Jun 01 11:45:51 +0000 2026",
+                "metrics": {
+                  "favorites": 1003,
+                  "retweets": 109,
+                  "views": "523730"
+                }
+              },
+              {
+                "title": "Andrew Tate has over 21 million Bitcoin 🤦🏻‍♂️ ",
+                "summary": "Andrew Tate has over 21 million Bitcoin 🤦🏻‍♂️ \n\n- SKY News https://t.co/7r0qKEzVTH",
+                "url": "https://x.com/TrendingBitcoin/status/2061569227031540026",
+                "source": "@TrendingBitcoin",
+                "date": "Mon Jun 01 22:03:00 +0000 2026",
+                "metrics": {
+                  "favorites": 22,
+                  "retweets": 5,
+                  "views": "3762"
+                }
+              },
+              {
+                "title": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.",
+                "summary": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on. https://t.co/G3antoc1DJ",
+                "url": "https://x.com/911NewsBreaks/status/2061499703540257108",
+                "source": "@911NewsBreaks",
+                "date": "Mon Jun 01 17:26:44 +0000 2026",
+                "metrics": {
+                  "favorites": 509,
+                  "retweets": 107,
+                  "views": "35909"
+                }
+              },
+              {
+                "title": "Manon trending and she’s not even attending the AMAs iktr https://t.co/5aw07ry8Qj",
+                "summary": "Manon trending and she’s not even attending the AMAs iktr https://t.co/5aw07ry8Qj",
+                "url": "https://x.com/junezlvr/status/2059069674449412227",
+                "source": "@junezlvr",
+                "date": "Tue May 26 00:30:40 +0000 2026",
+                "metrics": {
+                  "favorites": 3739,
+                  "retweets": 365,
+                  "views": "25058"
+                }
+              },
+              {
+                "title": "HOW TO 10× YOUR MONEY — MICHAEL SAYLOR",
+                "summary": "HOW TO 10× YOUR MONEY — MICHAEL SAYLOR\n\nBUY SOMETHING THAT:\n\n1. EVERYONE IN THE WORLD NEEDS.\n2. NOBODY IN THE WORLD CAN STOP.\n3. ALMOST NOBODY TRULY UNDERSTANDS.\n\nTEN YEARS AGO, IT WAS AMAZON AND APPLE.\nTODAY, IT’S BITCOIN. https://t.co/L700d1PWmt",
+                "url": "https://x.com/TrendingBitcoin/status/2061539027308646537",
+                "source": "@TrendingBitcoin",
+                "date": "Mon Jun 01 20:03:00 +0000 2026",
+                "metrics": {
+                  "favorites": 135,
+                  "retweets": 16,
+                  "views": "7796"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:48:51"
+}

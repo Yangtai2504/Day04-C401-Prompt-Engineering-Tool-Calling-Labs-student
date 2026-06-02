@@ -259,6 +259,33 @@ def print_table(results: list[dict[str, Any]], summary: dict[str, Any]) -> None:
         print(f"{key}: {value}")
 
 
+def append_version_log(
+    log_path: Path,
+    version: str,
+    changed_artifact: str,
+    artifact_version: str,
+    prompt_hash: str,
+    tools_hash: str,
+    reason: str,
+    hypothesis: str,
+    metric_before: str,
+    metric_after: str,
+    run_file: str,
+) -> None:
+    header = "version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file\n"
+    row = ",".join([
+        version, "team", changed_artifact, artifact_version,
+        prompt_hash, tools_hash,
+        f'"{reason}"', f'"{hypothesis}"',
+        metric_before, metric_after, run_file,
+    ]) + "\n"
+    if not log_path.exists() or log_path.read_text(encoding="utf-8").strip() == "":
+        log_path.write_text(header + row, encoding="utf-8")
+    else:
+        with log_path.open("a", encoding="utf-8") as f:
+            f.write(row)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run Research Agent live evals.")
     parser.add_argument("--phase", choices=["B"], default="B")
@@ -270,6 +297,10 @@ def main() -> None:
     parser.add_argument("--tools", type=Path, default=ARTIFACTS_DIR / "tools.yaml")
     parser.add_argument("--eval-cases", type=Path, default=DATA_DIR / "eval_base.json")
     parser.add_argument("--runs-dir", type=Path, default=ROOT / "runs")
+    parser.add_argument("--hypothesis", default="", help="Hypothesis for this version (logged to version_log.csv)")
+    parser.add_argument("--reason", default="", help="Reason / change summary (logged to version_log.csv)")
+    parser.add_argument("--metric-before", default="", help="Metric from previous version (logged to version_log.csv)")
+    parser.add_argument("--version-log", type=Path, default=ARTIFACTS_DIR / "version_log.csv")
     args = parser.parse_args()
 
     system_prompt = args.system_prompt.read_text(encoding="utf-8")
@@ -353,9 +384,37 @@ def main() -> None:
 
     out_path = args.runs_dir / f"{run_id}.json"
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+
+    # Save versioned snapshots of artifacts
+    snapshots_dir = ARTIFACTS_DIR / "snapshots"
+    snapshots_dir.mkdir(parents=True, exist_ok=True)
+    v = safe_slug(args.version)
+    snap_prompt = snapshots_dir / f"system_prompt_{v}.md"
+    snap_tools = snapshots_dir / f"tools_{v}.yaml"
+    snap_prompt.write_text(args.system_prompt.read_text(encoding="utf-8"), encoding="utf-8")
+    snap_tools.write_text(args.tools.read_text(encoding="utf-8"), encoding="utf-8")
+    print(f"Snapshots saved: {snap_prompt.name}, {snap_tools.name}")
+
     print_table(results, summary)
     print(f"\nArtifact version: {artifact_version.artifact_version}")
     print(f"\nSaved: {out_path}")
+
+    metric_after = f"case_accuracy={summary['case_accuracy']}"
+    av = artifact_version_dict(artifact_version)
+    append_version_log(
+        log_path=args.version_log,
+        version=args.version,
+        changed_artifact=args.system_prompt.name if args.reason else "baseline",
+        artifact_version=av["artifact_version"],
+        prompt_hash=av["prompt_hash"][:14],
+        tools_hash=av["tools_hash"][:14],
+        reason=args.reason or "baseline run",
+        hypothesis=args.hypothesis or "n/a",
+        metric_before=args.metric_before or "n/a",
+        metric_after=metric_after,
+        run_file=f"runs/{out_path.name}",
+    )
+    print(f"Version log updated: {args.version_log}")
 
 
 if __name__ == "__main__":

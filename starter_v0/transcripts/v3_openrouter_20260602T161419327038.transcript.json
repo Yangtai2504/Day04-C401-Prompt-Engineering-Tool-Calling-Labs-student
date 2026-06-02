@@ -1,0 +1,1271 @@
+{
+  "transcript_id": "v3_openrouter_20260602T161419327038",
+  "version": "v3",
+  "artifact_version": "v3+p79b9d12242d8+t8206e478b7cb",
+  "prompt_hash": "79b9d12242d883585870d9c81a77d2fa447c144cdbe846b723df9e1ace75a45e",
+  "tools_hash": "8206e478b7cb7c82b50ad9650240095d2f3a588a8bc9faaa0e9adeccc02edd20",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-02T16:14:19",
+  "updated_at": "2026-06-02T16:26:56",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-02T16:14:26",
+      "user": "Hello",
+      "status": "answered",
+      "assistant_text": "Hello! How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Hello! How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-06-02T16:14:29"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-06-02T16:21:03",
+      "user": "Tweet mới nhất của Andrej Karpathy là gì?",
+      "status": "answered",
+      "assistant_text": "Tweet mới nhất của Andrej Karpathy là:\n\n**Nội dung:** \"Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&D. I remain deeply passionate about education and plan to resume my work on it in time.\"\n\n**Ngày đăng:** 19 tháng 5, 2026\n\n**Số lượt thích:** 149,517  \n**Số lượt retweet:** 11,161  \n**Số lượt xem:** 27,353,825\n\nBạn có thể xem tweet [tại đây](https://x.com/karpathy/status/2056753169888334312).",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "karpathy",
+                "limit": 1
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "timeline",
+              "args": {
+                "screenname": "karpathy",
+                "limit": 1
+              },
+              "result": {
+                "tool": "get_user_tweets",
+                "screenname": "karpathy",
+                "items": [
+                  {
+                    "title": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative.",
+                    "summary": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&amp;D. I remain deeply passionate about education and plan to resume my work on it in time.",
+                    "url": "https://x.com/karpathy/status/2056753169888334312",
+                    "source": "@karpathy",
+                    "date": "Tue May 19 15:05:42 +0000 2026",
+                    "metrics": {
+                      "favorites": 149517,
+                      "retweets": 11161,
+                      "views": "27353825"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Tweet mới nhất của Andrej Karpathy là:\n\n**Nội dung:** \"Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&D. I remain deeply passionate about education and plan to resume my work on it in time.\"\n\n**Ngày đăng:** 19 tháng 5, 2026\n\n**Số lượt thích:** 149,517  \n**Số lượt retweet:** 11,161  \n**Số lượt xem:** 27,353,825\n\nBạn có thể xem tweet [tại đây](https://x.com/karpathy/status/2056753169888334312).",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "karpathy",
+            "limit": 1
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "screenname": "karpathy",
+            "items": [
+              {
+                "title": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative.",
+                "summary": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&amp;D. I remain deeply passionate about education and plan to resume my work on it in time.",
+                "url": "https://x.com/karpathy/status/2056753169888334312",
+                "source": "@karpathy",
+                "date": "Tue May 19 15:05:42 +0000 2026",
+                "metrics": {
+                  "favorites": 149517,
+                  "retweets": 11161,
+                  "views": "27353825"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:21:18"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-06-02T16:21:23",
+      "user": "Tin tức AI nổi bật hôm nay có gì?",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số tin tức AI nổi bật hôm nay:\n\n1. **AI expected to drive £18bn of UK digital ad spend by 2030**  \n   - **Nguồn:** [Marketing Week](https://www.marketingweek.com/iab-uk-ai-ad-spend/)  \n   - **Tóm tắt:** Dự báo rằng AI sẽ thúc đẩy 18 tỷ bảng Anh trong chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh vào năm 2030. IAB UK cho biết AI sẽ chiếm một phần ba chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh, với sự ảnh hưởng đến việc tạo nội dung, tìm kiếm không cần nhấp chuột và thương mại tự động.\n\n2. **40% of executives thought AI could save up to 20%. It didn’t deliver.**  \n   - **Nguồn:** [PitchBook](https://pitchbook.com/news/articles/40-of-executives-thought-ai-could-save-up-to-20-it-didnt-deliver)  \n   - **Tóm tắt:** Một báo cáo từ Bain cho thấy khoảng cách giữa chi tiêu cho AI và lợi ích năng suất đang khiến các giám đốc điều hành lo lắng. 40% công ty ghi nhận tiết kiệm chi phí dưới 10% từ các sáng kiến AI.\n\n3. **AI ad campaigns slam Trahan**  \n   - **Nguồn:** [The Washington Post](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/)  \n   - **Tóm tắt:** Một chiến dịch quảng cáo trị giá sáu con số đã được triển khai để chỉ trích đại diện Lori Trahan, cho rằng bà đang ủng hộ các \"đại gia AI\" trong các nỗ lực lập pháp của mình.\n\n4. **AI Savings Misses ‘Should Be Making Executives Uncomfortable,’ Bain Says**  \n   - **Nguồn:** [Insurance Journal](https://www.insurancejournal.com/news/national/2026/06/01/871951.htm)  \n   - **Tóm tắt:** Báo cáo từ Bain cho biết các mục tiêu tiết kiệm không đạt được đang khiến các giám đốc điều hành lo lắng, đặc biệt khi họ đang phê duyệt tăng chi tiêu cho AI dựa trên kỳ vọng tiết kiệm.\n\n5. **New Report: The AI Rebuild of Travel**  \n   - **Nguồn:** [Skift](https://skift.com/insights/the-ai-rebuild-of-travel/)  \n   - **Tóm tắt:** Công nghệ du lịch đang được xây dựng lại khi AI bắt đầu định hình cách thức khám phá, đặt chỗ và quản lý chuyến đi. Báo cáo này khám phá cách AI đang thay đổi ngành du lịch.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "AI expected to drive £18bn of UK digital ad spend by 2030 - Marketing Week",
+                    "url": "https://www.marketingweek.com/iab-uk-ai-ad-spend/",
+                    "source": "marketingweek.com",
+                    "summary": "# AI expected to drive £18bn of UK digital ad spend by 2030. IAB UK forecasts AI will drive one-third of UK digital ad spend by 2030 as advertisers adapt to changes in search, content and media buying. One-third (32%) of UK digital ad spend, equivalent to around £18bn, will be AI-driven by 2030, according to new forecasts from IAB UK. According to ‘The State of AI in Advertising: Charting the Shift from Automation to Autonomy, ‘ AI is expected to influence ad spend across four key areas– content creation, zero-click search, agentic trading and agentic commerce. To estimate the likely scale of change, IAB UK developed a series of ‘AI overlays’ that estimate the proportion of media spend by channel that is ‘AI-driven’, defined as a media buying and delivery decision made by an AI-powered algorithm. IAB UK forecasts most of the growth will come from the adoption of AI buying tools in search, such as Google’s AI Max and PMax; social, including Meta’s Advantage+; and display advertising through agentic programmatic buying.",
+                    "score": 0.80069196
+                  },
+                  {
+                    "title": "40% of executives thought AI could save up to 20%. It didn’t deliver. - PitchBook",
+                    "url": "https://pitchbook.com/news/articles/40-of-executives-thought-ai-could-save-up-to-20-it-didnt-deliver",
+                    "source": "pitchbook.com",
+                    "summary": "## The gap between AI spending and productivity gains “should be making executives uncomfortable,” a Bain report found. Corporates are beefing up their AI budgets but seeing lackluster productivity gains, according to the latest Bain & Company report. Bain’s Automation and AI Pathfinder Survey 2026, which had 951 respondents, found that 40% of the companies that tracked their spending recorded cost savings of less than 10% from their AI initiatives. Still, 90% of those surveyed whose AI investments underdelivered plan to increase their AI budgets next year. As compute and usage costs have risen dramatically, executives and shareholders are taking a closer look at the returns that those investments have brought so far. A PitchBook analysis of 186 AI-related questions on B2C earnings calls found that 90% were probing and investigative in tone, and that ROI and financial returns have overtaken product roadmaps as the dominant focus. Employees’ use of AI tools can range from coding assistants to AI-generated research to organizing unstructured databases.",
+                    "score": 0.26990628
+                  },
+                  {
+                    "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                    "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                    "source": "washingtonpost.com",
+                    "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                    "score": 0.8749346
+                  },
+                  {
+                    "title": "AI Savings Misses ‘Should Be Making Executives Uncomfortable,’ Bain Says - Insurance Journal",
+                    "url": "https://www.insurancejournal.com/news/national/2026/06/01/871951.htm",
+                    "source": "insurancejournal.com",
+                    "summary": "The missed targets “should be making executives uncomfortable,” especially since many of them are approving increased spending for artificial intelligence on the basis of expected savings, the consulting firm said in a report shared exclusively with Bloomberg News. While some companies are funding fresh investment in generative and agentic AI with realized savings, the largest share (44%) cited targeted savings among their top sources of funding for the next wave of outlays, according to the report. “Despite a decade of investments in data modernization running well into hundreds of billions of dollars globally, the No. 1 reason AI programs underperform is that companies cannot reliably get access to their own data,” Bain said. Its prescription: Instead of waiting to structure all of their data to make it ingestible by AI, companies should start with what’s available to feed into the models — and then use AI to help sort out how to structure the rest.",
+                    "score": 0.22715242
+                  },
+                  {
+                    "title": "New Report: The AI Rebuild of Travel - Skift",
+                    "url": "https://skift.com/insights/the-ai-rebuild-of-travel/",
+                    "source": "skift.com",
+                    "summary": "# New Report: The AI Rebuild of Travel. Travel technology is being rebuilt in real time as AI begins to shape how trips are discovered, booked, and managed. And systems built for websites and manual workflows are struggling to keep pace with a more connected, autonomous future. What once operated as a predictable digital journey is becoming an AI-mediated ecosystem powered by real-time data, interoperability, and increasingly intelligent systems. Skift Studio spoke with 10 senior technology, product, and digital leaders across airlines, hospitality companies, travel platforms, and technology providers to understand how the industry is preparing. One thing is clear: the next era of travel will be defined by infrastructure as much as interface. **Download the report to learn:**. * How AI assistants and agentic experiences are reshaping travel discovery and booking. * Why trust, governance, and identity are becoming central to AI-powered travel. * How airlines, hotels, and platforms are preparing for a more autonomous future.",
+                    "score": 0.20429464
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số tin tức AI nổi bật hôm nay:\n\n1. **AI expected to drive £18bn of UK digital ad spend by 2030**  \n   - **Nguồn:** [Marketing Week](https://www.marketingweek.com/iab-uk-ai-ad-spend/)  \n   - **Tóm tắt:** Dự báo rằng AI sẽ thúc đẩy 18 tỷ bảng Anh trong chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh vào năm 2030. IAB UK cho biết AI sẽ chiếm một phần ba chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh, với sự ảnh hưởng đến việc tạo nội dung, tìm kiếm không cần nhấp chuột và thương mại tự động.\n\n2. **40% of executives thought AI could save up to 20%. It didn’t deliver.**  \n   - **Nguồn:** [PitchBook](https://pitchbook.com/news/articles/40-of-executives-thought-ai-could-save-up-to-20-it-didnt-deliver)  \n   - **Tóm tắt:** Một báo cáo từ Bain cho thấy khoảng cách giữa chi tiêu cho AI và lợi ích năng suất đang khiến các giám đốc điều hành lo lắng. 40% công ty ghi nhận tiết kiệm chi phí dưới 10% từ các sáng kiến AI.\n\n3. **AI ad campaigns slam Trahan**  \n   - **Nguồn:** [The Washington Post](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/)  \n   - **Tóm tắt:** Một chiến dịch quảng cáo trị giá sáu con số đã được triển khai để chỉ trích đại diện Lori Trahan, cho rằng bà đang ủng hộ các \"đại gia AI\" trong các nỗ lực lập pháp của mình.\n\n4. **AI Savings Misses ‘Should Be Making Executives Uncomfortable,’ Bain Says**  \n   - **Nguồn:** [Insurance Journal](https://www.insurancejournal.com/news/national/2026/06/01/871951.htm)  \n   - **Tóm tắt:** Báo cáo từ Bain cho biết các mục tiêu tiết kiệm không đạt được đang khiến các giám đốc điều hành lo lắng, đặc biệt khi họ đang phê duyệt tăng chi tiêu cho AI dựa trên kỳ vọng tiết kiệm.\n\n5. **New Report: The AI Rebuild of Travel**  \n   - **Nguồn:** [Skift](https://skift.com/insights/the-ai-rebuild-of-travel/)  \n   - **Tóm tắt:** Công nghệ du lịch đang được xây dựng lại khi AI bắt đầu định hình cách thức khám phá, đặt chỗ và quản lý chuyến đi. Báo cáo này khám phá cách AI đang thay đổi ngành du lịch.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "AI expected to drive £18bn of UK digital ad spend by 2030 - Marketing Week",
+                "url": "https://www.marketingweek.com/iab-uk-ai-ad-spend/",
+                "source": "marketingweek.com",
+                "summary": "# AI expected to drive £18bn of UK digital ad spend by 2030. IAB UK forecasts AI will drive one-third of UK digital ad spend by 2030 as advertisers adapt to changes in search, content and media buying. One-third (32%) of UK digital ad spend, equivalent to around £18bn, will be AI-driven by 2030, according to new forecasts from IAB UK. According to ‘The State of AI in Advertising: Charting the Shift from Automation to Autonomy, ‘ AI is expected to influence ad spend across four key areas– content creation, zero-click search, agentic trading and agentic commerce. To estimate the likely scale of change, IAB UK developed a series of ‘AI overlays’ that estimate the proportion of media spend by channel that is ‘AI-driven’, defined as a media buying and delivery decision made by an AI-powered algorithm. IAB UK forecasts most of the growth will come from the adoption of AI buying tools in search, such as Google’s AI Max and PMax; social, including Meta’s Advantage+; and display advertising through agentic programmatic buying.",
+                "score": 0.80069196
+              },
+              {
+                "title": "40% of executives thought AI could save up to 20%. It didn’t deliver. - PitchBook",
+                "url": "https://pitchbook.com/news/articles/40-of-executives-thought-ai-could-save-up-to-20-it-didnt-deliver",
+                "source": "pitchbook.com",
+                "summary": "## The gap between AI spending and productivity gains “should be making executives uncomfortable,” a Bain report found. Corporates are beefing up their AI budgets but seeing lackluster productivity gains, according to the latest Bain & Company report. Bain’s Automation and AI Pathfinder Survey 2026, which had 951 respondents, found that 40% of the companies that tracked their spending recorded cost savings of less than 10% from their AI initiatives. Still, 90% of those surveyed whose AI investments underdelivered plan to increase their AI budgets next year. As compute and usage costs have risen dramatically, executives and shareholders are taking a closer look at the returns that those investments have brought so far. A PitchBook analysis of 186 AI-related questions on B2C earnings calls found that 90% were probing and investigative in tone, and that ROI and financial returns have overtaken product roadmaps as the dominant focus. Employees’ use of AI tools can range from coding assistants to AI-generated research to organizing unstructured databases.",
+                "score": 0.26990628
+              },
+              {
+                "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                "source": "washingtonpost.com",
+                "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                "score": 0.8749346
+              },
+              {
+                "title": "AI Savings Misses ‘Should Be Making Executives Uncomfortable,’ Bain Says - Insurance Journal",
+                "url": "https://www.insurancejournal.com/news/national/2026/06/01/871951.htm",
+                "source": "insurancejournal.com",
+                "summary": "The missed targets “should be making executives uncomfortable,” especially since many of them are approving increased spending for artificial intelligence on the basis of expected savings, the consulting firm said in a report shared exclusively with Bloomberg News. While some companies are funding fresh investment in generative and agentic AI with realized savings, the largest share (44%) cited targeted savings among their top sources of funding for the next wave of outlays, according to the report. “Despite a decade of investments in data modernization running well into hundreds of billions of dollars globally, the No. 1 reason AI programs underperform is that companies cannot reliably get access to their own data,” Bain said. Its prescription: Instead of waiting to structure all of their data to make it ingestible by AI, companies should start with what’s available to feed into the models — and then use AI to help sort out how to structure the rest.",
+                "score": 0.22715242
+              },
+              {
+                "title": "New Report: The AI Rebuild of Travel - Skift",
+                "url": "https://skift.com/insights/the-ai-rebuild-of-travel/",
+                "source": "skift.com",
+                "summary": "# New Report: The AI Rebuild of Travel. Travel technology is being rebuilt in real time as AI begins to shape how trips are discovered, booked, and managed. And systems built for websites and manual workflows are struggling to keep pace with a more connected, autonomous future. What once operated as a predictable digital journey is becoming an AI-mediated ecosystem powered by real-time data, interoperability, and increasingly intelligent systems. Skift Studio spoke with 10 senior technology, product, and digital leaders across airlines, hospitality companies, travel platforms, and technology providers to understand how the industry is preparing. One thing is clear: the next era of travel will be defined by infrastructure as much as interface. **Download the report to learn:**. * How AI assistants and agentic experiences are reshaping travel discovery and booking. * Why trust, governance, and identity are becoming central to AI-powered travel. * How airlines, hotels, and platforms are preparing for a more autonomous future.",
+                "score": 0.20429464
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:21:56"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-06-02T16:22:00",
+      "user": "Tóm tắt bài báo TabPFN-3: Technical Report cho tôi",
+      "status": "answered",
+      "assistant_text": "Tôi không tìm thấy bài báo cụ thể có tiêu đề \"TabPFN-3: Technical Report\". Tuy nhiên, dưới đây là một số bài báo kỹ thuật liên quan mà tôi đã tìm thấy:\n\n1. **Throughput Analysis of CSMA: Technical Report**  \n   - **Tác giả:** Xinghua Sun, Lin Dai  \n   - **Tóm tắt:** Bài báo này phân tích hiệu suất thông lượng của các mạng CSMA với hai cấu trúc người nhận đại diện, tức là mô hình va chạm và mô hình bắt giữ. Phân tích này được áp dụng cho một mạng IEEE 802.11, nơi kích thước cửa sổ backoff ban đầu tối ưu của các nút để đạt được thông lượng mạng tối đa được xác định và xác minh qua các kết quả mô phỏng.  \n   - **[Xem bài báo](http://arxiv.org/abs/1906.06643v1)**\n\n2. **Technical Report: Incorporating Blogs in Pollux**  \n   - **Tác giả:** Tobias Holtdirk, Nina Smirnova  \n   - **Tóm tắt:** Bài báo này mô tả việc tích hợp các blog chính trị vào Pollux, dịch vụ thông tin chuyên biệt cho Khoa học Chính trị tại Đức. Nó mô tả quy trình thu thập và phân tích các blog và cách tích hợp chúng vào hệ thống Pollux.  \n   - **[Xem bài báo](http://arxiv.org/abs/2403.17618v1)**\n\n3. **Technical Report: NEMO DNN Quantization for Deployment Model**  \n   - **Tác giả:** Francesco Conti  \n   - **Tóm tắt:** Bài báo này định nghĩa một khung chính thức cho việc lượng tử hóa từng lớp của Mạng Nơ-ron Sâu (DNN), tập trung vào các vấn đề liên quan đến việc triển khai cuối cùng. Nó cũng mô tả bốn đại diện DNN được sử dụng trong NEMO.  \n   - **[Xem bài báo](http://arxiv.org/abs/2004.05930v1)**\n\nNếu bạn cần thông tin chi tiết hơn về một bài báo cụ thể nào đó, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "TabPFN-3: Technical Report"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "TabPFN-3: Technical Report"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "query": "TabPFN-3: Technical Report",
+                "api_query": "TabPFN-3: Technical Report",
+                "total_results": 201784,
+                "items": [
+                  {
+                    "arxiv_id": "1906.06643v1",
+                    "title": "Throughput Analysis of CSMA: Technical Report",
+                    "summary": "In this technical report, the throughput performance of CSMA networks with two representative receiver structures, i.e., the collision model and the capture model, is characterized and optimized. The analysis is further applied to an IEEE 802.11 network, which is a representative wireless network that adopts the CSMA mechanism, where the optimal initial backoff window sizes of nodes to achieve the maximum network throughput are derived and verified against simulation results.",
+                    "authors": [
+                      "Xinghua Sun",
+                      "Lin Dai"
+                    ],
+                    "published": "2019-06-16T03:59:37Z",
+                    "updated": "2019-06-16T03:59:37Z",
+                    "url": "http://arxiv.org/abs/1906.06643v1",
+                    "pdf_url": "https://arxiv.org/pdf/1906.06643v1",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.NI",
+                    "categories": [
+                      "cs.NI"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2403.17618v1",
+                    "title": "Technical Report: Incorporating Blogs in Pollux",
+                    "summary": "This technical report describes the incorporation of political blogs into Pollux, the Specialised Information Service (FID) for Political Science in Germany. Considering the widespread use of political blogs in political science research, we decided to include them in the Pollux search system to enhance the available information infrastructure. We describe the crawling and analyzing of the blogs and the pipeline that integrates them into the Pollux system. To demonstrate the content of the incorporated blogs, we also provide a visualization of the topics covered by the blog posts during the first three months following integration.",
+                    "authors": [
+                      "Tobias Holtdirk",
+                      "Nina Smirnova"
+                    ],
+                    "published": "2024-03-26T11:49:54Z",
+                    "updated": "2024-03-26T11:49:54Z",
+                    "url": "http://arxiv.org/abs/2403.17618v1",
+                    "pdf_url": "https://arxiv.org/pdf/2403.17618v1",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.DL",
+                    "categories": [
+                      "cs.DL"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2004.05930v1",
+                    "title": "Technical Report: NEMO DNN Quantization for Deployment Model",
+                    "summary": "This technical report aims at defining a formal framework for Deep Neural Network (DNN) layer-wise quantization, focusing in particular on the problems related to the final deployment. It also acts as a documentation for the NEMO (NEural Minimization for pytOrch) framework. It describes the four DNN representations used in NEMO (FullPrecision, FakeQuantized, QuantizedDeployable and IntegerDeployable), focusing in particular on a formal definition of the latter two. An important feature of this model, and in particular the IntegerDeployable representation, is that it enables DNN inference using purely integers - without resorting to real-valued numbers in any part of the computation and without relying on an explicit fixed-point numerical representation.",
+                    "authors": [
+                      "Francesco Conti"
+                    ],
+                    "published": "2020-04-13T13:23:27Z",
+                    "updated": "2020-04-13T13:23:27Z",
+                    "url": "http://arxiv.org/abs/2004.05930v1",
+                    "pdf_url": "https://arxiv.org/pdf/2004.05930v1",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "cs.AI",
+                      "cs.NE",
+                      "stat.ML"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "1610.00768v6",
+                    "title": "Technical Report on the CleverHans v2.1.0 Adversarial Examples Library",
+                    "summary": "CleverHans is a software library that provides standardized reference implementations of adversarial example construction techniques and adversarial training. The library may be used to develop more robust machine learning models and to provide standardized benchmarks of models' performance in the adversarial setting. Benchmarks constructed without a standardized implementation of adversarial example construction are not comparable to each other, because a good result may indicate a robust model or it may merely indicate a weak implementation of the adversarial example construction procedure. This technical report is structured as follows. Section 1 provides an overview of adversarial examples in machine learning and of the CleverHans software. Section 2 presents the core functionalities of the library: namely the attacks based on adversarial examples and defenses to improve the robustness of machine learning models to these attacks. Section 3 describes how to report benchmark results using the library. Section 4 describes the versioning system.",
+                    "authors": [
+                      "Nicolas Papernot",
+                      "Fartash Faghri",
+                      "Nicholas Carlini",
+                      "Ian Goodfellow",
+                      "Reuben Feinman",
+                      "Alexey Kurakin",
+                      "Cihang Xie",
+                      "Yash Sharma",
+                      "Tom Brown",
+                      "Aurko Roy",
+                      "Alexander Matyasko",
+                      "Vahid Behzadan",
+                      "Karen Hambardzumyan",
+                      "Zhishuai Zhang",
+                      "Yi-Lin Juang",
+                      "Zhi Li",
+                      "Ryan Sheatsley",
+                      "Abhibhav Garg",
+                      "Jonathan Uesato",
+                      "Willi Gierke",
+                      "Yinpeng Dong",
+                      "David Berthelot",
+                      "Paul Hendricks",
+                      "Jonas Rauber",
+                      "Rujun Long",
+                      "Patrick McDaniel"
+                    ],
+                    "published": "2016-10-03T22:04:07Z",
+                    "updated": "2018-06-27T21:06:06Z",
+                    "url": "http://arxiv.org/abs/1610.00768v6",
+                    "pdf_url": "https://arxiv.org/pdf/1610.00768v6",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "cs.CR",
+                      "stat.ML"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2507.19402v1",
+                    "title": "FD4QC: Application of Classical and Quantum-Hybrid Machine Learning for Financial Fraud Detection A Technical Report",
+                    "summary": "The increasing complexity and volume of financial transactions pose significant challenges to traditional fraud detection systems. This technical report investigates and compares the efficacy of classical, quantum, and quantum-hybrid machine learning models for the binary classification of fraudulent financial activities. As of our methodology, first, we develop a comprehensive behavioural feature engineering framework to transform raw transactional data into a rich, descriptive feature set. Second, we implement and evaluate a range of models on the IBM Anti-Money Laundering (AML) dataset. The classical baseline models include Logistic Regression, Decision Tree, Random Forest, and XGBoost. These are compared against three hybrid classic quantum algorithms architectures: a Quantum Support Vector Machine (QSVM), a Variational Quantum Classifier (VQC), and a Hybrid Quantum Neural Network (HQNN). Furthermore, we propose Fraud Detection for Quantum Computing (FD4QC), a practical, API-driven system architecture designed for real-world deployment, featuring a classical-first, quantum-enhanced philosophy with robust fallback mechanisms. Our results demonstrate that classical tree-based models, particularly \\textit{Random Forest}, significantly outperform the quantum counterparts in the current setup, achieving high accuracy (\\(97.34\\%\\)) and F-measure (\\(86.95\\%\\)). Among the quantum models, \\textbf{QSVM} shows the most promise, delivering high precision (\\(77.15\\%\\)) and a low false-positive rate (\\(1.36\\%\\)), albeit with lower recall and significant computational overhead. This report provides a benchmark for a real-world financial application, highlights the current limitations of quantum machine learning in this domain, and outlines promising directions for future research.",
+                    "authors": [
+                      "Matteo Cardaioli",
+                      "Luca Marangoni",
+                      "Giada Martini",
+                      "Francesco Mazzolin",
+                      "Luca Pajola",
+                      "Andrea Ferretto Parodi",
+                      "Alessandra Saitta",
+                      "Maria Chiara Vernillo"
+                    ],
+                    "published": "2025-07-25T16:08:22Z",
+                    "updated": "2025-07-25T16:08:22Z",
+                    "url": "http://arxiv.org/abs/2507.19402v1",
+                    "pdf_url": "https://arxiv.org/pdf/2507.19402v1",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "cs.CE"
+                    ]
+                  }
+                ],
+                "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Tôi không tìm thấy bài báo cụ thể có tiêu đề \"TabPFN-3: Technical Report\". Tuy nhiên, dưới đây là một số bài báo kỹ thuật liên quan mà tôi đã tìm thấy:\n\n1. **Throughput Analysis of CSMA: Technical Report**  \n   - **Tác giả:** Xinghua Sun, Lin Dai  \n   - **Tóm tắt:** Bài báo này phân tích hiệu suất thông lượng của các mạng CSMA với hai cấu trúc người nhận đại diện, tức là mô hình va chạm và mô hình bắt giữ. Phân tích này được áp dụng cho một mạng IEEE 802.11, nơi kích thước cửa sổ backoff ban đầu tối ưu của các nút để đạt được thông lượng mạng tối đa được xác định và xác minh qua các kết quả mô phỏng.  \n   - **[Xem bài báo](http://arxiv.org/abs/1906.06643v1)**\n\n2. **Technical Report: Incorporating Blogs in Pollux**  \n   - **Tác giả:** Tobias Holtdirk, Nina Smirnova  \n   - **Tóm tắt:** Bài báo này mô tả việc tích hợp các blog chính trị vào Pollux, dịch vụ thông tin chuyên biệt cho Khoa học Chính trị tại Đức. Nó mô tả quy trình thu thập và phân tích các blog và cách tích hợp chúng vào hệ thống Pollux.  \n   - **[Xem bài báo](http://arxiv.org/abs/2403.17618v1)**\n\n3. **Technical Report: NEMO DNN Quantization for Deployment Model**  \n   - **Tác giả:** Francesco Conti  \n   - **Tóm tắt:** Bài báo này định nghĩa một khung chính thức cho việc lượng tử hóa từng lớp của Mạng Nơ-ron Sâu (DNN), tập trung vào các vấn đề liên quan đến việc triển khai cuối cùng. Nó cũng mô tả bốn đại diện DNN được sử dụng trong NEMO.  \n   - **[Xem bài báo](http://arxiv.org/abs/2004.05930v1)**\n\nNếu bạn cần thông tin chi tiết hơn về một bài báo cụ thể nào đó, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "TabPFN-3: Technical Report"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "query": "TabPFN-3: Technical Report",
+            "api_query": "TabPFN-3: Technical Report",
+            "total_results": 201784,
+            "items": [
+              {
+                "arxiv_id": "1906.06643v1",
+                "title": "Throughput Analysis of CSMA: Technical Report",
+                "summary": "In this technical report, the throughput performance of CSMA networks with two representative receiver structures, i.e., the collision model and the capture model, is characterized and optimized. The analysis is further applied to an IEEE 802.11 network, which is a representative wireless network that adopts the CSMA mechanism, where the optimal initial backoff window sizes of nodes to achieve the maximum network throughput are derived and verified against simulation results.",
+                "authors": [
+                  "Xinghua Sun",
+                  "Lin Dai"
+                ],
+                "published": "2019-06-16T03:59:37Z",
+                "updated": "2019-06-16T03:59:37Z",
+                "url": "http://arxiv.org/abs/1906.06643v1",
+                "pdf_url": "https://arxiv.org/pdf/1906.06643v1",
+                "source": "arxiv.org",
+                "primary_category": "cs.NI",
+                "categories": [
+                  "cs.NI"
+                ]
+              },
+              {
+                "arxiv_id": "2403.17618v1",
+                "title": "Technical Report: Incorporating Blogs in Pollux",
+                "summary": "This technical report describes the incorporation of political blogs into Pollux, the Specialised Information Service (FID) for Political Science in Germany. Considering the widespread use of political blogs in political science research, we decided to include them in the Pollux search system to enhance the available information infrastructure. We describe the crawling and analyzing of the blogs and the pipeline that integrates them into the Pollux system. To demonstrate the content of the incorporated blogs, we also provide a visualization of the topics covered by the blog posts during the first three months following integration.",
+                "authors": [
+                  "Tobias Holtdirk",
+                  "Nina Smirnova"
+                ],
+                "published": "2024-03-26T11:49:54Z",
+                "updated": "2024-03-26T11:49:54Z",
+                "url": "http://arxiv.org/abs/2403.17618v1",
+                "pdf_url": "https://arxiv.org/pdf/2403.17618v1",
+                "source": "arxiv.org",
+                "primary_category": "cs.DL",
+                "categories": [
+                  "cs.DL"
+                ]
+              },
+              {
+                "arxiv_id": "2004.05930v1",
+                "title": "Technical Report: NEMO DNN Quantization for Deployment Model",
+                "summary": "This technical report aims at defining a formal framework for Deep Neural Network (DNN) layer-wise quantization, focusing in particular on the problems related to the final deployment. It also acts as a documentation for the NEMO (NEural Minimization for pytOrch) framework. It describes the four DNN representations used in NEMO (FullPrecision, FakeQuantized, QuantizedDeployable and IntegerDeployable), focusing in particular on a formal definition of the latter two. An important feature of this model, and in particular the IntegerDeployable representation, is that it enables DNN inference using purely integers - without resorting to real-valued numbers in any part of the computation and without relying on an explicit fixed-point numerical representation.",
+                "authors": [
+                  "Francesco Conti"
+                ],
+                "published": "2020-04-13T13:23:27Z",
+                "updated": "2020-04-13T13:23:27Z",
+                "url": "http://arxiv.org/abs/2004.05930v1",
+                "pdf_url": "https://arxiv.org/pdf/2004.05930v1",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "cs.AI",
+                  "cs.NE",
+                  "stat.ML"
+                ]
+              },
+              {
+                "arxiv_id": "1610.00768v6",
+                "title": "Technical Report on the CleverHans v2.1.0 Adversarial Examples Library",
+                "summary": "CleverHans is a software library that provides standardized reference implementations of adversarial example construction techniques and adversarial training. The library may be used to develop more robust machine learning models and to provide standardized benchmarks of models' performance in the adversarial setting. Benchmarks constructed without a standardized implementation of adversarial example construction are not comparable to each other, because a good result may indicate a robust model or it may merely indicate a weak implementation of the adversarial example construction procedure. This technical report is structured as follows. Section 1 provides an overview of adversarial examples in machine learning and of the CleverHans software. Section 2 presents the core functionalities of the library: namely the attacks based on adversarial examples and defenses to improve the robustness of machine learning models to these attacks. Section 3 describes how to report benchmark results using the library. Section 4 describes the versioning system.",
+                "authors": [
+                  "Nicolas Papernot",
+                  "Fartash Faghri",
+                  "Nicholas Carlini",
+                  "Ian Goodfellow",
+                  "Reuben Feinman",
+                  "Alexey Kurakin",
+                  "Cihang Xie",
+                  "Yash Sharma",
+                  "Tom Brown",
+                  "Aurko Roy",
+                  "Alexander Matyasko",
+                  "Vahid Behzadan",
+                  "Karen Hambardzumyan",
+                  "Zhishuai Zhang",
+                  "Yi-Lin Juang",
+                  "Zhi Li",
+                  "Ryan Sheatsley",
+                  "Abhibhav Garg",
+                  "Jonathan Uesato",
+                  "Willi Gierke",
+                  "Yinpeng Dong",
+                  "David Berthelot",
+                  "Paul Hendricks",
+                  "Jonas Rauber",
+                  "Rujun Long",
+                  "Patrick McDaniel"
+                ],
+                "published": "2016-10-03T22:04:07Z",
+                "updated": "2018-06-27T21:06:06Z",
+                "url": "http://arxiv.org/abs/1610.00768v6",
+                "pdf_url": "https://arxiv.org/pdf/1610.00768v6",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "cs.CR",
+                  "stat.ML"
+                ]
+              },
+              {
+                "arxiv_id": "2507.19402v1",
+                "title": "FD4QC: Application of Classical and Quantum-Hybrid Machine Learning for Financial Fraud Detection A Technical Report",
+                "summary": "The increasing complexity and volume of financial transactions pose significant challenges to traditional fraud detection systems. This technical report investigates and compares the efficacy of classical, quantum, and quantum-hybrid machine learning models for the binary classification of fraudulent financial activities. As of our methodology, first, we develop a comprehensive behavioural feature engineering framework to transform raw transactional data into a rich, descriptive feature set. Second, we implement and evaluate a range of models on the IBM Anti-Money Laundering (AML) dataset. The classical baseline models include Logistic Regression, Decision Tree, Random Forest, and XGBoost. These are compared against three hybrid classic quantum algorithms architectures: a Quantum Support Vector Machine (QSVM), a Variational Quantum Classifier (VQC), and a Hybrid Quantum Neural Network (HQNN). Furthermore, we propose Fraud Detection for Quantum Computing (FD4QC), a practical, API-driven system architecture designed for real-world deployment, featuring a classical-first, quantum-enhanced philosophy with robust fallback mechanisms. Our results demonstrate that classical tree-based models, particularly \\textit{Random Forest}, significantly outperform the quantum counterparts in the current setup, achieving high accuracy (\\(97.34\\%\\)) and F-measure (\\(86.95\\%\\)). Among the quantum models, \\textbf{QSVM} shows the most promise, delivering high precision (\\(77.15\\%\\)) and a low false-positive rate (\\(1.36\\%\\)), albeit with lower recall and significant computational overhead. This report provides a benchmark for a real-world financial application, highlights the current limitations of quantum machine learning in this domain, and outlines promising directions for future research.",
+                "authors": [
+                  "Matteo Cardaioli",
+                  "Luca Marangoni",
+                  "Giada Martini",
+                  "Francesco Mazzolin",
+                  "Luca Pajola",
+                  "Andrea Ferretto Parodi",
+                  "Alessandra Saitta",
+                  "Maria Chiara Vernillo"
+                ],
+                "published": "2025-07-25T16:08:22Z",
+                "updated": "2025-07-25T16:08:22Z",
+                "url": "http://arxiv.org/abs/2507.19402v1",
+                "pdf_url": "https://arxiv.org/pdf/2507.19402v1",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "cs.CE"
+                ]
+              }
+            ],
+            "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:22:14"
+    },
+    {
+      "turn_index": 5,
+      "started_at": "2026-06-02T16:22:21",
+      "user": "Cho tôi BibTeX citation của bài arXiv 1706.03762",
+      "status": "answered",
+      "assistant_text": "Dưới đây là trích dẫn BibTeX cho bài báo arXiv 1706.03762:\n\n```bibtex\n@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}\n```\n\nNếu bạn cần thêm thông tin gì khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "cite",
+              "args": {
+                "arxiv_id": "1706.03762",
+                "style": "bibtex"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "cite",
+              "args": {
+                "arxiv_id": "1706.03762",
+                "style": "bibtex"
+              },
+              "result": {
+                "tool": "cite",
+                "arxiv_id": "1706.03762",
+                "style": "bibtex",
+                "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+                "title": "Attention Is All You Need",
+                "authors": [
+                  "Ashish Vaswani",
+                  "Noam Shazeer",
+                  "Niki Parmar",
+                  "Jakob Uszkoreit",
+                  "Llion Jones",
+                  "Aidan N. Gomez",
+                  "Lukasz Kaiser",
+                  "Illia Polosukhin"
+                ],
+                "year": "2017"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là trích dẫn BibTeX cho bài báo arXiv 1706.03762:\n\n```bibtex\n@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}\n```\n\nNếu bạn cần thêm thông tin gì khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "1706.03762",
+            "style": "bibtex"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "1706.03762",
+            "style": "bibtex",
+            "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+            "title": "Attention Is All You Need",
+            "authors": [
+              "Ashish Vaswani",
+              "Noam Shazeer",
+              "Niki Parmar",
+              "Jakob Uszkoreit",
+              "Llion Jones",
+              "Aidan N. Gomez",
+              "Lukasz Kaiser",
+              "Illia Polosukhin"
+            ],
+            "year": "2017"
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:22:27"
+    },
+    {
+      "turn_index": 6,
+      "started_at": "2026-06-02T16:22:59",
+      "user": "Tìm 5 bài báo mới nhất về AI agents trên arXiv → rồi Lấy citation APA của bài đầu tiên",
+      "status": "answered",
+      "assistant_text": "Dưới đây là 5 bài báo mới nhất về AI agents trên arXiv:\n\n1. **WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World**  \n   - **Tác giả:** Ao Liang, Lingdong Kong, Tianyi Yan, Hongsi Liu, Wesley Yang, Ziqi Huang, Wei Yin, Jialong Zuo, Yixuan Hu, Dekai Zhu, Dongyue Lu, Youquan Liu, Guangfeng Jiang, Linfeng Li, Xiangtai Li, Long Zhuo, Lai Xing Ng, Benoit R. Cottereau, Changxin Gao, Liang Pan, Wei Tsang Ooi, Ziwei Liu  \n   - **Ngày xuất bản:** 11 tháng 12, 2025  \n   - **[Xem bài báo](http://arxiv.org/abs/2512.10958v2)**\n\n2. **STABLEVAL: Disagreement-Aware and Stable Evaluation of AI Systems**  \n   - **Tác giả:** Akash Bonagiri, Gerard Janno Anderias, Saee Patil, Angelina Lai, Devang Borkar, Gezheng Kang, Ishant Gandhi, Setareh Rafatirad, Houman Homayoun  \n   - **Ngày xuất bản:** 4 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.02122v2)**\n\n3. **Beyond AI as Assistants: Toward Autonomous Discovery in Cosmology**  \n   - **Tác giả:** Licong Xu, Thomas Borrett  \n   - **Ngày xuất bản:** 14 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.14791v2)**\n\n4. **CVEvolve: Autonomous Algorithm Discovery for Unstructured Scientific Data Processing**  \n   - **Tác giả:** Ming Du, Xiangyu Yin, Yanqi Luo, Dishant Beniwal, Songyuan Tang, Hemant Sharma, Mathew J. Cherukara  \n   - **Ngày xuất bản:** 12 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.11359v3)**\n\n5. **Iteris: Agentic Research Loops for Computational Mathematics**  \n   - **Tác giả:** Leheng Chen, Zihao Liu, Wanyi He, Bin Dong  \n   - **Ngày xuất bản:** 1 tháng 6, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2606.02484v1)**\n\n### Citation APA cho bài đầu tiên:\nLiang, A., Kong, L., Yan, T., Liu, H., Yang, W., Huang, Z., Yin, W., Zuo, J., Hu, Y., Zhu, D., Lu, D., Liu, Y., Jiang, G., Li, L., Li, X., Zhuo, L., Ng, L. X., Cottereau, B. R., Gao, C., Pan, L., Ooi, W. T., & Liu, Z. (2025). *WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World*. arXiv. https://arxiv.org/abs/2512.10958v2\n\nNếu bạn cần thêm thông tin, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "AI agents",
+                "max_results": 5,
+                "sort_by": "lastUpdatedDate"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "AI agents",
+                "max_results": 5,
+                "sort_by": "lastUpdatedDate"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "query": "AI agents",
+                "api_query": "all:AI AND all:agents",
+                "total_results": 9914,
+                "items": [
+                  {
+                    "arxiv_id": "2512.10958v2",
+                    "title": "WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World",
+                    "summary": "Generative world models are reshaping embodied AI, enabling agents to synthesize realistic 4D driving environments that look convincing but often fail physically or behaviorally. Despite rapid progress, the field still lacks a unified way to assess whether generated worlds preserve geometry, obey physics, or support reliable control. We introduce WorldLens, a full-spectrum benchmark evaluating how well a model builds, understands, and behaves within its generated world. It spans five aspects -- Generation, Reconstruction, Action-Following, Downstream Task, and Human Preference -- jointly covering visual realism, geometric consistency, physical plausibility, and functional reliability. Across these dimensions, no existing world model excels universally: those with strong textures often violate physics, while geometry-stable ones lack behavioral fidelity. To align objective metrics with human judgment, we further construct WorldLens-26K, a large-scale dataset of human-annotated videos with numerical scores and textual rationales, and develop WorldLens-Agent, an evaluation model distilled from these annotations to enable scalable, explainable scoring. Together, the benchmark, dataset, and agent form a unified ecosystem for measuring world fidelity -- standardizing how future models are judged not only by how real they look, but by how real they behave.",
+                    "authors": [
+                      "Ao Liang",
+                      "Lingdong Kong",
+                      "Tianyi Yan",
+                      "Hongsi Liu",
+                      "Wesley Yang",
+                      "Ziqi Huang",
+                      "Wei Yin",
+                      "Jialong Zuo",
+                      "Yixuan Hu",
+                      "Dekai Zhu",
+                      "Dongyue Lu",
+                      "Youquan Liu",
+                      "Guangfeng Jiang",
+                      "Linfeng Li",
+                      "Xiangtai Li",
+                      "Long Zhuo",
+                      "Lai Xing Ng",
+                      "Benoit R. Cottereau",
+                      "Changxin Gao",
+                      "Liang Pan",
+                      "Wei Tsang Ooi",
+                      "Ziwei Liu"
+                    ],
+                    "published": "2025-12-11T18:59:58Z",
+                    "updated": "2026-06-01T17:54:44Z",
+                    "url": "http://arxiv.org/abs/2512.10958v2",
+                    "pdf_url": "https://arxiv.org/pdf/2512.10958v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.CV",
+                    "categories": [
+                      "cs.CV"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.02122v2",
+                    "title": "STABLEVAL: Disagreement-Aware and Stable Evaluation of AI Systems",
+                    "summary": "Human evaluation remains the primary standard for assessing modern AI systems, yet annotator disagreement, bias, and variability make system rankings fragile under standard majority vote aggregation. Majority vote discards annotator reliability and item-level ambiguity, often yielding unstable comparisons across annotator subsets. We introduce STABLEVAL, a disagreement-aware evaluation framework that models latent item correctness and annotator-specific confusion patterns to produce posterior expected item credit and calibrated agent-level scores. Unlike label-denoising approaches such as Dawid-Skene, STABLEVAL is explicitly designed for stable and uncertainty-aware system evaluation rather than hard label recovery. We formalize ranking stability as a first-class evaluation objective and analyze how aggregation methods preserve or distort underlying annotator behavior. Across controlled synthetic experiments and multiple real-world human-annotated benchmarks, majority vote exhibits increasing score error and ranking instability under annotator heterogeneity and adversarial noise, while STABLEVAL yields more stable and statistically grounded system rankings. These results demonstrate that modeling disagreement is essential for robust and reproducible AI evaluation.",
+                    "authors": [
+                      "Akash Bonagiri",
+                      "Gerard Janno Anderias",
+                      "Saee Patil",
+                      "Angelina Lai",
+                      "Devang Borkar",
+                      "Gezheng Kang",
+                      "Ishant Gandhi",
+                      "Setareh Rafatirad",
+                      "Houman Homayoun"
+                    ],
+                    "published": "2026-05-04T01:03:48Z",
+                    "updated": "2026-06-01T17:49:37Z",
+                    "url": "http://arxiv.org/abs/2605.02122v2",
+                    "pdf_url": "https://arxiv.org/pdf/2605.02122v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "cs.AI"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.14791v2",
+                    "title": "Beyond AI as Assistants: Toward Autonomous Discovery in Cosmology",
+                    "summary": "Recent advances in artificial intelligence (AI) agents are pushing AI beyond tools toward autonomous scientific discovery. We discuss two complementary agentic systems for cosmology: \\texttt{CMBEvolve}, which targets tasks with explicit quantitative objectives through LLM-guided code evolution and tree search, and \\texttt{CosmoEvolve}, which targets open-ended scientific workflows through a virtual multi-agent research laboratory. As preliminary demonstrations, we apply \\texttt{CMBEvolve} to out-of-distribution detection in weak-lensing maps, where it iteratively improves the benchmark score through code evolution, and \\texttt{CosmoEvolve} to autonomous ACT DR6 data analysis, where it identifies non-trivial pair- and scale-dependent behaviour and produces analysis-grade diagnostics. These examples show how cosmology can provide both controlled benchmark tasks and realistic open-ended research problems for the development of AI scientist systems.",
+                    "authors": [
+                      "Licong Xu",
+                      "Thomas Borrett"
+                    ],
+                    "published": "2026-05-14T12:58:12Z",
+                    "updated": "2026-06-01T17:26:00Z",
+                    "url": "http://arxiv.org/abs/2605.14791v2",
+                    "pdf_url": "https://arxiv.org/pdf/2605.14791v2",
+                    "source": "arxiv.org",
+                    "primary_category": "astro-ph.IM",
+                    "categories": [
+                      "astro-ph.IM",
+                      "astro-ph.CO",
+                      "cs.AI"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.11359v3",
+                    "title": "CVEvolve: Autonomous Algorithm Discovery for Unstructured Scientific Data Processing",
+                    "summary": "Scientific data processing often requires task-specific algorithms or AI models, creating a barrier for domain scientists who need to analyze their data but may not have extensive computing or image-processing expertise. This barrier is especially pronounced when data are noisy, have a high dynamic range, are sparsely labeled, or are only loosely specified. We introduce CVEvolve, an autonomous agentic harness with a zero-code interface for scientific data-processing algorithm discovery. CVEvolve combines a multi-round search strategy with tools for code execution, evaluation implementation, history management, holdout testing, and optional inspection of scientific data and visual outputs. The search alternates between discovery and improvement actions, and uses lineage-aware stochastic candidate sampling to balance exploration and exploitation. We demonstrate CVEvolve on X-ray fluorescence microscopy image registration, Bragg peak detection, high-energy diffraction microscopy image segmentation, and hybrid analytical-learning-based affine registration. Across these tasks, CVEvolve discovers algorithms that improve over baseline methods, while holdout test tracking helps identify candidates that generalize better than later over-optimized alternatives. These results show that zero-code, autonomous LLM-powered algorithm development can help domain scientists turn unstructured scientific image data into practical algorithms and downstream scientific discoveries.",
+                    "authors": [
+                      "Ming Du",
+                      "Xiangyu Yin",
+                      "Yanqi Luo",
+                      "Dishant Beniwal",
+                      "Songyuan Tang",
+                      "Hemant Sharma",
+                      "Mathew J. Cherukara"
+                    ],
+                    "published": "2026-05-12T00:24:30Z",
+                    "updated": "2026-06-01T16:59:31Z",
+                    "url": "http://arxiv.org/abs/2605.11359v3",
+                    "pdf_url": "https://arxiv.org/pdf/2605.11359v3",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.AI",
+                    "categories": [
+                      "cs.AI",
+                      "physics.data-an"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2606.02484v1",
+                    "title": "Iteris: Agentic Research Loops for Computational Mathematics",
+                    "summary": "Recent advances in large language models and agentic AI systems have enabled significant progress in mathematical discovery, from solving competition problems to tackling research-level conjectures. However, open problems in computational mathematics have received comparatively less attention: research in this area often requires not only proofs but also numerical experimentation, adversarial constructions, and algorithm design. In this paper, we introduce an agentic research system, Iteris, designed for open problems in computational mathematics. We apply Iteris to two open problems from a recent Simons Workshop collection (arXiv:2602.05394). In these case studies, Iteris generated numerical evidence, constructions, and proof drafts that led, after expert review and correction, to verified results. The first result is a phase diagram for the asymptotic comparison between conjugate gradient and randomized coordinate descent on power-law spectra; the second is a counterexample showing that QR factorization with column pivoting can fail to select well-conditioned submatrices even under low coherence. These case studies suggest that agentic AI systems can participate meaningfully in research workflows for open problems in computational mathematics, while human validation remains essential.",
+                    "authors": [
+                      "Leheng Chen",
+                      "Zihao Liu",
+                      "Wanyi He",
+                      "Bin Dong"
+                    ],
+                    "published": "2026-06-01T16:54:31Z",
+                    "updated": "2026-06-01T16:54:31Z",
+                    "url": "http://arxiv.org/abs/2606.02484v1",
+                    "pdf_url": "https://arxiv.org/pdf/2606.02484v1",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.AI",
+                    "categories": [
+                      "cs.AI",
+                      "cs.LG"
+                    ]
+                  }
+                ],
+                "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là 5 bài báo mới nhất về AI agents trên arXiv:\n\n1. **WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World**  \n   - **Tác giả:** Ao Liang, Lingdong Kong, Tianyi Yan, Hongsi Liu, Wesley Yang, Ziqi Huang, Wei Yin, Jialong Zuo, Yixuan Hu, Dekai Zhu, Dongyue Lu, Youquan Liu, Guangfeng Jiang, Linfeng Li, Xiangtai Li, Long Zhuo, Lai Xing Ng, Benoit R. Cottereau, Changxin Gao, Liang Pan, Wei Tsang Ooi, Ziwei Liu  \n   - **Ngày xuất bản:** 11 tháng 12, 2025  \n   - **[Xem bài báo](http://arxiv.org/abs/2512.10958v2)**\n\n2. **STABLEVAL: Disagreement-Aware and Stable Evaluation of AI Systems**  \n   - **Tác giả:** Akash Bonagiri, Gerard Janno Anderias, Saee Patil, Angelina Lai, Devang Borkar, Gezheng Kang, Ishant Gandhi, Setareh Rafatirad, Houman Homayoun  \n   - **Ngày xuất bản:** 4 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.02122v2)**\n\n3. **Beyond AI as Assistants: Toward Autonomous Discovery in Cosmology**  \n   - **Tác giả:** Licong Xu, Thomas Borrett  \n   - **Ngày xuất bản:** 14 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.14791v2)**\n\n4. **CVEvolve: Autonomous Algorithm Discovery for Unstructured Scientific Data Processing**  \n   - **Tác giả:** Ming Du, Xiangyu Yin, Yanqi Luo, Dishant Beniwal, Songyuan Tang, Hemant Sharma, Mathew J. Cherukara  \n   - **Ngày xuất bản:** 12 tháng 5, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2605.11359v3)**\n\n5. **Iteris: Agentic Research Loops for Computational Mathematics**  \n   - **Tác giả:** Leheng Chen, Zihao Liu, Wanyi He, Bin Dong  \n   - **Ngày xuất bản:** 1 tháng 6, 2026  \n   - **[Xem bài báo](http://arxiv.org/abs/2606.02484v1)**\n\n### Citation APA cho bài đầu tiên:\nLiang, A., Kong, L., Yan, T., Liu, H., Yang, W., Huang, Z., Yin, W., Zuo, J., Hu, Y., Zhu, D., Lu, D., Liu, Y., Jiang, G., Li, L., Li, X., Zhuo, L., Ng, L. X., Cottereau, B. R., Gao, C., Pan, L., Ooi, W. T., & Liu, Z. (2025). *WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World*. arXiv. https://arxiv.org/abs/2512.10958v2\n\nNếu bạn cần thêm thông tin, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "AI agents",
+            "max_results": 5,
+            "sort_by": "lastUpdatedDate"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "query": "AI agents",
+            "api_query": "all:AI AND all:agents",
+            "total_results": 9914,
+            "items": [
+              {
+                "arxiv_id": "2512.10958v2",
+                "title": "WorldLens: Full-Spectrum Evaluations of Driving World Models in Real World",
+                "summary": "Generative world models are reshaping embodied AI, enabling agents to synthesize realistic 4D driving environments that look convincing but often fail physically or behaviorally. Despite rapid progress, the field still lacks a unified way to assess whether generated worlds preserve geometry, obey physics, or support reliable control. We introduce WorldLens, a full-spectrum benchmark evaluating how well a model builds, understands, and behaves within its generated world. It spans five aspects -- Generation, Reconstruction, Action-Following, Downstream Task, and Human Preference -- jointly covering visual realism, geometric consistency, physical plausibility, and functional reliability. Across these dimensions, no existing world model excels universally: those with strong textures often violate physics, while geometry-stable ones lack behavioral fidelity. To align objective metrics with human judgment, we further construct WorldLens-26K, a large-scale dataset of human-annotated videos with numerical scores and textual rationales, and develop WorldLens-Agent, an evaluation model distilled from these annotations to enable scalable, explainable scoring. Together, the benchmark, dataset, and agent form a unified ecosystem for measuring world fidelity -- standardizing how future models are judged not only by how real they look, but by how real they behave.",
+                "authors": [
+                  "Ao Liang",
+                  "Lingdong Kong",
+                  "Tianyi Yan",
+                  "Hongsi Liu",
+                  "Wesley Yang",
+                  "Ziqi Huang",
+                  "Wei Yin",
+                  "Jialong Zuo",
+                  "Yixuan Hu",
+                  "Dekai Zhu",
+                  "Dongyue Lu",
+                  "Youquan Liu",
+                  "Guangfeng Jiang",
+                  "Linfeng Li",
+                  "Xiangtai Li",
+                  "Long Zhuo",
+                  "Lai Xing Ng",
+                  "Benoit R. Cottereau",
+                  "Changxin Gao",
+                  "Liang Pan",
+                  "Wei Tsang Ooi",
+                  "Ziwei Liu"
+                ],
+                "published": "2025-12-11T18:59:58Z",
+                "updated": "2026-06-01T17:54:44Z",
+                "url": "http://arxiv.org/abs/2512.10958v2",
+                "pdf_url": "https://arxiv.org/pdf/2512.10958v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.CV",
+                "categories": [
+                  "cs.CV"
+                ]
+              },
+              {
+                "arxiv_id": "2605.02122v2",
+                "title": "STABLEVAL: Disagreement-Aware and Stable Evaluation of AI Systems",
+                "summary": "Human evaluation remains the primary standard for assessing modern AI systems, yet annotator disagreement, bias, and variability make system rankings fragile under standard majority vote aggregation. Majority vote discards annotator reliability and item-level ambiguity, often yielding unstable comparisons across annotator subsets. We introduce STABLEVAL, a disagreement-aware evaluation framework that models latent item correctness and annotator-specific confusion patterns to produce posterior expected item credit and calibrated agent-level scores. Unlike label-denoising approaches such as Dawid-Skene, STABLEVAL is explicitly designed for stable and uncertainty-aware system evaluation rather than hard label recovery. We formalize ranking stability as a first-class evaluation objective and analyze how aggregation methods preserve or distort underlying annotator behavior. Across controlled synthetic experiments and multiple real-world human-annotated benchmarks, majority vote exhibits increasing score error and ranking instability under annotator heterogeneity and adversarial noise, while STABLEVAL yields more stable and statistically grounded system rankings. These results demonstrate that modeling disagreement is essential for robust and reproducible AI evaluation.",
+                "authors": [
+                  "Akash Bonagiri",
+                  "Gerard Janno Anderias",
+                  "Saee Patil",
+                  "Angelina Lai",
+                  "Devang Borkar",
+                  "Gezheng Kang",
+                  "Ishant Gandhi",
+                  "Setareh Rafatirad",
+                  "Houman Homayoun"
+                ],
+                "published": "2026-05-04T01:03:48Z",
+                "updated": "2026-06-01T17:49:37Z",
+                "url": "http://arxiv.org/abs/2605.02122v2",
+                "pdf_url": "https://arxiv.org/pdf/2605.02122v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "cs.AI"
+                ]
+              },
+              {
+                "arxiv_id": "2605.14791v2",
+                "title": "Beyond AI as Assistants: Toward Autonomous Discovery in Cosmology",
+                "summary": "Recent advances in artificial intelligence (AI) agents are pushing AI beyond tools toward autonomous scientific discovery. We discuss two complementary agentic systems for cosmology: \\texttt{CMBEvolve}, which targets tasks with explicit quantitative objectives through LLM-guided code evolution and tree search, and \\texttt{CosmoEvolve}, which targets open-ended scientific workflows through a virtual multi-agent research laboratory. As preliminary demonstrations, we apply \\texttt{CMBEvolve} to out-of-distribution detection in weak-lensing maps, where it iteratively improves the benchmark score through code evolution, and \\texttt{CosmoEvolve} to autonomous ACT DR6 data analysis, where it identifies non-trivial pair- and scale-dependent behaviour and produces analysis-grade diagnostics. These examples show how cosmology can provide both controlled benchmark tasks and realistic open-ended research problems for the development of AI scientist systems.",
+                "authors": [
+                  "Licong Xu",
+                  "Thomas Borrett"
+                ],
+                "published": "2026-05-14T12:58:12Z",
+                "updated": "2026-06-01T17:26:00Z",
+                "url": "http://arxiv.org/abs/2605.14791v2",
+                "pdf_url": "https://arxiv.org/pdf/2605.14791v2",
+                "source": "arxiv.org",
+                "primary_category": "astro-ph.IM",
+                "categories": [
+                  "astro-ph.IM",
+                  "astro-ph.CO",
+                  "cs.AI"
+                ]
+              },
+              {
+                "arxiv_id": "2605.11359v3",
+                "title": "CVEvolve: Autonomous Algorithm Discovery for Unstructured Scientific Data Processing",
+                "summary": "Scientific data processing often requires task-specific algorithms or AI models, creating a barrier for domain scientists who need to analyze their data but may not have extensive computing or image-processing expertise. This barrier is especially pronounced when data are noisy, have a high dynamic range, are sparsely labeled, or are only loosely specified. We introduce CVEvolve, an autonomous agentic harness with a zero-code interface for scientific data-processing algorithm discovery. CVEvolve combines a multi-round search strategy with tools for code execution, evaluation implementation, history management, holdout testing, and optional inspection of scientific data and visual outputs. The search alternates between discovery and improvement actions, and uses lineage-aware stochastic candidate sampling to balance exploration and exploitation. We demonstrate CVEvolve on X-ray fluorescence microscopy image registration, Bragg peak detection, high-energy diffraction microscopy image segmentation, and hybrid analytical-learning-based affine registration. Across these tasks, CVEvolve discovers algorithms that improve over baseline methods, while holdout test tracking helps identify candidates that generalize better than later over-optimized alternatives. These results show that zero-code, autonomous LLM-powered algorithm development can help domain scientists turn unstructured scientific image data into practical algorithms and downstream scientific discoveries.",
+                "authors": [
+                  "Ming Du",
+                  "Xiangyu Yin",
+                  "Yanqi Luo",
+                  "Dishant Beniwal",
+                  "Songyuan Tang",
+                  "Hemant Sharma",
+                  "Mathew J. Cherukara"
+                ],
+                "published": "2026-05-12T00:24:30Z",
+                "updated": "2026-06-01T16:59:31Z",
+                "url": "http://arxiv.org/abs/2605.11359v3",
+                "pdf_url": "https://arxiv.org/pdf/2605.11359v3",
+                "source": "arxiv.org",
+                "primary_category": "cs.AI",
+                "categories": [
+                  "cs.AI",
+                  "physics.data-an"
+                ]
+              },
+              {
+                "arxiv_id": "2606.02484v1",
+                "title": "Iteris: Agentic Research Loops for Computational Mathematics",
+                "summary": "Recent advances in large language models and agentic AI systems have enabled significant progress in mathematical discovery, from solving competition problems to tackling research-level conjectures. However, open problems in computational mathematics have received comparatively less attention: research in this area often requires not only proofs but also numerical experimentation, adversarial constructions, and algorithm design. In this paper, we introduce an agentic research system, Iteris, designed for open problems in computational mathematics. We apply Iteris to two open problems from a recent Simons Workshop collection (arXiv:2602.05394). In these case studies, Iteris generated numerical evidence, constructions, and proof drafts that led, after expert review and correction, to verified results. The first result is a phase diagram for the asymptotic comparison between conjugate gradient and randomized coordinate descent on power-law spectra; the second is a counterexample showing that QR factorization with column pivoting can fail to select well-conditioned submatrices even under low coherence. These case studies suggest that agentic AI systems can participate meaningfully in research workflows for open problems in computational mathematics, while human validation remains essential.",
+                "authors": [
+                  "Leheng Chen",
+                  "Zihao Liu",
+                  "Wanyi He",
+                  "Bin Dong"
+                ],
+                "published": "2026-06-01T16:54:31Z",
+                "updated": "2026-06-01T16:54:31Z",
+                "url": "http://arxiv.org/abs/2606.02484v1",
+                "pdf_url": "https://arxiv.org/pdf/2606.02484v1",
+                "source": "arxiv.org",
+                "primary_category": "cs.AI",
+                "categories": [
+                  "cs.AI",
+                  "cs.LG"
+                ]
+              }
+            ],
+            "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:23:18"
+    },
+    {
+      "turn_index": 7,
+      "started_at": "2026-06-02T16:25:04",
+      "user": "Tìm trên web tin AI hôm nay và tìm thêm tweet về AI",
+      "status": "answered",
+      "assistant_text": "### Tin tức AI hôm nay:\n\n1. **AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future**  \n   - **Nguồn:** [HuffPost](https://www.huffpost.com/entry/anthropic-ai-ipo-wall-street_n_6a1db1fae4b032392fa3fc39)  \n   - **Tóm tắt:** AI giant Anthropic đã nộp hồ sơ bí mật cho một đợt phát hành cổ phiếu lần đầu ra công chúng (IPO) tại Mỹ, đánh dấu một bước quan trọng trong cơn sốt AI trên Phố Wall.\n\n2. **SoftBank lines up €75bn data centre investment in France**  \n   - **Nguồn:** [Total Telecom](https://totaltele.com/softbank-lines-up-e75bn-data-centre-investment-in-france/)  \n   - **Tóm tắt:** SoftBank đã công bố kế hoạch đầu tư lên tới 75 tỷ euro để triển khai các trung tâm dữ liệu tập trung vào AI tại Pháp, nhằm biến nước này thành một trung tâm hạ tầng AI hàng đầu ở châu Âu.\n\n3. **AI ad campaigns slam Trahan**  \n   - **Nguồn:** [The Washington Post](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/)  \n   - **Tóm tắt:** Một chiến dịch quảng cáo trị giá sáu con số đã được triển khai để chỉ trích đại diện Lori Trahan, cho rằng bà đang ủng hộ các \"đại gia AI\" trong các nỗ lực lập pháp của mình.\n\n4. **Q2 2026 The State of Consumer AI**  \n   - **Nguồn:** [PitchBook](https://pitchbook.com/news/reports/q2-2026-the-state-of-consumer-ai)  \n   - **Tóm tắt:** Báo cáo cho thấy giá trị của các công ty khởi nghiệp AI tiêu dùng đã tăng gấp ba lần so với năm trước, nhưng 10 công ty hàng đầu hiện chiếm gần 80% tổng giá trị.\n\n5. **NYT Publisher Warns AI Companies May Lead to 'Unnecessary Harm'**  \n   - **Nguồn:** [Variety](https://variety.com/2026/biz/news/new-york-times-ai-companies-choices-unnecessary-harm-1236763934/)  \n   - **Tóm tắt:** Nhà xuất bản của New York Times cảnh báo rằng các công ty AI đang đưa ra những lựa chọn có thể gây ra \"hại không cần thiết\" cho ngành báo chí và quyền truy cập của công chúng vào các nguồn tin cậy.\n\n---\n\n### Tweet mới về AI:\n\n1. **@aiwatch_jp**  \n   - **Nội dung:** \"姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価\"  \n   - **[Xem tweet](https://x.com/aiwatch_jp/status/2061740878084079970)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n2. **@idmafs**  \n   - **Nội dung:** \"اونایی که دلواپس \\\"لخت کردن چادری‌ها با ai\\\" هستن رو هم بلاک می‌کنم.\"  \n   - **[Xem tweet](https://x.com/idmafs/status/2061740874841637256)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n3. **@YTxscc4lOtBHTKy**  \n   - **Nội dung:** \"ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。\"  \n   - **[Xem tweet](https://x.com/YTxscc4lOtBHTKy/status/2061740874787336513)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n4. **@s_modo_li**  \n   - **Nội dung:** \"@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون\"  \n   - **[Xem tweet](https://x.com/s_modo_li/status/2061740874740949356)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n5. **@mode_jb**  \n   - **Nội dung:** \"@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!\"  \n   - **[Xem tweet](https://x.com/mode_jb/status/2061740874229223452)**  \n   - **Ngày:** 02 tháng 6, 2026\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức hoặc tweet nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI news",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              }
+            },
+            {
+              "name": "social_search",
+              "args": {
+                "query": "AI",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "AI news",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "AI news",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future - HuffPost",
+                    "url": "https://www.huffpost.com/entry/anthropic-ai-ipo-wall-street_n_6a1db1fae4b032392fa3fc39",
+                    "source": "huffpost.com",
+                    "summary": "# AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future. AI giant Anthropic said on Monday it has confidentially filed for a U.S. initial public offering, teeing up what could become the watershed moment for Wall Street's AI frenzy. June 1 (Reuters) - AI giant Anthropic said on Monday it has confidentially filed for a U.S. initial public offering, teeing up what could become a watershed moment for Wall Street’s AI frenzy. The crucial step toward a listing comes on the heels of SpaceX’s mega-IPO, which is on course to rewrite the record books as the Elon Musk-led company pursues a $75 billion offering at a $1.75 trillion valuation. OpenAI is also preparing to confidentially file for a U.S. IPO in the coming weeks, a source familiar with the matter told Reuters in late May, adding to a wave of blockbuster listings anticipated in the year ahead.",
+                    "score": 0.5914643
+                  },
+                  {
+                    "title": "SoftBank lines up €75bn data centre investment in France - Total Telecom",
+                    "url": "https://totaltele.com/softbank-lines-up-e75bn-data-centre-investment-in-france/",
+                    "source": "totaltele.com",
+                    "summary": "Posted by Harry Baldock | Jun 1, 2026 | Investment, INFRASTRUCTURE, AI, COMPANY NEWS, Cloud, Data Centres, Europe, News. ###### “France is uniquely positioned to become a leading AI infrastructure hub in Europe,” says SoftBank CEO Masayoshi Son. This week, SoftBank Group has announced plans to invest up to €75 billion to deploy 5 GW of AI-focused data centres in France. “With its industrial capabilities, talent base and national ambition, France is uniquely positioned to become a leading AI infrastructure hub in Europe.”. “SoftBank’s decision to invest massively in AI datacenters in France – a first for the group in Europe – is testament to President Emmanuel Macron’s ambition to position France as a leading destination all along the AI value chain,” said Roland Lescure, Minister of Economy, Finance, & Industrial, Energy, & Digital Sovereignty. France is quickly becoming something of a European champion for AI data centres, with major tech and telco consortium AION pledging to build an ‘AI gigafactory’ in the country just last month.",
+                    "score": 0.55478466
+                  },
+                  {
+                    "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                    "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                    "source": "washingtonpost.com",
+                    "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                    "score": 0.5393963
+                  },
+                  {
+                    "title": "Q2 2026 The State of Consumer AI - PitchBook",
+                    "url": "https://pitchbook.com/news/reports/q2-2026-the-state-of-consumer-ai",
+                    "source": "pitchbook.com",
+                    "summary": "# The State of Consumer AI. ### Series B emerges as the highest-conviction entry point in consumer AI venture. Cumulative consumer unicorn valuations tripled YoY to reach $1.4 trillion by the end of 2025, but the top 10 companies now account for nearly 80% of that total value, making the asset class functionally a bet on a handful of platforms. Meanwhile, a growing cohort of AI-native products have pushed consumer pricing past the $100-per-month threshold, a level that was commercially nonviable before the current wave and signals a blurring of consumer and enterprise-grade willingness to pay. Series B stands out as the highest-conviction entry point, combining a 97.1% success rate with 63.5% annualized returns. Against this backdrop, consumer sentiment has dropped to levels not seen since the global financial crisis, K-shaped wealth divergence is narrowing the addressable middle of the market, and generative AI app downloads have scaled to 3.8 billion annually, underscoring both the depth of adoption and the intensity of competition that private market investors must navigate.",
+                    "score": 0.5382315
+                  },
+                  {
+                    "title": "NYT Publisher Warns AI Companies May Lead to 'Unnecessary Harm' - Variety",
+                    "url": "https://variety.com/2026/biz/news/new-york-times-ai-companies-choices-unnecessary-harm-1236763934/",
+                    "source": "variety.com",
+                    "summary": "# New York Times Publisher Warns That AI Companies Are Making Choices That ‘Violate Settled Law’ and Could Cause a ‘Great Deal of Unnecessary Harm’. New York Times publisher A.G. Sulzberger warned that AI companies were making choices that could lead to “a great deal of unnecessary harm” to the news business and the public’s access to reliable sources, in a speech delivered during the World News Media Congress in France on Monday. Companies leading the development of generative-AI systems — including OpenAI, Meta, Anthropic and Google — are “failing to embrace a core responsibility” of their control over the data fueling the technology’s development, Sulzberger said: making sure the public has access to “trustworthy” news. He pinned the cause on the companies’ “hijacking” of the public’s attention, spurred by the content they’ve trained their large language models on, including news articles. I’m warning that AI companies are making choices that violate settled law, threaten the viability of creative work, and appear likely to cause a great deal of unnecessary harm.”.",
+                    "score": 0.52962893
+                  }
+                ]
+              }
+            },
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "AI",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "query": "AI",
+                "search_type": "Latest",
+                "items": [
+                  {
+                    "title": "姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価 https://t.co/XEPaisLwkQ #AI医療相談",
+                    "summary": "姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価 https://t.co/XEPaisLwkQ #AI医療相談",
+                    "url": "https://x.com/aiwatch_jp/status/2061740878084079970",
+                    "source": "@aiwatch_jp",
+                    "date": "Tue Jun 02 09:25:05 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": null
+                    }
+                  },
+                  {
+                    "title": "اونایی که دلواپس \"لخت کردن چادری‌ها با ai\" هستن رو هم بلاک می‌کنم. بیاین برین کیرم تو مغز نداشته‌تون شد. نگران خامنه‌ای ",
+                    "summary": "اونایی که دلواپس \"لخت کردن چادری‌ها با ai\" هستن رو هم بلاک می‌کنم. بیاین برین کیرم تو مغز نداشته‌تون شد. نگران خامنه‌ای و قاتل پای لانچر هم میشین شماها. واقعا آخوند دوست دارین فقط روتون نمیشه مستقیم بگین، با جاکشی و ادای \"وای نه این زن ستیزیه\" بیان می‌کنین. کثافتا.",
+                    "url": "https://x.com/idmafs/status/2061740874841637256",
+                    "source": "@idmafs",
+                    "date": "Tue Jun 02 09:25:04 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": null
+                    }
+                  },
+                  {
+                    "title": "ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。",
+                    "summary": "ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。\nある程度までのソフト開発といわれる分野が、もはやオンラインゲームのごとくなってるもん。ヤバイわよ。",
+                    "url": "https://x.com/YTxscc4lOtBHTKy/status/2061740874787336513",
+                    "source": "@YTxscc4lOtBHTKy",
+                    "date": "Tue Jun 02 09:25:04 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": null
+                    }
+                  },
+                  {
+                    "title": "@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون ",
+                    "summary": "@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون \n\nبا سند و مدرک:\n\nhttps://t.co/PeAgUdFF4t",
+                    "url": "https://x.com/s_modo_li/status/2061740874740949356",
+                    "source": "@s_modo_li",
+                    "date": "Tue Jun 02 09:25:04 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": null
+                    }
+                  },
+                  {
+                    "title": "@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!",
+                    "summary": "@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!",
+                    "url": "https://x.com/mode_jb/status/2061740874229223452",
+                    "source": "@mode_jb",
+                    "date": "Tue Jun 02 09:25:04 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": null
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "### Tin tức AI hôm nay:\n\n1. **AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future**  \n   - **Nguồn:** [HuffPost](https://www.huffpost.com/entry/anthropic-ai-ipo-wall-street_n_6a1db1fae4b032392fa3fc39)  \n   - **Tóm tắt:** AI giant Anthropic đã nộp hồ sơ bí mật cho một đợt phát hành cổ phiếu lần đầu ra công chúng (IPO) tại Mỹ, đánh dấu một bước quan trọng trong cơn sốt AI trên Phố Wall.\n\n2. **SoftBank lines up €75bn data centre investment in France**  \n   - **Nguồn:** [Total Telecom](https://totaltele.com/softbank-lines-up-e75bn-data-centre-investment-in-france/)  \n   - **Tóm tắt:** SoftBank đã công bố kế hoạch đầu tư lên tới 75 tỷ euro để triển khai các trung tâm dữ liệu tập trung vào AI tại Pháp, nhằm biến nước này thành một trung tâm hạ tầng AI hàng đầu ở châu Âu.\n\n3. **AI ad campaigns slam Trahan**  \n   - **Nguồn:** [The Washington Post](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/)  \n   - **Tóm tắt:** Một chiến dịch quảng cáo trị giá sáu con số đã được triển khai để chỉ trích đại diện Lori Trahan, cho rằng bà đang ủng hộ các \"đại gia AI\" trong các nỗ lực lập pháp của mình.\n\n4. **Q2 2026 The State of Consumer AI**  \n   - **Nguồn:** [PitchBook](https://pitchbook.com/news/reports/q2-2026-the-state-of-consumer-ai)  \n   - **Tóm tắt:** Báo cáo cho thấy giá trị của các công ty khởi nghiệp AI tiêu dùng đã tăng gấp ba lần so với năm trước, nhưng 10 công ty hàng đầu hiện chiếm gần 80% tổng giá trị.\n\n5. **NYT Publisher Warns AI Companies May Lead to 'Unnecessary Harm'**  \n   - **Nguồn:** [Variety](https://variety.com/2026/biz/news/new-york-times-ai-companies-choices-unnecessary-harm-1236763934/)  \n   - **Tóm tắt:** Nhà xuất bản của New York Times cảnh báo rằng các công ty AI đang đưa ra những lựa chọn có thể gây ra \"hại không cần thiết\" cho ngành báo chí và quyền truy cập của công chúng vào các nguồn tin cậy.\n\n---\n\n### Tweet mới về AI:\n\n1. **@aiwatch_jp**  \n   - **Nội dung:** \"姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価\"  \n   - **[Xem tweet](https://x.com/aiwatch_jp/status/2061740878084079970)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n2. **@idmafs**  \n   - **Nội dung:** \"اونایی که دلواپس \\\"لخت کردن چادری‌ها با ai\\\" هستن رو هم بلاک می‌کنم.\"  \n   - **[Xem tweet](https://x.com/idmafs/status/2061740874841637256)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n3. **@YTxscc4lOtBHTKy**  \n   - **Nội dung:** \"ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。\"  \n   - **[Xem tweet](https://x.com/YTxscc4lOtBHTKy/status/2061740874787336513)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n4. **@s_modo_li**  \n   - **Nội dung:** \"@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون\"  \n   - **[Xem tweet](https://x.com/s_modo_li/status/2061740874740949356)**  \n   - **Ngày:** 02 tháng 6, 2026\n\n5. **@mode_jb**  \n   - **Nội dung:** \"@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!\"  \n   - **[Xem tweet](https://x.com/mode_jb/status/2061740874229223452)**  \n   - **Ngày:** 02 tháng 6, 2026\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức hoặc tweet nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI news",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI news",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future - HuffPost",
+                "url": "https://www.huffpost.com/entry/anthropic-ai-ipo-wall-street_n_6a1db1fae4b032392fa3fc39",
+                "source": "huffpost.com",
+                "summary": "# AI Giant Anthropic Confidentially Files For U.S. IPO As Investors Bet Big On AI Future. AI giant Anthropic said on Monday it has confidentially filed for a U.S. initial public offering, teeing up what could become the watershed moment for Wall Street's AI frenzy. June 1 (Reuters) - AI giant Anthropic said on Monday it has confidentially filed for a U.S. initial public offering, teeing up what could become a watershed moment for Wall Street’s AI frenzy. The crucial step toward a listing comes on the heels of SpaceX’s mega-IPO, which is on course to rewrite the record books as the Elon Musk-led company pursues a $75 billion offering at a $1.75 trillion valuation. OpenAI is also preparing to confidentially file for a U.S. IPO in the coming weeks, a source familiar with the matter told Reuters in late May, adding to a wave of blockbuster listings anticipated in the year ahead.",
+                "score": 0.5914643
+              },
+              {
+                "title": "SoftBank lines up €75bn data centre investment in France - Total Telecom",
+                "url": "https://totaltele.com/softbank-lines-up-e75bn-data-centre-investment-in-france/",
+                "source": "totaltele.com",
+                "summary": "Posted by Harry Baldock | Jun 1, 2026 | Investment, INFRASTRUCTURE, AI, COMPANY NEWS, Cloud, Data Centres, Europe, News. ###### “France is uniquely positioned to become a leading AI infrastructure hub in Europe,” says SoftBank CEO Masayoshi Son. This week, SoftBank Group has announced plans to invest up to €75 billion to deploy 5 GW of AI-focused data centres in France. “With its industrial capabilities, talent base and national ambition, France is uniquely positioned to become a leading AI infrastructure hub in Europe.”. “SoftBank’s decision to invest massively in AI datacenters in France – a first for the group in Europe – is testament to President Emmanuel Macron’s ambition to position France as a leading destination all along the AI value chain,” said Roland Lescure, Minister of Economy, Finance, & Industrial, Energy, & Digital Sovereignty. France is quickly becoming something of a European champion for AI data centres, with major tech and telco consortium AION pledging to build an ‘AI gigafactory’ in the country just last month.",
+                "score": 0.55478466
+              },
+              {
+                "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                "source": "washingtonpost.com",
+                "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                "score": 0.5393963
+              },
+              {
+                "title": "Q2 2026 The State of Consumer AI - PitchBook",
+                "url": "https://pitchbook.com/news/reports/q2-2026-the-state-of-consumer-ai",
+                "source": "pitchbook.com",
+                "summary": "# The State of Consumer AI. ### Series B emerges as the highest-conviction entry point in consumer AI venture. Cumulative consumer unicorn valuations tripled YoY to reach $1.4 trillion by the end of 2025, but the top 10 companies now account for nearly 80% of that total value, making the asset class functionally a bet on a handful of platforms. Meanwhile, a growing cohort of AI-native products have pushed consumer pricing past the $100-per-month threshold, a level that was commercially nonviable before the current wave and signals a blurring of consumer and enterprise-grade willingness to pay. Series B stands out as the highest-conviction entry point, combining a 97.1% success rate with 63.5% annualized returns. Against this backdrop, consumer sentiment has dropped to levels not seen since the global financial crisis, K-shaped wealth divergence is narrowing the addressable middle of the market, and generative AI app downloads have scaled to 3.8 billion annually, underscoring both the depth of adoption and the intensity of competition that private market investors must navigate.",
+                "score": 0.5382315
+              },
+              {
+                "title": "NYT Publisher Warns AI Companies May Lead to 'Unnecessary Harm' - Variety",
+                "url": "https://variety.com/2026/biz/news/new-york-times-ai-companies-choices-unnecessary-harm-1236763934/",
+                "source": "variety.com",
+                "summary": "# New York Times Publisher Warns That AI Companies Are Making Choices That ‘Violate Settled Law’ and Could Cause a ‘Great Deal of Unnecessary Harm’. New York Times publisher A.G. Sulzberger warned that AI companies were making choices that could lead to “a great deal of unnecessary harm” to the news business and the public’s access to reliable sources, in a speech delivered during the World News Media Congress in France on Monday. Companies leading the development of generative-AI systems — including OpenAI, Meta, Anthropic and Google — are “failing to embrace a core responsibility” of their control over the data fueling the technology’s development, Sulzberger said: making sure the public has access to “trustworthy” news. He pinned the cause on the companies’ “hijacking” of the public’s attention, spurred by the content they’ve trained their large language models on, including news articles. I’m warning that AI companies are making choices that violate settled law, threaten the viability of creative work, and appear likely to cause a great deal of unnecessary harm.”.",
+                "score": 0.52962893
+              }
+            ]
+          }
+        },
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "AI",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "AI",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価 https://t.co/XEPaisLwkQ #AI医療相談",
+                "summary": "姫路市の夜間・休日の医療体制支援を目的とした「AI医療相談」実証実験 市民の76.3％からシステムの有用性を支持する肯定的な評価 https://t.co/XEPaisLwkQ #AI医療相談",
+                "url": "https://x.com/aiwatch_jp/status/2061740878084079970",
+                "source": "@aiwatch_jp",
+                "date": "Tue Jun 02 09:25:05 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "اونایی که دلواپس \"لخت کردن چادری‌ها با ai\" هستن رو هم بلاک می‌کنم. بیاین برین کیرم تو مغز نداشته‌تون شد. نگران خامنه‌ای ",
+                "summary": "اونایی که دلواپس \"لخت کردن چادری‌ها با ai\" هستن رو هم بلاک می‌کنم. بیاین برین کیرم تو مغز نداشته‌تون شد. نگران خامنه‌ای و قاتل پای لانچر هم میشین شماها. واقعا آخوند دوست دارین فقط روتون نمیشه مستقیم بگین، با جاکشی و ادای \"وای نه این زن ستیزیه\" بیان می‌کنین. کثافتا.",
+                "url": "https://x.com/idmafs/status/2061740874841637256",
+                "source": "@idmafs",
+                "date": "Tue Jun 02 09:25:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。",
+                "summary": "ホント、自分みたいな才能の無い奴じゃなくて、すでに一芸を持っている（その分野の一連の流れを把握している）と自負している人にこそ AIに慣れていてほしいね。\nある程度までのソフト開発といわれる分野が、もはやオンラインゲームのごとくなってるもん。ヤバイわよ。",
+                "url": "https://x.com/YTxscc4lOtBHTKy/status/2061740874787336513",
+                "source": "@YTxscc4lOtBHTKy",
+                "date": "Tue Jun 02 09:25:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون ",
+                "summary": "@Zayandeh03 Ai چرا وقتی واقعیش بعد کافه و روی تخت اومد بیرون \n\nبا سند و مدرک:\n\nhttps://t.co/PeAgUdFF4t",
+                "url": "https://x.com/s_modo_li/status/2061740874740949356",
+                "source": "@s_modo_li",
+                "date": "Tue Jun 02 09:25:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!",
+                "summary": "@GAndersonTrades The money is all into semis and AI. When those burst, then it will come back!",
+                "url": "https://x.com/mode_jb/status/2061740874229223452",
+                "source": "@mode_jb",
+                "date": "Tue Jun 02 09:25:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T16:25:35"
+    }
+  ]
+}

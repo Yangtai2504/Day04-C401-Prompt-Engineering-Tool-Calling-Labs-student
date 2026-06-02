@@ -1,0 +1,290 @@
+{
+  "transcript_id": "ui_20260602T155437446484",
+  "version": "(current)",
+  "artifact_version": "(current)+p79b9d12242d8+t8206e478b7cb",
+  "prompt_hash": "79b9d12242d883585870d9c81a77d2fa447c144cdbe846b723df9e1ace75a45e",
+  "tools_hash": "8206e478b7cb7c82b50ad9650240095d2f3a588a8bc9faaa0e9adeccc02edd20",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Cho tôi citation BibTeX của bài Attention Is All You Need",
+      "status": "answered",
+      "assistant_text": "Dưới đây là citation BibTeX cho bài báo \"Attention Is All You Need\":\n\n```bibtex\n@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}\n```",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "cite",
+              "args": {
+                "arxiv_id": "1706.03762",
+                "style": "bibtex"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "cite",
+              "args": {
+                "arxiv_id": "1706.03762",
+                "style": "bibtex"
+              },
+              "result": {
+                "tool": "cite",
+                "arxiv_id": "1706.03762",
+                "style": "bibtex",
+                "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+                "title": "Attention Is All You Need",
+                "authors": [
+                  "Ashish Vaswani",
+                  "Noam Shazeer",
+                  "Niki Parmar",
+                  "Jakob Uszkoreit",
+                  "Llion Jones",
+                  "Aidan N. Gomez",
+                  "Lukasz Kaiser",
+                  "Illia Polosukhin"
+                ],
+                "year": "2017"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là citation BibTeX cho bài báo \"Attention Is All You Need\":\n\n```bibtex\n@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}\n```",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "1706.03762",
+            "style": "bibtex"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "1706.03762",
+            "style": "bibtex",
+            "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+            "title": "Attention Is All You Need",
+            "authors": [
+              "Ashish Vaswani",
+              "Noam Shazeer",
+              "Niki Parmar",
+              "Jakob Uszkoreit",
+              "Llion Jones",
+              "Aidan N. Gomez",
+              "Lukasz Kaiser",
+              "Illia Polosukhin"
+            ],
+            "year": "2017"
+          }
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "user": "Hôm nay trending gì",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số chủ đề đang trending tại Việt Nam hôm nay:\n\n1. **[Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda - CNN](https://www.cnn.com/2026/06/01/politics/hackers-space-force-official-instagram-iranian-propaganda)**  \n   Hackers đã xâm nhập vào tài khoản Instagram của một quan chức cấp cao của Lực lượng Không gian Hoa Kỳ và đăng tải các thông điệp tuyên truyền ủng hộ Iran.\n\n2. **[China’s model smart dairy factory offers lessons for Vietnam - Báo VietNamNet](https://vietnamnet.vn/en/china-s-model-smart-dairy-factory-offers-lessons-for-vietnam-2521949.html)**  \n   Các nhà sản xuất sữa tại Việt Nam đang theo đuổi chuyển đổi số thông qua các nền tảng dữ liệu mở.\n\n3. **[India confirms deal to supply Brahmos missile to Vietnam - Army Technology](https://www.army-technology.com/news/india-brahmos-missile-vietnam/)**  \n   Ấn Độ đã ký thỏa thuận cung cấp tên lửa BrahMos cho Việt Nam, với tầm bắn lên tới 290 km.\n\n4. **[A Soviet Jew’s Warning About Propaganda - The Times of Israel](https://blogs.timesofisrael.com/a-soviet-jews-warning-about-propaganda/)**  \n   Một bài viết cảnh báo về sự khác biệt giữa truyền thông và tuyên truyền, nhấn mạnh tầm quan trọng của việc đặt câu hỏi về thông tin tiêu thụ.\n\n5. **[SEA-H2X cable linking China and Southeast Asia is ready for service - Developing Telecoms](https://www.developingtelecoms.com/telecom-technology/optical-fixed-networks/20328-sea-h2x-cable-linking-china-and-southeast-asia-is-ready-for-service.html)**  \n   Cáp SEA-H2X kết nối Trung Quốc và Đông Nam Á đã sẵn sàng phục vụ, hỗ trợ nhu cầu ngày càng tăng về AI và điện toán đám mây.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chủ đề nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "trending",
+              "args": {
+                "country": "vietnam"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "trending",
+              "args": {
+                "country": "vietnam"
+              },
+              "result": {
+                "tool": "trending",
+                "country": "vietnam",
+                "query_used": "trending topics today in vietnam",
+                "items": [
+                  {
+                    "title": "Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda - CNN",
+                    "url": "https://www.cnn.com/2026/06/01/politics/hackers-space-force-official-instagram-iranian-propaganda",
+                    "source": "cnn.com",
+                    "summary": "# Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda. * Hackers breached the Instagram account of a senior Space Force official and posted pro-Iran propaganda. * Chief Master Sgt. John Bentivegna's account temporarily displayed videos invoking Vietnam War propaganda and anti-US messaging. Hackers breached a senior US Space Force official’s Instagram account and temporarily posted a string of pro-Iran and anti-US propaganda on Sunday, some of it invoking the Vietnam War. One video reviewed by CNN used audio from “Hanoi Hannah,” an infamous Vietnam War propagandist, telling US soldiers to “leave a sinking ship.” The video also featured images of late Iranian security official Ali Larijani, who was killed weeks into the US-Israel-Iran war. The hack of Bentivegna’s Instagram account is only the latest front in the propaganda battles that have been a feature of the US war with Iran.",
+                    "score": 0.060086645
+                  },
+                  {
+                    "title": "China’s model smart dairy factory offers lessons for Vietnam - Báo VietNamNet",
+                    "url": "https://vietnamnet.vn/en/china-s-model-smart-dairy-factory-offers-lessons-for-vietnam-2521949.html",
+                    "source": "vietnamnet.vn",
+                    "summary": "## Vietnam’s dairy manufacturers are pursuing digital transformation through open data platforms that connect aging machinery with modern IoT systems. In the fourth quarter of 2024, the World Economic Forum (WEF) officially recognized Mengniu’s Ningxia facility in China as a Lighthouse Factory. The Lighthouse Factory title is awarded by the WEF to manufacturing facilities that pioneer the use of advanced digital technologies to create customer value, accelerate time-to-market and optimize operational efficiency. The results achieved by the Lighthouse Factory model have established a new benchmark for the global dairy industry. Speaking to VietNamNet on the sidelines of the International Dairy and Dairy Products Exhibition 2026, Nguyen Van, Technical Director of Tetra Pak Vietnam, said the greatest challenge facing Vietnam’s dairy sector is the lack of infrastructure uniformity. In Vietnam, major dairy producers are beginning to incorporate these technologies into their smart factory roadmaps, gradually narrowing the gap between local manufacturing operations and the world’s leading Lighthouse Factories.",
+                    "score": 0.05749328
+                  },
+                  {
+                    "title": "India confirms deal to supply Brahmos missile to Vietnam - Army Technology",
+                    "url": "https://www.army-technology.com/news/india-brahmos-missile-vietnam/",
+                    "source": "army-technology.com",
+                    "summary": "# India confirms deal to supply Brahmos missile to Vietnam. The two-stage missile has a flight range of up to 290km and is capable of carrying a conventional warhead weighing up to 200kg. India has signed an agreement to supply BrahMos supersonic cruise missiles to Vietnam, according to Defence Secretary Rajesh Kumar Singh. The potential deal with Vietnam was previously reported by Reuters, which cited two sources stating that Vietnamese President To Lam was expected to discuss expanding defence cooperation involving BrahMos missiles with India during a visit to New Delhi. India has previously exported BrahMos missiles to the Philippines and entered into a contract with Indonesia in March, as part of its efforts to increase domestic defence manufacturing for both domestic and export markets. Singh also stated that India is in the “final stages” of negotiations on a BrahMos missile supply deal with Indonesia. The design allows the missile to maintain supersonic speeds of up to 2.8 Mach throughout its flight, with a maximum range of 290km.",
+                    "score": 0.039937314
+                  },
+                  {
+                    "title": "A Soviet Jew’s Warning About Propaganda - The Times of Israel",
+                    "url": "https://blogs.timesofisrael.com/a-soviet-jews-warning-about-propaganda/",
+                    "source": "blogs.timesofisrael.com",
+                    "summary": "* You will receive email alerts from this author. You will no longer receive email alerts from this author. # A Soviet Jew’s Warning About Propaganda. The idea was simple…have dialogue. For decades, universities have been the birthplace of intellectual movements and political activism. From Vietnam to civil rights to anti apartheid movements, college campuses have served as places where ideas are challenged, debated, and refined, and manifested. The goal was not to convince everyone to agree. The goal was to create an opportunity for students who had never met an Israeli soldier to engage with a real human being one-on-one. I grew up understanding the difference between media and propaganda. Propaganda is not designed to inform. Whatever one’s views of the war, no Israeli soldier is instructed to enter Gaza with the mission of killing children. How do we teach an entire generation to question what they are consuming rather than simply repeating it?",
+                    "score": 0.005708034
+                  },
+                  {
+                    "title": "SEA-H2X cable linking China and Southeast Asia is ready for service - Developing Telecoms",
+                    "url": "https://www.developingtelecoms.com/telecom-technology/optical-fixed-networks/20328-sea-h2x-cable-linking-china-and-southeast-asia-is-ready-for-service.html",
+                    "source": "developingtelecoms.com",
+                    "summary": "## SEA-H2X cable linking China and Southeast Asia is ready for service. Chinese subsea cable firm HMN Tech has announced that the South East Asia Hainan–Hong Kong Express Cable System (SEA-H2X) connecting China to Southeast Asia is now ready for service. The 6,000-km SEA-H2X subsea cable – which is owned by China Mobile International, China Unicom Global and Converge ICT – runs from China’s Hainan Province and Hong Kong to the Philippines, Thailand and Singapore. It’s also designed to support extensions to Vietnam, Cambodia, Indonesia, East Malaysia and the Malaysian peninsula. HMN said in a statement on Thursday that it deployed its 39.5-nm bandwidth repeaters and ultra-low-loss optical fibres in the system, delivering a system capacity of over 200 Tbps designed to support the growing requirements of AI, cloud computing, and international data centres across Southeast Asia with higher capacity and lower latency. SEA-H2X has been in the works since at least 2022, and was initially scheduled to be ready for service in 2024.",
+                    "score": 0.0040072887
+                  },
+                  {
+                    "title": "June 1: Anti-weaponization fund, NC police officer assault charge - NBC News",
+                    "url": "https://www.nbcnews.com/nightly-news-netcast/video/nbc-nightly-news-full-episode-june-1-264319045609",
+                    "source": "nbcnews.com",
+                    "summary": "For an optimal experience visit our site on another browser. ## May 31: ICE Protests, Flight Security Scare, Manhunt. * ## May 30: Cave Rescue, Loud Boom, ICE Protests. * ## May 29: Cave rescue, deadly bus crash. * ## May 28: Deadly Dallas explosion, Jill Biden memoir. ## Nightly News Netcast. Trump speaks to NBC News amid Iran talks and administration's apparent abandonment of $1.8 billion fund; Fired police officer charged after video appears to show him repeatedly punching woman; Race against time to find and rescue two men in Laos Cave; and more on tonight's broadcast.June 2, 2026. ## Best of NBC News. ## Top Story. ## Kornacki breaks down numbers on NBA Finals for Spurs and Knicks. ## Taylor Swift announces new original song for 'Toy Story 5'. ## Bad Bunny may meet Pope Leo as they both visit Madrid. ## Sonic booms heard around the U.S. ## How Israeli attacks in Lebanon impact U.S. talks with Iran.",
+                    "score": 0.0027683857
+                  },
+                  {
+                    "title": "PTL Chat: June 1, 2026 - CBS News",
+                    "url": "https://www.cbsnews.com/pittsburgh/video/ptl-chat-june-1-2026/",
+                    "source": "cbsnews.com",
+                    "summary": "* Out For A Walk Forecast. # PTL Chat: June 1, 2026. PTL hosts Heather Abraham and David Highfield discuss Pittsburgh culture, trending news and social media, food, sports, and more.",
+                    "score": 0.0015854307
+                  },
+                  {
+                    "title": "Meet the top 10 most active defense tech VCs - PitchBook",
+                    "url": "https://pitchbook.com/news/articles/meet-the-top-10-most-active-defense-tech-vcs",
+                    "source": "pitchbook.com",
+                    "summary": "# Meet the top 10 most active defense tech VCs. A small group of venture capital firms is driving a record flood of capital into defense tech as investors seize geopolitical tailwinds, including the US war with Iran and continued tensions with China. VCs invested a record $19.8 billion into the sector in Q1—the most ever in a single quarter, and more than a third of 2025’s full-year total, according to PitchBook’s Q1 2026 Defense Tech VC Trends report. The most active check writers ranged from Andreessen Horowitz to a $50 million shop focused on deep tech, underscoring the widespread interest among VCs. Late-stage and venture growth rounds captured 88% of that $19.8 billion. The Iran war has been a significant factor in investment growth, but not the only one, according to Ryan Micheletti, co-founder and GP of The Veteran Fund. Here are the top 10 most-active VCs in defense tech in Q1 2026, ranked by deal count globally, according to PitchBook data.",
+                    "score": 0.0013045067
+                  },
+                  {
+                    "title": "Live Baseball Updates: No. 10 FSU plays St. John's in Tallahassee Regional Final (12:00 p.m.) - 247Sports",
+                    "url": "https://247sports.com/college/florida-state/article/florida-state-seminoles-fsu-baseball-live-updates-st-johns-tallahassee-regional-final-287167789/",
+                    "source": "247sports.com",
+                    "summary": "JoinFREE Noles247.com Newsletter - Join Today. * **Trending**Former Florida State star Jared Verse heads to Browns in blockbuster Myles Garrett trade. * **Trending**Photo Gallery: Florida State defeats Northern Illinois to remain alive in the Tallahassee Regional. ## Florida State will need to win two games on Monday to advance to the Tuscaloosa Super Regional. The Red Storm are in the driver's seat of the regional after a 2-0 start, including a 6-5 win over FSU on Friday. The Seminoles would have to beat them twice to advance to the Tuscaloosa Super Regional. The 'Noles are the away team for this game. FSU came out of the loser's bracket with a 2-1 win over **Coastal Carolina** and a 7-4 extra-innings win against **Northern Illinois**. *Beard dominates in relief, Seminoles survive elimination game against Coastal Carolina*. *FSU breaks out for three runs in extras to survive second elimination game of the day*. > Heading into today: pic.twitter.com/YJWa2Sy8dK. Follow along in the thread below for live updates.",
+                    "score": 0.0010628869
+                  },
+                  {
+                    "title": "10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated - CBS News",
+                    "url": "https://www.cbsnews.com/newyork/video/10th-congressional-district-debate-between-rep-dan-goldman-brad-lander-gets-heated/",
+                    "source": "cbsnews.com",
+                    "summary": "* Book Club with Mary Calvi. * Class Act with Chris Wragge. * The 5:33 | Legacy of the LIRR Massacre. * On The Dot with David Schechter: Wildfires & Climate Change. * Climate Change: Protecting our Planet. # 10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated. The incumbent and challenger addressing topics like immigration enforcement, taxing the wealthy, and bringing affordable housing to the Brooklyn Marine Terminal. CBS News New York's Dick Brennan reports.",
+                    "score": 0.0010044163
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số chủ đề đang trending tại Việt Nam hôm nay:\n\n1. **[Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda - CNN](https://www.cnn.com/2026/06/01/politics/hackers-space-force-official-instagram-iranian-propaganda)**  \n   Hackers đã xâm nhập vào tài khoản Instagram của một quan chức cấp cao của Lực lượng Không gian Hoa Kỳ và đăng tải các thông điệp tuyên truyền ủng hộ Iran.\n\n2. **[China’s model smart dairy factory offers lessons for Vietnam - Báo VietNamNet](https://vietnamnet.vn/en/china-s-model-smart-dairy-factory-offers-lessons-for-vietnam-2521949.html)**  \n   Các nhà sản xuất sữa tại Việt Nam đang theo đuổi chuyển đổi số thông qua các nền tảng dữ liệu mở.\n\n3. **[India confirms deal to supply Brahmos missile to Vietnam - Army Technology](https://www.army-technology.com/news/india-brahmos-missile-vietnam/)**  \n   Ấn Độ đã ký thỏa thuận cung cấp tên lửa BrahMos cho Việt Nam, với tầm bắn lên tới 290 km.\n\n4. **[A Soviet Jew’s Warning About Propaganda - The Times of Israel](https://blogs.timesofisrael.com/a-soviet-jews-warning-about-propaganda/)**  \n   Một bài viết cảnh báo về sự khác biệt giữa truyền thông và tuyên truyền, nhấn mạnh tầm quan trọng của việc đặt câu hỏi về thông tin tiêu thụ.\n\n5. **[SEA-H2X cable linking China and Southeast Asia is ready for service - Developing Telecoms](https://www.developingtelecoms.com/telecom-technology/optical-fixed-networks/20328-sea-h2x-cable-linking-china-and-southeast-asia-is-ready-for-service.html)**  \n   Cáp SEA-H2X kết nối Trung Quốc và Đông Nam Á đã sẵn sàng phục vụ, hỗ trợ nhu cầu ngày càng tăng về AI và điện toán đám mây.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chủ đề nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "trending",
+          "args": {
+            "country": "vietnam"
+          },
+          "result": {
+            "tool": "trending",
+            "country": "vietnam",
+            "query_used": "trending topics today in vietnam",
+            "items": [
+              {
+                "title": "Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda - CNN",
+                "url": "https://www.cnn.com/2026/06/01/politics/hackers-space-force-official-instagram-iranian-propaganda",
+                "source": "cnn.com",
+                "summary": "# Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda. * Hackers breached the Instagram account of a senior Space Force official and posted pro-Iran propaganda. * Chief Master Sgt. John Bentivegna's account temporarily displayed videos invoking Vietnam War propaganda and anti-US messaging. Hackers breached a senior US Space Force official’s Instagram account and temporarily posted a string of pro-Iran and anti-US propaganda on Sunday, some of it invoking the Vietnam War. One video reviewed by CNN used audio from “Hanoi Hannah,” an infamous Vietnam War propagandist, telling US soldiers to “leave a sinking ship.” The video also featured images of late Iranian security official Ali Larijani, who was killed weeks into the US-Israel-Iran war. The hack of Bentivegna’s Instagram account is only the latest front in the propaganda battles that have been a feature of the US war with Iran.",
+                "score": 0.060086645
+              },
+              {
+                "title": "China’s model smart dairy factory offers lessons for Vietnam - Báo VietNamNet",
+                "url": "https://vietnamnet.vn/en/china-s-model-smart-dairy-factory-offers-lessons-for-vietnam-2521949.html",
+                "source": "vietnamnet.vn",
+                "summary": "## Vietnam’s dairy manufacturers are pursuing digital transformation through open data platforms that connect aging machinery with modern IoT systems. In the fourth quarter of 2024, the World Economic Forum (WEF) officially recognized Mengniu’s Ningxia facility in China as a Lighthouse Factory. The Lighthouse Factory title is awarded by the WEF to manufacturing facilities that pioneer the use of advanced digital technologies to create customer value, accelerate time-to-market and optimize operational efficiency. The results achieved by the Lighthouse Factory model have established a new benchmark for the global dairy industry. Speaking to VietNamNet on the sidelines of the International Dairy and Dairy Products Exhibition 2026, Nguyen Van, Technical Director of Tetra Pak Vietnam, said the greatest challenge facing Vietnam’s dairy sector is the lack of infrastructure uniformity. In Vietnam, major dairy producers are beginning to incorporate these technologies into their smart factory roadmaps, gradually narrowing the gap between local manufacturing operations and the world’s leading Lighthouse Factories.",
+                "score": 0.05749328
+              },
+              {
+                "title": "India confirms deal to supply Brahmos missile to Vietnam - Army Technology",
+                "url": "https://www.army-technology.com/news/india-brahmos-missile-vietnam/",
+                "source": "army-technology.com",
+                "summary": "# India confirms deal to supply Brahmos missile to Vietnam. The two-stage missile has a flight range of up to 290km and is capable of carrying a conventional warhead weighing up to 200kg. India has signed an agreement to supply BrahMos supersonic cruise missiles to Vietnam, according to Defence Secretary Rajesh Kumar Singh. The potential deal with Vietnam was previously reported by Reuters, which cited two sources stating that Vietnamese President To Lam was expected to discuss expanding defence cooperation involving BrahMos missiles with India during a visit to New Delhi. India has previously exported BrahMos missiles to the Philippines and entered into a contract with Indonesia in March, as part of its efforts to increase domestic defence manufacturing for both domestic and export markets. Singh also stated that India is in the “final stages” of negotiations on a BrahMos missile supply deal with Indonesia. The design allows the missile to maintain supersonic speeds of up to 2.8 Mach throughout its flight, with a maximum range of 290km.",
+                "score": 0.039937314
+              },
+              {
+                "title": "A Soviet Jew’s Warning About Propaganda - The Times of Israel",
+                "url": "https://blogs.timesofisrael.com/a-soviet-jews-warning-about-propaganda/",
+                "source": "blogs.timesofisrael.com",
+                "summary": "* You will receive email alerts from this author. You will no longer receive email alerts from this author. # A Soviet Jew’s Warning About Propaganda. The idea was simple…have dialogue. For decades, universities have been the birthplace of intellectual movements and political activism. From Vietnam to civil rights to anti apartheid movements, college campuses have served as places where ideas are challenged, debated, and refined, and manifested. The goal was not to convince everyone to agree. The goal was to create an opportunity for students who had never met an Israeli soldier to engage with a real human being one-on-one. I grew up understanding the difference between media and propaganda. Propaganda is not designed to inform. Whatever one’s views of the war, no Israeli soldier is instructed to enter Gaza with the mission of killing children. How do we teach an entire generation to question what they are consuming rather than simply repeating it?",
+                "score": 0.005708034
+              },
+              {
+                "title": "SEA-H2X cable linking China and Southeast Asia is ready for service - Developing Telecoms",
+                "url": "https://www.developingtelecoms.com/telecom-technology/optical-fixed-networks/20328-sea-h2x-cable-linking-china-and-southeast-asia-is-ready-for-service.html",
+                "source": "developingtelecoms.com",
+                "summary": "## SEA-H2X cable linking China and Southeast Asia is ready for service. Chinese subsea cable firm HMN Tech has announced that the South East Asia Hainan–Hong Kong Express Cable System (SEA-H2X) connecting China to Southeast Asia is now ready for service. The 6,000-km SEA-H2X subsea cable – which is owned by China Mobile International, China Unicom Global and Converge ICT – runs from China’s Hainan Province and Hong Kong to the Philippines, Thailand and Singapore. It’s also designed to support extensions to Vietnam, Cambodia, Indonesia, East Malaysia and the Malaysian peninsula. HMN said in a statement on Thursday that it deployed its 39.5-nm bandwidth repeaters and ultra-low-loss optical fibres in the system, delivering a system capacity of over 200 Tbps designed to support the growing requirements of AI, cloud computing, and international data centres across Southeast Asia with higher capacity and lower latency. SEA-H2X has been in the works since at least 2022, and was initially scheduled to be ready for service in 2024.",
+                "score": 0.0040072887
+              },
+              {
+                "title": "June 1: Anti-weaponization fund, NC police officer assault charge - NBC News",
+                "url": "https://www.nbcnews.com/nightly-news-netcast/video/nbc-nightly-news-full-episode-june-1-264319045609",
+                "source": "nbcnews.com",
+                "summary": "For an optimal experience visit our site on another browser. ## May 31: ICE Protests, Flight Security Scare, Manhunt. * ## May 30: Cave Rescue, Loud Boom, ICE Protests. * ## May 29: Cave rescue, deadly bus crash. * ## May 28: Deadly Dallas explosion, Jill Biden memoir. ## Nightly News Netcast. Trump speaks to NBC News amid Iran talks and administration's apparent abandonment of $1.8 billion fund; Fired police officer charged after video appears to show him repeatedly punching woman; Race against time to find and rescue two men in Laos Cave; and more on tonight's broadcast.June 2, 2026. ## Best of NBC News. ## Top Story. ## Kornacki breaks down numbers on NBA Finals for Spurs and Knicks. ## Taylor Swift announces new original song for 'Toy Story 5'. ## Bad Bunny may meet Pope Leo as they both visit Madrid. ## Sonic booms heard around the U.S. ## How Israeli attacks in Lebanon impact U.S. talks with Iran.",
+                "score": 0.0027683857
+              },
+              {
+                "title": "PTL Chat: June 1, 2026 - CBS News",
+                "url": "https://www.cbsnews.com/pittsburgh/video/ptl-chat-june-1-2026/",
+                "source": "cbsnews.com",
+                "summary": "* Out For A Walk Forecast. # PTL Chat: June 1, 2026. PTL hosts Heather Abraham and David Highfield discuss Pittsburgh culture, trending news and social media, food, sports, and more.",
+                "score": 0.0015854307
+              },
+              {
+                "title": "Meet the top 10 most active defense tech VCs - PitchBook",
+                "url": "https://pitchbook.com/news/articles/meet-the-top-10-most-active-defense-tech-vcs",
+                "source": "pitchbook.com",
+                "summary": "# Meet the top 10 most active defense tech VCs. A small group of venture capital firms is driving a record flood of capital into defense tech as investors seize geopolitical tailwinds, including the US war with Iran and continued tensions with China. VCs invested a record $19.8 billion into the sector in Q1—the most ever in a single quarter, and more than a third of 2025’s full-year total, according to PitchBook’s Q1 2026 Defense Tech VC Trends report. The most active check writers ranged from Andreessen Horowitz to a $50 million shop focused on deep tech, underscoring the widespread interest among VCs. Late-stage and venture growth rounds captured 88% of that $19.8 billion. The Iran war has been a significant factor in investment growth, but not the only one, according to Ryan Micheletti, co-founder and GP of The Veteran Fund. Here are the top 10 most-active VCs in defense tech in Q1 2026, ranked by deal count globally, according to PitchBook data.",
+                "score": 0.0013045067
+              },
+              {
+                "title": "Live Baseball Updates: No. 10 FSU plays St. John's in Tallahassee Regional Final (12:00 p.m.) - 247Sports",
+                "url": "https://247sports.com/college/florida-state/article/florida-state-seminoles-fsu-baseball-live-updates-st-johns-tallahassee-regional-final-287167789/",
+                "source": "247sports.com",
+                "summary": "JoinFREE Noles247.com Newsletter - Join Today. * **Trending**Former Florida State star Jared Verse heads to Browns in blockbuster Myles Garrett trade. * **Trending**Photo Gallery: Florida State defeats Northern Illinois to remain alive in the Tallahassee Regional. ## Florida State will need to win two games on Monday to advance to the Tuscaloosa Super Regional. The Red Storm are in the driver's seat of the regional after a 2-0 start, including a 6-5 win over FSU on Friday. The Seminoles would have to beat them twice to advance to the Tuscaloosa Super Regional. The 'Noles are the away team for this game. FSU came out of the loser's bracket with a 2-1 win over **Coastal Carolina** and a 7-4 extra-innings win against **Northern Illinois**. *Beard dominates in relief, Seminoles survive elimination game against Coastal Carolina*. *FSU breaks out for three runs in extras to survive second elimination game of the day*. > Heading into today: pic.twitter.com/YJWa2Sy8dK. Follow along in the thread below for live updates.",
+                "score": 0.0010628869
+              },
+              {
+                "title": "10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated - CBS News",
+                "url": "https://www.cbsnews.com/newyork/video/10th-congressional-district-debate-between-rep-dan-goldman-brad-lander-gets-heated/",
+                "source": "cbsnews.com",
+                "summary": "* Book Club with Mary Calvi. * Class Act with Chris Wragge. * The 5:33 | Legacy of the LIRR Massacre. * On The Dot with David Schechter: Wildfires & Climate Change. * Climate Change: Protecting our Planet. # 10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated. The incumbent and challenger addressing topics like immigration enforcement, taxing the wealthy, and bringing affordable housing to the Brooklyn Marine Terminal. CBS News New York's Dick Brennan reports.",
+                "score": 0.0010044163
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:55:23"
+}

@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TIMEOUT = 30
+TIMEOUT = 60
 
 
 def err(tool: str, exc: Exception) -> dict[str, Any]:

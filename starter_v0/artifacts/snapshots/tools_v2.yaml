@@ -9,12 +9,12 @@
 tools:
   # ---------------- Core tools ----------------
   - name: clarify
-    description: "Hỏi người dùng khi thiếu thông tin bắt buộc hoặc cần xác nhận trước khi thực hiện hành động. Dùng response_type=text khi cần thông tin tự do (handle, URL). Dùng response_type=yes_no khi cần xác nhận hành động ghi (gửi, đăng)."
+    description: "Gửi một câu hỏi cho người dùng."
     parameters:
       type: object
       properties:
         question: {type: string, default: "", description: "Câu hỏi"}
-        response_type: {type: string, enum: [text, yes_no, choice], default: "text", description: "Kiểu trả lời: text=thông tin tự do, yes_no=xác nhận hành động"}
+        response_type: {type: string, enum: [text, yes_no, choice], default: "text", description: "Kiểu trả lời"}
         options: {type: array, default: [], items: {type: string}, description: "Các lựa chọn"}
       required: [question]
 
@@ -77,42 +77,14 @@ tools:
         headline: {type: string, default: "", description: "Tiêu đề"}
       required: [items, template]
 
-  - name: trending
-    description: "Lấy danh sách trending topics trên Twitter/X theo quốc gia. Dùng khi user muốn biết chủ đề đang hot mà không có keyword cụ thể. Khác với social_search (tìm theo keyword), trending trả về những gì đang được thảo luận nhiều nhất hiện tại."
-    parameters:
-      type: object
-      properties:
-        country: {type: string, default: "worldwide", description: "Tên quốc gia hoặc mã (vd: vietnam, us, japan, worldwide)"}
-        limit: {type: integer, default: 10, description: "Số lượng trending topics trả về"}
-      required: []
-
-  - name: cite
-    description: "Format citation (trích dẫn) cho một bài báo arXiv theo style BibTeX, APA, hoặc plain text. Dùng sau khi có arxiv_id từ tool papers. Không cần API ngoài."
-    parameters:
-      type: object
-      properties:
-        arxiv_id: {type: string, default: "", description: "arXiv ID, ví dụ: 1706.03762"}
-        style: {type: string, enum: [bibtex, apa, plain], default: "bibtex", description: "Format citation: bibtex cho LaTeX, apa cho văn bản, plain cho text thông thường"}
-      required: [arxiv_id]
-
-  - name: summarize
-    description: "Trích xuất các ý chính từ văn bản thô (nội dung từ fetch hoặc paper_text) thành danh sách key points. Dùng khi cần tóm tắt sâu nội dung đầy đủ, không phải abstract. Truyền trường 'text' từ kết quả của paper_text hoặc fetch vào đây."
-    parameters:
-      type: object
-      properties:
-        text: {type: string, default: "", description: "Nội dung văn bản cần tóm tắt"}
-        max_points: {type: integer, default: 5, description: "Số lượng ý chính tối đa"}
-        lang: {type: string, default: "auto", description: "Ngôn ngữ (auto tự phát hiện)"}
-      required: [text]
-
   # ---------------- Bonus tools ----------------
   - name: send
-    description: "Gửi một đoạn văn bản lên Telegram. CHỈ gọi tool này khi confirmed=true. Trước khi gọi send, BẮT BUỘC phải gọi clarify với response_type=yes_no để xác nhận với người dùng. Không bao giờ gọi send trực tiếp mà không có bước xác nhận."
+    description: "Gửi một đoạn văn bản đi."
     parameters:
       type: object
       properties:
-        text: {type: string, default: "", description: "Nội dung cần gửi"}
-        confirmed: {type: boolean, default: false, description: "Phải là true — chỉ set true sau khi người dùng xác nhận qua clarify"}
+        text: {type: string, default: "", description: "Nội dung"}
+        confirmed: {type: boolean, default: false, description: "Cờ xác nhận"}
       required: [text]
 
   - name: policy

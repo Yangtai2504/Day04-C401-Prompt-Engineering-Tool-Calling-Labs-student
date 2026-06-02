@@ -1,0 +1,102 @@
+{
+  "transcript_id": "ui_20260602T153938638420",
+  "version": "(current)",
+  "artifact_version": "(current)+p812087e2a5a8+te2007a262a00",
+  "prompt_hash": "812087e2a5a8dac90f14f55ba4005770537b369f63713cc4b656bda167bc1714",
+  "tools_hash": "e2007a262a001ba244ef540c79e7a08cc97c898280043f1c992827a8c5d2aa61",
+  "provider": "openrouter",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Tìm bài báo mới nhất của Yann Lecun và tóm tắt bài báo đó",
+      "status": "answered",
+      "assistant_text": "Xin lỗi, nhưng tôi không thể tìm được thông tin về bài báo mới nhất của Yann Lecun. Tôi đã gặp một lỗi khi gọi công cụ tìm kiếm bài báo.\n\nNếu bạn muốn tìm kiếm thông tin khác, vui lòng cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": [
+                {
+                  "query": "Yann Lecun",
+                  "max_results": 1,
+                  "sort_by": "lastUpdatedDate"
+                },
+                {
+                  "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+                  "max_points": 5,
+                  "lang": "auto"
+                },
+                {
+                  "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+                  "confirmed": true
+                }
+              ]
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": [
+                {
+                  "query": "Yann Lecun",
+                  "max_results": 1,
+                  "sort_by": "lastUpdatedDate"
+                },
+                {
+                  "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+                  "max_points": 5,
+                  "lang": "auto"
+                },
+                {
+                  "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+                  "confirmed": true
+                }
+              ],
+              "result": {
+                "error": "TypeError",
+                "message": "tools.papers.tool.arxiv_search() argument after ** must be a mapping, not list"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Xin lỗi, nhưng tôi không thể tìm được thông tin về bài báo mới nhất của Yann Lecun. Tôi đã gặp một lỗi khi gọi công cụ tìm kiếm bài báo.\n\nNếu bạn muốn tìm kiếm thông tin khác, vui lòng cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": [
+            {
+              "query": "Yann Lecun",
+              "max_results": 1,
+              "sort_by": "lastUpdatedDate"
+            },
+            {
+              "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+              "max_points": 5,
+              "lang": "auto"
+            },
+            {
+              "text": "tóm tắt bài báo mới nhất của Yann Lecun",
+              "confirmed": true
+            }
+          ],
+          "result": {
+            "error": "TypeError",
+            "message": "tools.papers.tool.arxiv_search() argument after ** must be a mapping, not list"
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:40:05"
+}

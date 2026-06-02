@@ -1,0 +1,375 @@
+{
+  "transcript_id": "ui_20260602T152041459222",
+  "version": "(current)",
+  "artifact_version": "(current)+p26553067786f+t40092ba19a62",
+  "prompt_hash": "26553067786f01fe3cffc2af306fabc649c625840c56fe16e4beff5a67cd32d1",
+  "tools_hash": "40092ba19a623787ae6919faf7124778244cbad953799ac021e08f61cf727627",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "5 bài báo mới nhất của Yann Lecun",
+      "status": "answered",
+      "assistant_text": "Here are the 5 most recent papers by Yann LeCun:\n\n1. **[Causal-JEPA: Learning World Models through Object-Level Latent Masking](http://arxiv.org/abs/2602.11389v2)**  \n   - **Authors:** Heejeong Nam, Quentin Le Lidec, Lucas Maes, Yann LeCun, Randall Balestriero  \n   - **Published:** May 28, 2026  \n   - **Summary:** This paper proposes C-JEPA, an object-centric world model that extends masked joint embedding prediction to object-level representations, improving performance in visual question answering and agent control tasks.  \n   - **[PDF Link](https://arxiv.org/pdf/2602.11389v2)**\n\n2. **[TabPFN-3: Technical Report](http://arxiv.org/abs/2605.13986v2)**  \n   - **Authors:** Léo Grinsztajn, Klemens Flöge, Oscar Key, Felix Birkel, Philipp Jund, Brendan Roof, Mihir Manium, Shi Bin Hoo, Magnus Bühler, Anurag Garg, Dominik Safaric, Jake Robertson, Benjamin Jäger, Simone Alessi, Adrian Hayler, Vladyslav Moroshan, Lennart Purucker, Philipp Singer, Alan Arazi, Julien Siems, Jan Hendrik Metzen, Georg Grab, Nick Erickson, Siyuan Guo, Eliott Kalfon, Simon Bing, David Salinas, Clara Cornu, Lilly Charlotte Wehrhahn, Diana Kriuchkova, Kursat Kaya, Lydia Sidhoum, Marie Salmon, Jerry Chen, Madelon Hulsebos, Yann LeCun, Samuel Müller, Bernhard Schölkopf, Sauraj Gambhir, Noah Hollmann, Frank Hutter  \n   - **Published:** May 28, 2026  \n   - **Summary:** This report discusses TabPFN-3, which enhances tabular data prediction performance and efficiency, achieving state-of-the-art results on various datasets.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.13986v2)**\n\n3. **[Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations](http://arxiv.org/abs/2602.01456v2)**  \n   - **Authors:** Yilun Kuang, Yash Dagade, Tim G. J. Rudner, Randall Balestriero, Yann LeCun  \n   - **Published:** May 28, 2026  \n   - **Summary:** This paper introduces Rectified LpJEPA, which learns sparse representations while maintaining performance in image classification tasks.  \n   - **[PDF Link](https://arxiv.org/pdf/2602.01456v2)**\n\n4. **[When Does LeJEPA Learn a World Model?](http://arxiv.org/abs/2605.26379v1)**  \n   - **Authors:** David Klindt, Yann LeCun, Randall Balestriero  \n   - **Published:** May 25, 2026  \n   - **Summary:** The paper proves that LeJEPA can recover latent variables from nonlinear observations, providing a foundation for building World Models.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.26379v1)**\n\n5. **[Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement](http://arxiv.org/abs/2605.14759v2)**  \n   - **Authors:** Nian Liu, Nikita Kazeev, Stephen Gregory Dale, Artem Maevskiy, Yuwei Zeng, Ryoji Kubo, Pengru Huang, Thomas Laurent, Yann LeCun, Kostya S. Novoselov, Xavier Bresson  \n   - **Published:** May 25, 2026  \n   - **Summary:** This paper presents Crys-JEPA, a model for crystal generation that balances stability and novelty in material discovery.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.14759v2)**\n\nFeel free to ask if you need more information on any of these papers!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Yann LeCun",
+                "max_results": 5,
+                "sort_by": "lastUpdatedDate"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Yann LeCun",
+                "max_results": 5,
+                "sort_by": "lastUpdatedDate"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "query": "Yann LeCun",
+                "api_query": "all:Yann AND all:LeCun",
+                "total_results": 222,
+                "items": [
+                  {
+                    "arxiv_id": "2602.11389v2",
+                    "title": "Causal-JEPA: Learning World Models through Object-Level Latent Masking",
+                    "summary": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By masking object-level latents and requiring each masked object state to be inferred from the surrounding context, C-JEPA imposes structured partial observability during training, creating counterfactual-like prediction queries that discourage shortcut solutions and make interaction-dependent prediction necessary under the learning objective. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20% in counterfactual reasoning over the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces useful inductive bias by controlling observability. Our code is available at https://github.com/galilai-group/cjepa.",
+                    "authors": [
+                      "Heejeong Nam",
+                      "Quentin Le Lidec",
+                      "Lucas Maes",
+                      "Yann LeCun",
+                      "Randall Balestriero"
+                    ],
+                    "published": "2026-02-11T21:47:26Z",
+                    "updated": "2026-05-28T17:57:16Z",
+                    "url": "http://arxiv.org/abs/2602.11389v2",
+                    "pdf_url": "https://arxiv.org/pdf/2602.11389v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.AI",
+                    "categories": [
+                      "cs.AI"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.13986v2",
+                    "title": "TabPFN-3: Technical Report",
+                    "summary": "Tabular data underpins most high-value prediction problems in science and industry, and TabPFN has driven the foundation model revolution for this modality. Designed with feedback from our users, TabPFN-3 builds on this foundation to scale state-of-the-art performance to datasets with 1M training rows and substantially reduce training and inference time. Pretrained exclusively on synthetic data from our prior, TabPFN-3 dramatically pushes the frontier of tabular prediction and brings substantial gains on time series, relational, and tabular-text data. On the standard tabular benchmark TabArena, a forward pass of TabPFN-3 outperforms all other models, including tuned and ensembled baselines, by a significant margin, and pareto-dominates the speed/performance frontier. On more diverse datasets, TabPFN-3 ranks first on datasets with many classes, and beats 8-hour-tuned gradient-boosted-tree baselines on datasets up to 1M training rows and 200 features. TabPFN-3 introduces test-time compute scaling to tabular foundation models. Our API offering TabPFN-3-Plus (Thinking) exploits this to beat all non-TabPFN models by over 200 Elo on TabArena, rising to 420 Elo on the largest data subset, and outperforms AutoGluon 1.5 extreme while being 10x faster, without using LLMs, real data, internet search or any other model besides TabPFN. TabPFN-3 extends the capabilities of our models, enabling SOTA prediction on relational data (new SOTA foundation model on RelBenchV1) and tabular-text data (SOTA on TabSTAR via TabPFN-3-Plus); and improves existing integrations: a specialized checkpoint, TabPFN-TS-3, ranks 2nd on the time-series benchmark fev-bench, and SHAP-value computation is up to 120x faster. TabPFN-3 achieves this performance while being up to 20x faster than TabPFN-2.5. In addition, a reduced KV cache and row-chunking scale to 1M rows on one H100 with fast inference speed.",
+                    "authors": [
+                      "Léo Grinsztajn",
+                      "Klemens Flöge",
+                      "Oscar Key",
+                      "Felix Birkel",
+                      "Philipp Jund",
+                      "Brendan Roof",
+                      "Mihir Manium",
+                      "Shi Bin Hoo",
+                      "Magnus Bühler",
+                      "Anurag Garg",
+                      "Dominik Safaric",
+                      "Jake Robertson",
+                      "Benjamin Jäger",
+                      "Simone Alessi",
+                      "Adrian Hayler",
+                      "Vladyslav Moroshan",
+                      "Lennart Purucker",
+                      "Philipp Singer",
+                      "Alan Arazi",
+                      "Julien Siems",
+                      "Jan Hendrik Metzen",
+                      "Georg Grab",
+                      "Nick Erickson",
+                      "Siyuan Guo",
+                      "Eliott Kalfon",
+                      "Simon Bing",
+                      "David Salinas",
+                      "Clara Cornu",
+                      "Lilly Charlotte Wehrhahn",
+                      "Diana Kriuchkova",
+                      "Kursat Kaya",
+                      "Lydia Sidhoum",
+                      "Marie Salmon",
+                      "Jerry Chen",
+                      "Madelon Hulsebos",
+                      "Yann LeCun",
+                      "Samuel Müller",
+                      "Bernhard Schölkopf",
+                      "Sauraj Gambhir",
+                      "Noah Hollmann",
+                      "Frank Hutter"
+                    ],
+                    "published": "2026-05-13T18:01:43Z",
+                    "updated": "2026-05-28T17:22:15Z",
+                    "url": "http://arxiv.org/abs/2605.13986v2",
+                    "pdf_url": "https://arxiv.org/pdf/2605.13986v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "stat.ML"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2602.01456v2",
+                    "title": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations",
+                    "summary": "Joint-Embedding Predictive Architectures (JEPA) learn view-invariant representations and admit projection-based distribution matching for collapse prevention. Existing approaches regularize representations towards isotropic Gaussian distributions, but inherently favor dense representations and fail to capture the key property of sparsity observed in efficient representations. We introduce Rectified Distribution Matching Regularization (RDMReg), a sliced two-sample distribution-matching loss that aligns representations to a Rectified Generalized Gaussian (RGG) distribution. RGG enables explicit control over expected $\\ell_0$ norm through rectification, while its continuous truncated component admits a maximum-entropy characterization under expected $\\ell_p$ norm and support constraints. Equipping JEPAs with RDMReg yields Rectified LpJEPA, which strictly generalizes prior Gaussian-based JEPAs. Empirically, Rectified LpJEPA learns sparse, non-negative representations with favorable sparsity--performance trade-offs and competitive downstream performance on image classification benchmarks, showing that RDMReg can enforce sparsity while preserving task-relevant information.",
+                    "authors": [
+                      "Yilun Kuang",
+                      "Yash Dagade",
+                      "Tim G. J. Rudner",
+                      "Randall Balestriero",
+                      "Yann LeCun"
+                    ],
+                    "published": "2026-02-01T21:49:30Z",
+                    "updated": "2026-05-28T16:40:33Z",
+                    "url": "http://arxiv.org/abs/2602.01456v2",
+                    "pdf_url": "https://arxiv.org/pdf/2602.01456v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG",
+                      "cs.CV"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.26379v1",
+                    "title": "When Does LeJEPA Learn a World Model?",
+                    "summary": "A representation that scrambles the true degrees of freedom of the world cannot support reliable planning or compositional generalization. We prove that LeJEPA (alignment plus Gaussian regularization) linearly recovers the world's latent variables from nonlinear observations, a property known as linear identifiability, in a broad class of worlds where latents evolve under stationary, additive-noise transitions. Our main result is that among all such worlds, the Gaussian is the unique latent distribution for which this guarantee holds. The forward direction rests on a spectral decomposition in which each degree of nonlinearity is strictly penalized by alignment, making the linear map the optimum; the converse rules out every non-Gaussian alternative. We further prove an approximate identifiability result where the guarantee degrades gracefully, and show that linear, orthogonal identifiability enables optimal latent-space planning. We validate the theory with experiments ranging from 2D examples to 1024-dimensional latents, including distributional ablations and pixel-based robotic control. Our theory turns an empirically successful recipe into a mathematical guarantee, providing the foundation for building World Models that provably recover the structure of the world.",
+                    "authors": [
+                      "David Klindt",
+                      "Yann LeCun",
+                      "Randall Balestriero"
+                    ],
+                    "published": "2026-05-25T22:56:26Z",
+                    "updated": "2026-05-25T22:56:26Z",
+                    "url": "http://arxiv.org/abs/2605.26379v1",
+                    "pdf_url": "https://arxiv.org/pdf/2605.26379v1",
+                    "source": "arxiv.org",
+                    "primary_category": "stat.ML",
+                    "categories": [
+                      "stat.ML",
+                      "cs.LG"
+                    ]
+                  },
+                  {
+                    "arxiv_id": "2605.14759v2",
+                    "title": "Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement",
+                    "summary": "De novo crystal generation seeks to discover materials that are not merely realistic, but also stable and novel. However, most existing generative models are trained to maximize the likelihood of observed crystals, which encourages samples to stay close to known materials yet not necessarily align with the criteria that matter in discovery. Our empirical analysis shows that current crystal generative models exhibit a clear conflict between stability and novelty: samples near the observed distribution tend to retain stability but offer limited novelty, whereas samples farther from it often lose stability rapidly. This suggests that the useful region for discovering crystals that are both stable and novel is extremely narrow. To move beyond this limitation, we introduce Crys-JEPA, a joint embedding predictive architecture for crystals that learns an energy-aware latent space preserving formation-energy differences. In this space, stability assessment can be reformulated as an embedding-based comparison against accessible training crystals, reducing the reliance on expensive energy evaluation and task-specific external references. Building on Crys-JEPA, we further develop a screening-and-refinement pipeline that identifies promising generated crystals and reintroduces them to refine the generative model. On MP-20 and Alex-MP-20 datasets, we achieve improvements over baselines up to 53.8% and 72.7% on V.S.U.N. metric, respectively.",
+                    "authors": [
+                      "Nian Liu",
+                      "Nikita Kazeev",
+                      "Stephen Gregory Dale",
+                      "Artem Maevskiy",
+                      "Yuwei Zeng",
+                      "Ryoji Kubo",
+                      "Pengru Huang",
+                      "Thomas Laurent",
+                      "Yann LeCun",
+                      "Kostya S. Novoselov",
+                      "Xavier Bresson"
+                    ],
+                    "published": "2026-05-14T12:23:04Z",
+                    "updated": "2026-05-25T06:13:51Z",
+                    "url": "http://arxiv.org/abs/2605.14759v2",
+                    "pdf_url": "https://arxiv.org/pdf/2605.14759v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.LG",
+                    "categories": [
+                      "cs.LG"
+                    ]
+                  }
+                ],
+                "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the 5 most recent papers by Yann LeCun:\n\n1. **[Causal-JEPA: Learning World Models through Object-Level Latent Masking](http://arxiv.org/abs/2602.11389v2)**  \n   - **Authors:** Heejeong Nam, Quentin Le Lidec, Lucas Maes, Yann LeCun, Randall Balestriero  \n   - **Published:** May 28, 2026  \n   - **Summary:** This paper proposes C-JEPA, an object-centric world model that extends masked joint embedding prediction to object-level representations, improving performance in visual question answering and agent control tasks.  \n   - **[PDF Link](https://arxiv.org/pdf/2602.11389v2)**\n\n2. **[TabPFN-3: Technical Report](http://arxiv.org/abs/2605.13986v2)**  \n   - **Authors:** Léo Grinsztajn, Klemens Flöge, Oscar Key, Felix Birkel, Philipp Jund, Brendan Roof, Mihir Manium, Shi Bin Hoo, Magnus Bühler, Anurag Garg, Dominik Safaric, Jake Robertson, Benjamin Jäger, Simone Alessi, Adrian Hayler, Vladyslav Moroshan, Lennart Purucker, Philipp Singer, Alan Arazi, Julien Siems, Jan Hendrik Metzen, Georg Grab, Nick Erickson, Siyuan Guo, Eliott Kalfon, Simon Bing, David Salinas, Clara Cornu, Lilly Charlotte Wehrhahn, Diana Kriuchkova, Kursat Kaya, Lydia Sidhoum, Marie Salmon, Jerry Chen, Madelon Hulsebos, Yann LeCun, Samuel Müller, Bernhard Schölkopf, Sauraj Gambhir, Noah Hollmann, Frank Hutter  \n   - **Published:** May 28, 2026  \n   - **Summary:** This report discusses TabPFN-3, which enhances tabular data prediction performance and efficiency, achieving state-of-the-art results on various datasets.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.13986v2)**\n\n3. **[Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations](http://arxiv.org/abs/2602.01456v2)**  \n   - **Authors:** Yilun Kuang, Yash Dagade, Tim G. J. Rudner, Randall Balestriero, Yann LeCun  \n   - **Published:** May 28, 2026  \n   - **Summary:** This paper introduces Rectified LpJEPA, which learns sparse representations while maintaining performance in image classification tasks.  \n   - **[PDF Link](https://arxiv.org/pdf/2602.01456v2)**\n\n4. **[When Does LeJEPA Learn a World Model?](http://arxiv.org/abs/2605.26379v1)**  \n   - **Authors:** David Klindt, Yann LeCun, Randall Balestriero  \n   - **Published:** May 25, 2026  \n   - **Summary:** The paper proves that LeJEPA can recover latent variables from nonlinear observations, providing a foundation for building World Models.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.26379v1)**\n\n5. **[Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement](http://arxiv.org/abs/2605.14759v2)**  \n   - **Authors:** Nian Liu, Nikita Kazeev, Stephen Gregory Dale, Artem Maevskiy, Yuwei Zeng, Ryoji Kubo, Pengru Huang, Thomas Laurent, Yann LeCun, Kostya S. Novoselov, Xavier Bresson  \n   - **Published:** May 25, 2026  \n   - **Summary:** This paper presents Crys-JEPA, a model for crystal generation that balances stability and novelty in material discovery.  \n   - **[PDF Link](https://arxiv.org/pdf/2605.14759v2)**\n\nFeel free to ask if you need more information on any of these papers!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Yann LeCun",
+            "max_results": 5,
+            "sort_by": "lastUpdatedDate"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "query": "Yann LeCun",
+            "api_query": "all:Yann AND all:LeCun",
+            "total_results": 222,
+            "items": [
+              {
+                "arxiv_id": "2602.11389v2",
+                "title": "Causal-JEPA: Learning World Models through Object-Level Latent Masking",
+                "summary": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By masking object-level latents and requiring each masked object state to be inferred from the surrounding context, C-JEPA imposes structured partial observability during training, creating counterfactual-like prediction queries that discourage shortcut solutions and make interaction-dependent prediction necessary under the learning objective. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20% in counterfactual reasoning over the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces useful inductive bias by controlling observability. Our code is available at https://github.com/galilai-group/cjepa.",
+                "authors": [
+                  "Heejeong Nam",
+                  "Quentin Le Lidec",
+                  "Lucas Maes",
+                  "Yann LeCun",
+                  "Randall Balestriero"
+                ],
+                "published": "2026-02-11T21:47:26Z",
+                "updated": "2026-05-28T17:57:16Z",
+                "url": "http://arxiv.org/abs/2602.11389v2",
+                "pdf_url": "https://arxiv.org/pdf/2602.11389v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.AI",
+                "categories": [
+                  "cs.AI"
+                ]
+              },
+              {
+                "arxiv_id": "2605.13986v2",
+                "title": "TabPFN-3: Technical Report",
+                "summary": "Tabular data underpins most high-value prediction problems in science and industry, and TabPFN has driven the foundation model revolution for this modality. Designed with feedback from our users, TabPFN-3 builds on this foundation to scale state-of-the-art performance to datasets with 1M training rows and substantially reduce training and inference time. Pretrained exclusively on synthetic data from our prior, TabPFN-3 dramatically pushes the frontier of tabular prediction and brings substantial gains on time series, relational, and tabular-text data. On the standard tabular benchmark TabArena, a forward pass of TabPFN-3 outperforms all other models, including tuned and ensembled baselines, by a significant margin, and pareto-dominates the speed/performance frontier. On more diverse datasets, TabPFN-3 ranks first on datasets with many classes, and beats 8-hour-tuned gradient-boosted-tree baselines on datasets up to 1M training rows and 200 features. TabPFN-3 introduces test-time compute scaling to tabular foundation models. Our API offering TabPFN-3-Plus (Thinking) exploits this to beat all non-TabPFN models by over 200 Elo on TabArena, rising to 420 Elo on the largest data subset, and outperforms AutoGluon 1.5 extreme while being 10x faster, without using LLMs, real data, internet search or any other model besides TabPFN. TabPFN-3 extends the capabilities of our models, enabling SOTA prediction on relational data (new SOTA foundation model on RelBenchV1) and tabular-text data (SOTA on TabSTAR via TabPFN-3-Plus); and improves existing integrations: a specialized checkpoint, TabPFN-TS-3, ranks 2nd on the time-series benchmark fev-bench, and SHAP-value computation is up to 120x faster. TabPFN-3 achieves this performance while being up to 20x faster than TabPFN-2.5. In addition, a reduced KV cache and row-chunking scale to 1M rows on one H100 with fast inference speed.",
+                "authors": [
+                  "Léo Grinsztajn",
+                  "Klemens Flöge",
+                  "Oscar Key",
+                  "Felix Birkel",
+                  "Philipp Jund",
+                  "Brendan Roof",
+                  "Mihir Manium",
+                  "Shi Bin Hoo",
+                  "Magnus Bühler",
+                  "Anurag Garg",
+                  "Dominik Safaric",
+                  "Jake Robertson",
+                  "Benjamin Jäger",
+                  "Simone Alessi",
+                  "Adrian Hayler",
+                  "Vladyslav Moroshan",
+                  "Lennart Purucker",
+                  "Philipp Singer",
+                  "Alan Arazi",
+                  "Julien Siems",
+                  "Jan Hendrik Metzen",
+                  "Georg Grab",
+                  "Nick Erickson",
+                  "Siyuan Guo",
+                  "Eliott Kalfon",
+                  "Simon Bing",
+                  "David Salinas",
+                  "Clara Cornu",
+                  "Lilly Charlotte Wehrhahn",
+                  "Diana Kriuchkova",
+                  "Kursat Kaya",
+                  "Lydia Sidhoum",
+                  "Marie Salmon",
+                  "Jerry Chen",
+                  "Madelon Hulsebos",
+                  "Yann LeCun",
+                  "Samuel Müller",
+                  "Bernhard Schölkopf",
+                  "Sauraj Gambhir",
+                  "Noah Hollmann",
+                  "Frank Hutter"
+                ],
+                "published": "2026-05-13T18:01:43Z",
+                "updated": "2026-05-28T17:22:15Z",
+                "url": "http://arxiv.org/abs/2605.13986v2",
+                "pdf_url": "https://arxiv.org/pdf/2605.13986v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "stat.ML"
+                ]
+              },
+              {
+                "arxiv_id": "2602.01456v2",
+                "title": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations",
+                "summary": "Joint-Embedding Predictive Architectures (JEPA) learn view-invariant representations and admit projection-based distribution matching for collapse prevention. Existing approaches regularize representations towards isotropic Gaussian distributions, but inherently favor dense representations and fail to capture the key property of sparsity observed in efficient representations. We introduce Rectified Distribution Matching Regularization (RDMReg), a sliced two-sample distribution-matching loss that aligns representations to a Rectified Generalized Gaussian (RGG) distribution. RGG enables explicit control over expected $\\ell_0$ norm through rectification, while its continuous truncated component admits a maximum-entropy characterization under expected $\\ell_p$ norm and support constraints. Equipping JEPAs with RDMReg yields Rectified LpJEPA, which strictly generalizes prior Gaussian-based JEPAs. Empirically, Rectified LpJEPA learns sparse, non-negative representations with favorable sparsity--performance trade-offs and competitive downstream performance on image classification benchmarks, showing that RDMReg can enforce sparsity while preserving task-relevant information.",
+                "authors": [
+                  "Yilun Kuang",
+                  "Yash Dagade",
+                  "Tim G. J. Rudner",
+                  "Randall Balestriero",
+                  "Yann LeCun"
+                ],
+                "published": "2026-02-01T21:49:30Z",
+                "updated": "2026-05-28T16:40:33Z",
+                "url": "http://arxiv.org/abs/2602.01456v2",
+                "pdf_url": "https://arxiv.org/pdf/2602.01456v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG",
+                  "cs.CV"
+                ]
+              },
+              {
+                "arxiv_id": "2605.26379v1",
+                "title": "When Does LeJEPA Learn a World Model?",
+                "summary": "A representation that scrambles the true degrees of freedom of the world cannot support reliable planning or compositional generalization. We prove that LeJEPA (alignment plus Gaussian regularization) linearly recovers the world's latent variables from nonlinear observations, a property known as linear identifiability, in a broad class of worlds where latents evolve under stationary, additive-noise transitions. Our main result is that among all such worlds, the Gaussian is the unique latent distribution for which this guarantee holds. The forward direction rests on a spectral decomposition in which each degree of nonlinearity is strictly penalized by alignment, making the linear map the optimum; the converse rules out every non-Gaussian alternative. We further prove an approximate identifiability result where the guarantee degrades gracefully, and show that linear, orthogonal identifiability enables optimal latent-space planning. We validate the theory with experiments ranging from 2D examples to 1024-dimensional latents, including distributional ablations and pixel-based robotic control. Our theory turns an empirically successful recipe into a mathematical guarantee, providing the foundation for building World Models that provably recover the structure of the world.",
+                "authors": [
+                  "David Klindt",
+                  "Yann LeCun",
+                  "Randall Balestriero"
+                ],
+                "published": "2026-05-25T22:56:26Z",
+                "updated": "2026-05-25T22:56:26Z",
+                "url": "http://arxiv.org/abs/2605.26379v1",
+                "pdf_url": "https://arxiv.org/pdf/2605.26379v1",
+                "source": "arxiv.org",
+                "primary_category": "stat.ML",
+                "categories": [
+                  "stat.ML",
+                  "cs.LG"
+                ]
+              },
+              {
+                "arxiv_id": "2605.14759v2",
+                "title": "Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement",
+                "summary": "De novo crystal generation seeks to discover materials that are not merely realistic, but also stable and novel. However, most existing generative models are trained to maximize the likelihood of observed crystals, which encourages samples to stay close to known materials yet not necessarily align with the criteria that matter in discovery. Our empirical analysis shows that current crystal generative models exhibit a clear conflict between stability and novelty: samples near the observed distribution tend to retain stability but offer limited novelty, whereas samples farther from it often lose stability rapidly. This suggests that the useful region for discovering crystals that are both stable and novel is extremely narrow. To move beyond this limitation, we introduce Crys-JEPA, a joint embedding predictive architecture for crystals that learns an energy-aware latent space preserving formation-energy differences. In this space, stability assessment can be reformulated as an embedding-based comparison against accessible training crystals, reducing the reliance on expensive energy evaluation and task-specific external references. Building on Crys-JEPA, we further develop a screening-and-refinement pipeline that identifies promising generated crystals and reintroduces them to refine the generative model. On MP-20 and Alex-MP-20 datasets, we achieve improvements over baselines up to 53.8% and 72.7% on V.S.U.N. metric, respectively.",
+                "authors": [
+                  "Nian Liu",
+                  "Nikita Kazeev",
+                  "Stephen Gregory Dale",
+                  "Artem Maevskiy",
+                  "Yuwei Zeng",
+                  "Ryoji Kubo",
+                  "Pengru Huang",
+                  "Thomas Laurent",
+                  "Yann LeCun",
+                  "Kostya S. Novoselov",
+                  "Xavier Bresson"
+                ],
+                "published": "2026-05-14T12:23:04Z",
+                "updated": "2026-05-25T06:13:51Z",
+                "url": "http://arxiv.org/abs/2605.14759v2",
+                "pdf_url": "https://arxiv.org/pdf/2605.14759v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.LG",
+                "categories": [
+                  "cs.LG"
+                ]
+              }
+            ],
+            "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:22:46"
+}

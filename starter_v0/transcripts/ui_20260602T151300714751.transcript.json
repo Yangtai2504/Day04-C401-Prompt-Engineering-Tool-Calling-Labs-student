@@ -1,0 +1,113 @@
+{
+  "transcript_id": "ui_20260602T151300714751",
+  "version": "(current)",
+  "artifact_version": "(current)+p26553067786f+t40092ba19a62",
+  "prompt_hash": "26553067786f01fe3cffc2af306fabc649c625840c56fe16e4beff5a67cd32d1",
+  "tools_hash": "40092ba19a623787ae6919faf7124778244cbad953799ac021e08f61cf727627",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "hell no",
+      "status": "answered",
+      "assistant_text": "It seems like you might be feeling frustrated. How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "It seems like you might be feeling frustrated. How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "turn_index": 2,
+      "user": "i mean hello",
+      "status": "answered",
+      "assistant_text": "Hello! How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Hello! How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "turn_index": 3,
+      "user": "hell no",
+      "status": "answered",
+      "assistant_text": "It seems like there might be some confusion. If there's something specific you'd like to discuss or ask about, feel free to let me know!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "It seems like there might be some confusion. If there's something specific you'd like to discuss or ask about, feel free to let me know!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "turn_index": 4,
+      "user": "tìm bài báo về Trần Đức Lương",
+      "status": "answered",
+      "assistant_text": "I encountered a timeout issue while trying to find articles related to Trần Đức Lương. Unfortunately, I couldn't retrieve any results at this moment. \n\nWould you like me to try again or assist you with something else?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Trần Đức Lương",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Trần Đức Lương",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "error": "ReadTimeout",
+                "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "I encountered a timeout issue while trying to find articles related to Trần Đức Lương. Unfortunately, I couldn't retrieve any results at this moment. \n\nWould you like me to try again or assist you with something else?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Trần Đức Lương",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "error": "ReadTimeout",
+            "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:15:11"
+}

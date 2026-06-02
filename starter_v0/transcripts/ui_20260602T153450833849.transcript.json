@@ -1,0 +1,117 @@
+{
+  "transcript_id": "ui_20260602T153450833849",
+  "version": "(current)",
+  "artifact_version": "(current)+p812087e2a5a8+te2007a262a00",
+  "prompt_hash": "812087e2a5a8dac90f14f55ba4005770537b369f63713cc4b656bda167bc1714",
+  "tools_hash": "e2007a262a001ba244ef540c79e7a08cc97c898280043f1c992827a8c5d2aa61",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations tóm tắt bài báo này cho tôi\n\n",
+      "status": "answered",
+      "assistant_text": "Hiện tại, tôi không thể truy cập vào bài báo \"Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations\" trên arXiv để tóm tắt. Bạn có thể cung cấp cho tôi một liên kết đến bài báo hoặc thông tin khác để tôi có thể giúp bạn tốt hơn không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "error": "HTTPError",
+                "message": "429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=Rectified+LpJEPA%3A+Joint-Embedding+Predictive+Architectures+with+Sparse+and+Maximum-Entropy+Representations&max_results=5&sortBy=relevance&sortOrder=descending"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hiện tại, tôi không thể truy cập vào bài báo \"Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations\" trên arXiv để tóm tắt. Bạn có thể cung cấp cho tôi một liên kết đến bài báo hoặc thông tin khác để tôi có thể giúp bạn tốt hơn không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "error": "HTTPError",
+            "message": "429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=Rectified+LpJEPA%3A+Joint-Embedding+Predictive+Architectures+with+Sparse+and+Maximum-Entropy+Representations&max_results=5&sortBy=relevance&sortOrder=descending"
+          }
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "user": "TabPFN-3: Technical Report tóm tắt bài báo này cho tôi\n\n",
+      "status": "answered",
+      "assistant_text": "Hiện tại, tôi không thể truy cập vào bài báo \"TabPFN-3: Technical Report\" trên arXiv do gặp lỗi. Bạn có thể cung cấp cho tôi một liên kết đến bài báo hoặc thông tin khác để tôi có thể giúp bạn tốt hơn không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "TabPFN-3: Technical Report"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "TabPFN-3: Technical Report"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "error": "HTTPError",
+                "message": "429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=TabPFN-3%3A+Technical+Report&max_results=5&sortBy=relevance&sortOrder=descending"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hiện tại, tôi không thể truy cập vào bài báo \"TabPFN-3: Technical Report\" trên arXiv do gặp lỗi. Bạn có thể cung cấp cho tôi một liên kết đến bài báo hoặc thông tin khác để tôi có thể giúp bạn tốt hơn không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "TabPFN-3: Technical Report"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "error": "HTTPError",
+            "message": "429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=TabPFN-3%3A+Technical+Report&max_results=5&sortBy=relevance&sortOrder=descending"
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:38:33"
+}

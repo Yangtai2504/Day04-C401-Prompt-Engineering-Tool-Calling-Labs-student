@@ -1,0 +1,941 @@
+{
+  "run_id": "v3_B_group_openrouter_20260602T160056767253",
+  "version": "v3",
+  "artifact_version": "v3+p79b9d12242d8+t8206e478b7cb",
+  "prompt_hash": "79b9d12242d883585870d9c81a77d2fa447c144cdbe846b723df9e1ace75a45e",
+  "tools_hash": "8206e478b7cb7c82b50ad9650240095d2f3a588a8bc9faaa0e9adeccc02edd20",
+  "phase": "B",
+  "suite": "group",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "eval_cases": "data\\eval_group.json",
+  "dataset_id": "day04_v2_research_group",
+  "dataset_role": "group",
+  "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
+  "generated_at": "2026-06-02T16:00:56",
+  "summary": {
+    "total_cases": 10,
+    "measured_cases": 10,
+    "provider_error_cases": 0,
+    "passed_cases": 10,
+    "case_accuracy": 1.0,
+    "tool_routing_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "multiturn_accuracy": 1.0,
+    "failure_counts": {},
+    "observed_mismatch_counts": {}
+  },
+  "results": [
+    {
+      "id": "G01_trending_routing",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "what_it_tests": "Câu hỏi 'trending gì' không có keyword → dùng trending, không phải social_search hay lookup."
+      },
+      "input": "Hôm nay đang trending gì trên mạng?",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "trending",
+            "args": {}
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "trending",
+            "args": {
+              "country": "vietnam"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "trending",
+          "args": {
+            "country": "vietnam"
+          },
+          "result": {
+            "tool": "trending",
+            "country": "vietnam",
+            "query_used": "trending topics today in vietnam",
+            "items": [
+              {
+                "title": "Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda - CNN",
+                "url": "https://www.cnn.com/2026/06/01/politics/hackers-space-force-official-instagram-iranian-propaganda",
+                "source": "cnn.com",
+                "summary": "# Hackers breach senior US Space Force official’s Instagram account and post Iranian propaganda. * Hackers breached the Instagram account of a senior Space Force official and posted pro-Iran propaganda. * Chief Master Sgt. John Bentivegna's account temporarily displayed videos invoking Vietnam War propaganda and anti-US messaging. Hackers breached a senior US Space Force official’s Instagram account and temporarily posted a string of pro-Iran and anti-US propaganda on Sunday, some of it invoking the Vietnam War. One video reviewed by CNN used audio from “Hanoi Hannah,” an infamous Vietnam War propagandist, telling US soldiers to “leave a sinking ship.” The video also featured images of late Iranian security official Ali Larijani, who was killed weeks into the US-Israel-Iran war. The hack of Bentivegna’s Instagram account is only the latest front in the propaganda battles that have been a feature of the US war with Iran.",
+                "score": 0.060086645
+              },
+              {
+                "title": "China’s model smart dairy factory offers lessons for Vietnam - Báo VietNamNet",
+                "url": "https://vietnamnet.vn/en/china-s-model-smart-dairy-factory-offers-lessons-for-vietnam-2521949.html",
+                "source": "vietnamnet.vn",
+                "summary": "## Vietnam’s dairy manufacturers are pursuing digital transformation through open data platforms that connect aging machinery with modern IoT systems. In the fourth quarter of 2024, the World Economic Forum (WEF) officially recognized Mengniu’s Ningxia facility in China as a Lighthouse Factory. The Lighthouse Factory title is awarded by the WEF to manufacturing facilities that pioneer the use of advanced digital technologies to create customer value, accelerate time-to-market and optimize operational efficiency. The results achieved by the Lighthouse Factory model have established a new benchmark for the global dairy industry. Speaking to VietNamNet on the sidelines of the International Dairy and Dairy Products Exhibition 2026, Nguyen Van, Technical Director of Tetra Pak Vietnam, said the greatest challenge facing Vietnam’s dairy sector is the lack of infrastructure uniformity. In Vietnam, major dairy producers are beginning to incorporate these technologies into their smart factory roadmaps, gradually narrowing the gap between local manufacturing operations and the world’s leading Lighthouse Factories.",
+                "score": 0.05749328
+              },
+              {
+                "title": "India confirms deal to supply Brahmos missile to Vietnam - Army Technology",
+                "url": "https://www.army-technology.com/news/india-brahmos-missile-vietnam/",
+                "source": "army-technology.com",
+                "summary": "# India confirms deal to supply Brahmos missile to Vietnam. The two-stage missile has a flight range of up to 290km and is capable of carrying a conventional warhead weighing up to 200kg. India has signed an agreement to supply BrahMos supersonic cruise missiles to Vietnam, according to Defence Secretary Rajesh Kumar Singh. The potential deal with Vietnam was previously reported by Reuters, which cited two sources stating that Vietnamese President To Lam was expected to discuss expanding defence cooperation involving BrahMos missiles with India during a visit to New Delhi. India has previously exported BrahMos missiles to the Philippines and entered into a contract with Indonesia in March, as part of its efforts to increase domestic defence manufacturing for both domestic and export markets. Singh also stated that India is in the “final stages” of negotiations on a BrahMos missile supply deal with Indonesia. The design allows the missile to maintain supersonic speeds of up to 2.8 Mach throughout its flight, with a maximum range of 290km.",
+                "score": 0.039937314
+              },
+              {
+                "title": "A Soviet Jew’s Warning About Propaganda - The Times of Israel",
+                "url": "https://blogs.timesofisrael.com/a-soviet-jews-warning-about-propaganda/",
+                "source": "blogs.timesofisrael.com",
+                "summary": "* You will receive email alerts from this author. You will no longer receive email alerts from this author. # A Soviet Jew’s Warning About Propaganda. The idea was simple…have dialogue. For decades, universities have been the birthplace of intellectual movements and political activism. From Vietnam to civil rights to anti apartheid movements, college campuses have served as places where ideas are challenged, debated, and refined, and manifested. The goal was not to convince everyone to agree. The goal was to create an opportunity for students who had never met an Israeli soldier to engage with a real human being one-on-one. I grew up understanding the difference between media and propaganda. Propaganda is not designed to inform. Whatever one’s views of the war, no Israeli soldier is instructed to enter Gaza with the mission of killing children. How do we teach an entire generation to question what they are consuming rather than simply repeating it?",
+                "score": 0.005708034
+              },
+              {
+                "title": "SEA-H2X cable linking China and Southeast Asia is ready for service - Developing Telecoms",
+                "url": "https://www.developingtelecoms.com/telecom-technology/optical-fixed-networks/20328-sea-h2x-cable-linking-china-and-southeast-asia-is-ready-for-service.html",
+                "source": "developingtelecoms.com",
+                "summary": "## SEA-H2X cable linking China and Southeast Asia is ready for service. Chinese subsea cable firm HMN Tech has announced that the South East Asia Hainan–Hong Kong Express Cable System (SEA-H2X) connecting China to Southeast Asia is now ready for service. The 6,000-km SEA-H2X subsea cable – which is owned by China Mobile International, China Unicom Global and Converge ICT – runs from China’s Hainan Province and Hong Kong to the Philippines, Thailand and Singapore. It’s also designed to support extensions to Vietnam, Cambodia, Indonesia, East Malaysia and the Malaysian peninsula. HMN said in a statement on Thursday that it deployed its 39.5-nm bandwidth repeaters and ultra-low-loss optical fibres in the system, delivering a system capacity of over 200 Tbps designed to support the growing requirements of AI, cloud computing, and international data centres across Southeast Asia with higher capacity and lower latency. SEA-H2X has been in the works since at least 2022, and was initially scheduled to be ready for service in 2024.",
+                "score": 0.0040072887
+              },
+              {
+                "title": "June 1: Anti-weaponization fund, NC police officer assault charge - NBC News",
+                "url": "https://www.nbcnews.com/nightly-news-netcast/video/nbc-nightly-news-full-episode-june-1-264319045609",
+                "source": "nbcnews.com",
+                "summary": "For an optimal experience visit our site on another browser. ## May 31: ICE Protests, Flight Security Scare, Manhunt. * ## May 30: Cave Rescue, Loud Boom, ICE Protests. * ## May 29: Cave rescue, deadly bus crash. * ## May 28: Deadly Dallas explosion, Jill Biden memoir. ## Nightly News Netcast. Trump speaks to NBC News amid Iran talks and administration's apparent abandonment of $1.8 billion fund; Fired police officer charged after video appears to show him repeatedly punching woman; Race against time to find and rescue two men in Laos Cave; and more on tonight's broadcast.June 2, 2026. ## Best of NBC News. ## Top Story. ## Kornacki breaks down numbers on NBA Finals for Spurs and Knicks. ## Taylor Swift announces new original song for 'Toy Story 5'. ## Bad Bunny may meet Pope Leo as they both visit Madrid. ## Sonic booms heard around the U.S. ## How Israeli attacks in Lebanon impact U.S. talks with Iran.",
+                "score": 0.0027683857
+              },
+              {
+                "title": "PTL Chat: June 1, 2026 - CBS News",
+                "url": "https://www.cbsnews.com/pittsburgh/video/ptl-chat-june-1-2026/",
+                "source": "cbsnews.com",
+                "summary": "* Out For A Walk Forecast. # PTL Chat: June 1, 2026. PTL hosts Heather Abraham and David Highfield discuss Pittsburgh culture, trending news and social media, food, sports, and more.",
+                "score": 0.0015854307
+              },
+              {
+                "title": "Meet the top 10 most active defense tech VCs - PitchBook",
+                "url": "https://pitchbook.com/news/articles/meet-the-top-10-most-active-defense-tech-vcs",
+                "source": "pitchbook.com",
+                "summary": "# Meet the top 10 most active defense tech VCs. A small group of venture capital firms is driving a record flood of capital into defense tech as investors seize geopolitical tailwinds, including the US war with Iran and continued tensions with China. VCs invested a record $19.8 billion into the sector in Q1—the most ever in a single quarter, and more than a third of 2025’s full-year total, according to PitchBook’s Q1 2026 Defense Tech VC Trends report. The most active check writers ranged from Andreessen Horowitz to a $50 million shop focused on deep tech, underscoring the widespread interest among VCs. Late-stage and venture growth rounds captured 88% of that $19.8 billion. The Iran war has been a significant factor in investment growth, but not the only one, according to Ryan Micheletti, co-founder and GP of The Veteran Fund. Here are the top 10 most-active VCs in defense tech in Q1 2026, ranked by deal count globally, according to PitchBook data.",
+                "score": 0.0013045067
+              },
+              {
+                "title": "Live Baseball Updates: No. 10 FSU plays St. John's in Tallahassee Regional Final (12:00 p.m.) - 247Sports",
+                "url": "https://247sports.com/college/florida-state/article/florida-state-seminoles-fsu-baseball-live-updates-st-johns-tallahassee-regional-final-287167789/",
+                "source": "247sports.com",
+                "summary": "JoinFREE Noles247.com Newsletter - Join Today. * **Trending**Former Florida State star Jared Verse heads to Browns in blockbuster Myles Garrett trade. * **Trending**Photo Gallery: Florida State defeats Northern Illinois to remain alive in the Tallahassee Regional. ## Florida State will need to win two games on Monday to advance to the Tuscaloosa Super Regional. The Red Storm are in the driver's seat of the regional after a 2-0 start, including a 6-5 win over FSU on Friday. The Seminoles would have to beat them twice to advance to the Tuscaloosa Super Regional. The 'Noles are the away team for this game. FSU came out of the loser's bracket with a 2-1 win over **Coastal Carolina** and a 7-4 extra-innings win against **Northern Illinois**. *Beard dominates in relief, Seminoles survive elimination game against Coastal Carolina*. *FSU breaks out for three runs in extras to survive second elimination game of the day*. > Heading into today: pic.twitter.com/YJWa2Sy8dK. Follow along in the thread below for live updates.",
+                "score": 0.0010628869
+              },
+              {
+                "title": "10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated - CBS News",
+                "url": "https://www.cbsnews.com/newyork/video/10th-congressional-district-debate-between-rep-dan-goldman-brad-lander-gets-heated/",
+                "source": "cbsnews.com",
+                "summary": "* Book Club with Mary Calvi. * Class Act with Chris Wragge. * The 5:33 | Legacy of the LIRR Massacre. * On The Dot with David Schechter: Wildfires & Climate Change. * Climate Change: Protecting our Planet. # 10th Congressional District debate between Rep. Dan Goldman, Brad Lander gets heated. The incumbent and challenger addressing topics like immigration enforcement, taxing the wealthy, and bringing affordable housing to the Brooklyn Marine Terminal. CBS News New York's Dick Brennan reports.",
+                "score": 0.0010044163
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G02_cite_bibtex_direct",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "what_it_tests": "Có arxiv_id rõ ràng + yêu cầu BibTeX → gọi cite trực tiếp, không cần gọi papers trước."
+      },
+      "input": "Cho tôi BibTeX citation của bài arXiv 1706.03762",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "bibtex"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "bibtex"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "1706.03762",
+            "style": "bibtex"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "1706.03762",
+            "style": "bibtex",
+            "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+            "title": "Attention Is All You Need",
+            "authors": [
+              "Ashish Vaswani",
+              "Noam Shazeer",
+              "Niki Parmar",
+              "Jakob Uszkoreit",
+              "Llion Jones",
+              "Aidan N. Gomez",
+              "Lukasz Kaiser",
+              "Illia Polosukhin"
+            ],
+            "year": "2017"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G03_cite_missing_id",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "what_it_tests": "Nói 'bài báo này' nhưng không có arxiv_id → clarify hỏi ID, không tự đoán."
+      },
+      "input": "Cho tôi citation của bài báo này",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "clarify",
+            "args": {
+              "response_type": "text"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "clarify",
+            "args": {
+              "question": "Bạn có thể cung cấp cho tôi ID hoặc URL của bài báo mà bạn muốn trích dẫn không?",
+              "response_type": "text"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "missing_info",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "clarify",
+          "args": {
+            "question": "Bạn có thể cung cấp cho tôi ID hoặc URL của bài báo mà bạn muốn trích dẫn không?",
+            "response_type": "text"
+          },
+          "result": {
+            "tool": "ask_user",
+            "question": "Bạn có thể cung cấp cho tôi ID hoặc URL của bài báo mà bạn muốn trích dẫn không?",
+            "response_type": "text",
+            "options": [],
+            "awaiting_user": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "G04_no_tool_greeting",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "what_it_tests": "Lời cảm ơn xã giao → không gọi tool, trả lời thẳng."
+      },
+      "input": "Cảm ơn bạn nhé!",
+      "expect": {
+        "no_tool": true,
+        "behavior": "answer_without_tool"
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [],
+        "actual_text": "Không có gì! Nếu bạn cần thêm thông tin hay hỗ trợ gì, cứ hỏi nhé!",
+        "case_failure_type": "unnecessary_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": []
+    },
+    {
+      "id": "G05_cite_apa_style",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "what_it_tests": "Trích đúng style=apa từ yêu cầu, không dùng style mặc định bibtex."
+      },
+      "input": "Lấy citation APA của bài arXiv 2501.05729",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "2501.05729",
+              "style": "apa"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "2501.05729",
+              "style": "apa"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_arg_value",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "2501.05729",
+            "style": "apa"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "2501.05729",
+            "style": "apa",
+            "citation": "Ma, Y., Wang, S., Liu, T., & Li, H. (2025). ExPO: Explainable Phonetic Trait-Oriented Network for Speaker Verification. arXiv:2501.05729. https://arxiv.org/abs/2501.05729",
+            "title": "ExPO: Explainable Phonetic Trait-Oriented Network for Speaker Verification",
+            "authors": [
+              "Yi Ma",
+              "Shuai Wang",
+              "Tianchi Liu",
+              "Haizhou Li"
+            ],
+            "year": "2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MG01_papers_then_cite",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "what_it_tests": "3 turns: tìm paper → user cung cấp arxiv_id rõ ràng → xác nhận style bibtex. Eval inject turns dưới dạng text nên arxiv_id phải explicit trong turn."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Tìm bài Attention Is All You Need trên arXiv"
+        },
+        {
+          "role": "user",
+          "content": "arxiv_id của bài đó là 1706.03762, lấy citation đi"
+        },
+        {
+          "role": "user",
+          "content": "Dùng style BibTeX nhé, bài 1706.03762"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "bibtex"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "bibtex"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "1706.03762",
+            "style": "bibtex"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "1706.03762",
+            "style": "bibtex",
+            "citation": "@article{Vaswani2017attention,\n  title   = {Attention Is All You Need},\n  author  = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},\n  year    = {2017},\n  journal = {arXiv preprint arXiv:1706.03762},\n  url     = {https://arxiv.org/abs/1706.03762}\n}",
+            "title": "Attention Is All You Need",
+            "authors": [
+              "Ashish Vaswani",
+              "Noam Shazeer",
+              "Niki Parmar",
+              "Jakob Uszkoreit",
+              "Llion Jones",
+              "Aidan N. Gomez",
+              "Lukasz Kaiser",
+              "Illia Polosukhin"
+            ],
+            "year": "2017"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MG02_trending_then_search_tweets",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "what_it_tests": "3 turns: trending → switch sang social_search với keyword từ context, search_type=Top vì yêu cầu top tweets."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Xem trending topics hôm nay"
+        },
+        {
+          "role": "user",
+          "content": "Tìm tweet về AI trong các topic đó đi"
+        },
+        {
+          "role": "user",
+          "content": "Lấy top tweets về AI nhé"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "social_search",
+            "args": {
+              "query": "AI",
+              "search_type": "Top"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "social_search",
+            "args": {
+              "query": "AI",
+              "search_type": "Top",
+              "limit": 5
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "AI",
+            "search_type": "Top",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "AI",
+            "search_type": "Top",
+            "items": [
+              {
+                "title": "Most people think prompting is just writing better sentences",
+                "summary": "Most people think prompting is just writing better sentences\n\nAnthropic shows why that's wrong\n\nThis 32-minute workshop breaks down how prompts are built for production\n\nNot prompt hacks\nNot \"act as\"\nNot another $300 course\n\nActual systems\n\nEvals\nEdge cases\nModel migration\nAgent loops\n\nGood prompt is not one message\n\nIt's a workflow the model can follow, test and improve\n\nThis matters because every new claude opus or sonnet will still reward the same rules\n\nWatch the prompting playbook\nBookmark it before your next bad ai answer is just a bad setup",
+                "url": "https://x.com/0xwhrrari/status/2061432825631404538",
+                "source": "@0xwhrrari",
+                "date": "Mon Jun 01 13:00:59 +0000 2026",
+                "metrics": {
+                  "favorites": 561,
+                  "retweets": 81,
+                  "views": "110349"
+                }
+              },
+              {
+                "title": "【衝撃】",
+                "summary": "【衝撃】\nAnthropicハッカソンで優勝した人が、自分の\nClaude Codeの開発セットを丸ごとOSSで公開してヤバい🔥これ何が入ってるかというと👇\nhttps://t.co/0RJtX8HBIZ\n・183個の agent skills（用途別に動くClaudeの“技”）\n・48個の sub-agents（役割で分担する小さなAI）\n・79個の ready-made commands（よく使う作業の一発コマンド）\n・Claude Code / Codex / Cursor / Gemini / OpenCode で動く\n・名前は「Everything Claude Code」、MITライセンスで商用利用OK\n\nつまり何ができるかというと…\n\n具体的に👇\n・183個のskillsを混ぜて自分のリポに足せる\n・サブエージェントは並列で走らせられる\n\n今夜リポを入れるだけで、\n本格的なエージェント開発環境が手に入る時代。\n\nAIの進化 止まらないですね。\n\nこの“skillsを束ねてClaudeをチーム化する”全体像を一気に押さえたいなら、Skills 67選の記事が一番速い。\n気になる人はこの下の記事を読むと解像度が一段上がる👇",
+                "url": "https://x.com/ClaudeCode_love/status/2061572249329778834",
+                "source": "@ClaudeCode_love",
+                "date": "Mon Jun 01 22:15:01 +0000 2026",
+                "metrics": {
+                  "favorites": 608,
+                  "retweets": 60,
+                  "views": "119694"
+                }
+              },
+              {
+                "title": "🚨 MIND-BLOWING AERIAL FOOTAGE: Amazon's $11 BILLION AI Monster in Rural Indiana is INSANE Look at this beast. A 1,200-ac",
+                "summary": "🚨 MIND-BLOWING AERIAL FOOTAGE: Amazon's $11 BILLION AI Monster in Rural Indiana is INSANE Look at this beast. A 1,200-acre campus rising from farmland snow... soon 30+ buildings sucking down 2.2 GIGAWATTS of power (enough for 1+ MILLION homes) and 300 MILLION gallons of water per year just for cooling AI servers.\n\nWelcome to the terminator.\n\nThis is happening NOW in New Carlisle.\n\nOne facility.\n\nDedicated to training god-like AI models.\n\nAnd this is just the beginning...\n\nHow many of these mega-camps are we building while \"climate emergency\" talks continue?\n\nIs this the price of AI dominance...\nor future regret?\n\nJobs + tech leadership vs. local power bills and water strain... worth it?\n\nWhen do we get fusion/nuclear/small modular reactors to power this explosion?\n\nLet me know what you think,\nand SHARE THIS so that others may too.\n\nAnd if you're not already following @TrueOnX...\nWhat the heck are you doing?!",
+                "url": "https://x.com/TrueOnX/status/2061208517185503261",
+                "source": "@TrueOnX",
+                "date": "Sun May 31 22:09:40 +0000 2026",
+                "metrics": {
+                  "favorites": 3410,
+                  "retweets": 2799,
+                  "views": "311923"
+                }
+              },
+              {
+                "title": "🚨A MARKETER QUIT HIS JOB, LEARNED AI, AND MADE $360,000 IN A SINGLE MONTH.",
+                "summary": "🚨A MARKETER QUIT HIS JOB, LEARNED AI, AND MADE $360,000 IN A SINGLE MONTH.\n\nNot by trading manually.\n\nNot by staring at charts all day.\n\nHe built an AI-powered BTC simulation engine using Claude.\n\nAnd the results were wild.\n\nA 35-year-old marketer from Hong Kong, known on Polymarket as \"marketing101,\" went deep into AI and created a system that reportedly generated over $360K in profit.\n\nThe idea?\n\nInstead of guessing where Bitcoin might go...\n\nThe system simulates thousands of possible market reactions before placing a trade.\n\nWhat powers it:\n\n→ Claude as the reasoning engine\n→ MiroFish for force-graph simulations\n→ Live market data from multiple exchanges\n→ Order book analysis\n→ Institutional flow signals\n→ 10,000 simulation cycles before every trade\n\nAccording to the breakdown, the bot:\n\n✅ Pulls live BTC data from major exchanges\n✅ Analyzes order book depth\n✅ Simulates thousands of market outcomes\n✅ Detects pricing inefficiencies\n✅ Executes only when a strong statistical edge appears\n✅ Adjusts position sizes automatically based on performance\n\nWhat makes it different from typical retail trading bots?\n\n→ Multi-simulation decision making\n→ AI reasoning layer with Claude\n→ Institutional-grade data sources\n→ Risk management built into every trade\n\nRisk controls include:\n\n→ Half-Kelly position sizing\n→ Daily loss caps\n→ Auto-stop after consecutive losses\n→ Paper trading before going live\n→ No expensive GPU required\n\nThe recommended setup:\n\n→ Claude API\n→ MiroFish\n→ Python environment\n→ Trading wallet\n→ Telegram alerts\n\nThe most interesting part?\n\nHe's not trying to predict the future.\n\nHe's running thousands of possible futures before the market moves.\n\nMost traders watch charts.\n\nAI traders are increasingly building systems that analyze probabilities at a scale humans can't.\n\nWhether this specific strategy continues working or not...\n\nThe bigger lesson is clear:\n\nAI is becoming a powerful tool for building automated decision systems.\n\nSave this thread if you're interested in where AI and trading are heading next. 👇",
+                "url": "https://x.com/girlinAI/status/2061651996231553476",
+                "source": "@girlinAI",
+                "date": "Tue Jun 02 03:31:54 +0000 2026",
+                "metrics": {
+                  "favorites": 44,
+                  "retweets": 27,
+                  "views": "568"
+                }
+              },
+              {
+                "title": "A lot of people feel powerless when it comes to AI.",
+                "summary": "A lot of people feel powerless when it comes to AI.\n\nLike the future is being decided by Big Tech, billionaires, and governments.\n\nBut it doesn't have to be that way.\n\nEvery person who joins Action Model is helping build an alternative.\n\nAn AI model owned by the people who help train it.\n\nOn your own, you can't compete with Big Tech.\n\nTogether, in the hundreds of thousands and eventually millions, we can.\n\nThe future of AI is still being written.\n\nChoose to be part of it, before it's too late.",
+                "url": "https://x.com/ActionModelAI/status/2061731486760341889",
+                "source": "@ActionModelAI",
+                "date": "Tue Jun 02 08:47:46 +0000 2026",
+                "metrics": {
+                  "favorites": 129,
+                  "retweets": 93,
+                  "views": "487"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "MG03_clarify_then_cite",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "what_it_tests": "3 turns: thiếu ID ban đầu → user cung cấp ID → user xác nhận style APA. Carry arxiv_id và style từ 2 lượt trước."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Cho tôi citation của bài báo về I-JEPA"
+        },
+        {
+          "role": "user",
+          "content": "ID là 2301.08243"
+        },
+        {
+          "role": "user",
+          "content": "Dùng APA format nhé"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "2301.08243",
+              "style": "apa"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "2301.08243",
+              "style": "apa"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "missing_info",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "2301.08243",
+            "style": "apa"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "2301.08243",
+            "style": "apa",
+            "citation": "Assran, M., et al. (2023). Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture. arXiv:2301.08243. https://arxiv.org/abs/2301.08243",
+            "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+            "authors": [
+              "Mahmoud Assran",
+              "Quentin Duval",
+              "Ishan Misra",
+              "Piotr Bojanowski",
+              "Pascal Vincent",
+              "Michael Rabbat",
+              "Yann LeCun",
+              "Nicolas Ballas"
+            ],
+            "year": "2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MG04_correction_cite_style",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "what_it_tests": "3 turns: cite mặc định → user đổi style sang APA → xác nhận giữ arxiv_id cũ. Carry arxiv_id, chỉ update style."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Citation của bài 1706.03762"
+        },
+        {
+          "role": "user",
+          "content": "Đổi sang APA đi"
+        },
+        {
+          "role": "user",
+          "content": "Vẫn bài đó nhé, chỉ đổi style thôi"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "apa"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "cite",
+            "args": {
+              "arxiv_id": "1706.03762",
+              "style": "apa"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_arg_value",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "cite",
+          "args": {
+            "arxiv_id": "1706.03762",
+            "style": "apa"
+          },
+          "result": {
+            "tool": "cite",
+            "arxiv_id": "1706.03762",
+            "style": "apa",
+            "citation": "Vaswani, A., et al. (2017). Attention Is All You Need. arXiv:1706.03762. https://arxiv.org/abs/1706.03762",
+            "title": "Attention Is All You Need",
+            "authors": [
+              "Ashish Vaswani",
+              "Noam Shazeer",
+              "Niki Parmar",
+              "Jakob Uszkoreit",
+              "Llion Jones",
+              "Aidan N. Gomez",
+              "Lukasz Kaiser",
+              "Illia Polosukhin"
+            ],
+            "year": "2017"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MG05_web_and_twitter_research",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "what_it_tests": "3 turns: news → add twitter → latest turn yêu cầu rõ cả hai nguồn. Agent phải gọi cả lookup + social_search song song với cùng chủ đề Anthropic."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Tìm tin tức về Anthropic hôm nay"
+        },
+        {
+          "role": "user",
+          "content": "Thêm cả tweet về Anthropic nữa nhé"
+        },
+        {
+          "role": "user",
+          "content": "Tìm cả web lẫn tweet về Anthropic đi"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "query": "Anthropic",
+              "topic": "news"
+            }
+          },
+          {
+            "name": "social_search",
+            "args": {
+              "query": "Anthropic"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "query": "Anthropic",
+              "topic": "news",
+              "timeframe": "day",
+              "max_results": 5
+            }
+          },
+          {
+            "name": "social_search",
+            "args": {
+              "query": "Anthropic",
+              "limit": 5
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "Anthropic",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Anthropic",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "San Francisco AI giant Anthropic files for IPO after $965 billion valuation - San Francisco Chronicle",
+                "url": "https://www.sfchronicle.com/tech/article/anthropic-confidential-ipo-filing-22286123.php",
+                "source": "sfchronicle.com",
+                "summary": "San Francisco AI giant Anthropic files for IPO after $965 billion valuation. Anthropic, the San Francisco artificial intelligence company behind the Claude chatbot, has confidentially filed paperwork for a proposed initial public offering, moving it closer to a possible Wall Street debut. The company said Monday it submitted a draft registration statement to the U.S. Securities and Exchange Commission for a proposed offering of common stock. The confidential filing does not guarantee Anthropic will go public, but it allows the company to begin the SEC review process before deciding whether to move ahead. The filing comes days after Anthropic announced a massive new funding round that valued the company at $965 billion. Anthropic is one of the Bay Area’s most prominent AI companies, along with OpenAI. Its growth has been driven in part by demand for Claude and AI tools used by businesses and software developers. Aidin Vaziri is a staff writer at The San Francisco Chronicle.",
+                "score": 0.8235701
+              },
+              {
+                "title": "Anthropic races toward a Wall Street debut with a confidential SEC filing - Greenwich Time",
+                "url": "https://www.greenwichtime.com/business/article/anthropic-races-toward-a-wall-street-debut-with-a-22286173.php",
+                "source": "greenwichtime.com",
+                "summary": "Artificial intelligence company Anthropic is moving toward going public on Wall Street, the latest chapter in its meteoric rise from a little-known research laboratory to one of the leading AI companies valued at $965 billion. Anthropic said Monday it has submitted a confidential filing with the U.S. Securities and Exchange Commission for a proposed initial public offering of its common stock. “This gives us the option to go public after the SEC completes its review,” Anthropic said in a brief statement. The company said it hasn't decided on the number or price of shares to be offered. Anthropic said last week it had raised $65 billion in private funding that will push its valuation to $965 billion, a whopping number that makes the five-year-old maker of the Claude chatbot one of the world’s most valuable startups. Find the Best Near You. The best home remodelers in CT.",
+                "score": 0.8080827
+              },
+              {
+                "title": "Anthropic races toward a Wall Street debut with a confidential SEC filing - The Washington Post",
+                "url": "https://www.washingtonpost.com/business/2026/06/01/anthropic-ai-claude-ipo/ffc2f514-5dd8-11f1-9c46-d6211372eede_story.html",
+                "source": "washingtonpost.com",
+                "summary": "# Anthropic races toward a Wall Street debut with a confidential SEC filing. Artificial intelligence company Anthropic is moving toward going public on Wall Street, the latest chapter in its meteoric rise from a little-known research laboratory to one of the leading AI companies valued at $965 billion. FILE - Pages from the Anthropic website and the company’s logo are displayed on a computer screen in New York, Feb. 26, 2026. (AP Photo/Patrick Sison, File). By Matt O'Brien | AP.",
+                "score": 0.74961954
+              },
+              {
+                "title": "VC Bill Gurley says Anthropic is 'midwifing a deity' by 'building a species that's superior to humans' - Business Insider",
+                "url": "https://www.businessinsider.com/bill-gurley-anthropic-ai-god-humanity-theory-2026-6",
+                "source": "businessinsider.com",
+                "summary": "# VC Bill Gurley says Anthropic is 'midwifing a deity' by 'building a species that's superior to humans'. \"The more I dig, I've met people who I dare say think it's their responsibility and they're excited about building a species that's superior to humans,\" Gurley said during a recent episode of the \"All-In Podcast.\". Gurley, who said he spent a month reading everything he could about Anthropic, said he came away convinced that one of the leading AI startups wants to create a God-like system to rule humanity. I think they're midwifing a deity here,\" Gurley said. \"He says, 'It could be a capitalist economy of AI systems which then give out resources to humans based on some secondary economy of what the AI systems think makes sense to reward in humans.' So that's envisioning a deity of sorts that's going to break ties and decide what humans do,\" Gurley said, quoting from the essay.",
+                "score": 0.7036111
+              },
+              {
+                "title": "Anthropic files for IPO before OpenAI as trillion-dollar startups race to go public - NBC News",
+                "url": "https://www.nbcnews.com/business/corporations/anthropic-files-ipo-openai-rcna347897",
+                "source": "nbcnews.com",
+                "summary": "# Anthropic files for IPO before OpenAI amid race to the public markets for trillion-dollar startups. The move comes earlier than expected as the Claude AI maker looks to beat its chief rival to fresh funding. Anthropic has filed for an initial public stock offering, a surprise start to its race with OpenAI to go public.Chris Ratcliffe / Bloomberg via Getty Images file. Artificial intelligence startup Anthropic said Monday it filed for an initial public stock offering, a surprise start to the race between it and OpenAI to be the next trillion-dollar AI startup to hit the public markets. The filing, which is currently confidential as the Securities and Exchange Commission reviews it, comes earlier than expected as the Claude AI maker looks to beat its primary rival to fresh funding. Beating OpenAI to the market will likely be important for Anthropic, because its trading debut is set to occur shortly after SpaceX’s trillion-dollar IPO.",
+                "score": 0.68064564
+              }
+            ]
+          }
+        },
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "Anthropic",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "Anthropic",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "And it's not just Google.",
+                "summary": "And it's not just Google.\n\n· Microsoft on OpenAI: $228B on $13.8B (~17.6x)\n· Amazon on Anthropic: ~$74B on $8B (~9x)\n· Nvidia on CoreWeave alone: ~$3.66B on the early checks, plus locked-in GPU revenue\n\nTop-decile VC funds do 3-5x. Big Tech strategic books are doing 10-20x — and binding the customer at the same time.\n\nThe new playbook: capital + compute + customer, all from one balance sheet.",
+                "url": "https://x.com/AInvestOfficial/status/2061734777166684332",
+                "source": "@AInvestOfficial",
+                "date": "Tue Jun 02 09:00:50 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "I think Anthropic want to establish a model for developers to work with breaks based on downtime lol. Coffee time. https",
+                "summary": "I think Anthropic want to establish a model for developers to work with breaks based on downtime lol. Coffee time. https://t.co/nh4yMctv8n",
+                "url": "https://x.com/ivanmmurcia_/status/2061734733478764938",
+                "source": "@ivanmmurcia_",
+                "date": "Tue Jun 02 09:00:40 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "2"
+                }
+              },
+              {
+                "title": "Anthropic vs OpenAI: AI's new rivalry moves to the stock market",
+                "summary": "Anthropic vs OpenAI: AI's new rivalry moves to the stock market\n\nhttps://t.co/mJ4BcsruBf",
+                "url": "https://x.com/businessline/status/2061734646946132457",
+                "source": "@businessline",
+                "date": "Tue Jun 02 09:00:19 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "10"
+                }
+              },
+              {
+                "title": "Claude has gone offline",
+                "summary": "Claude has gone offline\n\nClaude, the AI chatbot made by Anthropic, has gone offline in a major outage.\n\nThe system refused to respond to questions from users as a result of the technical issue\n\n https://t.co/FSDbtp1GZv",
+                "url": "https://x.com/GoogeliArt/status/2061734635738915142",
+                "source": "@GoogeliArt",
+                "date": "Tue Jun 02 09:00:16 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "1"
+                }
+              },
+              {
+                "title": "这两天 Anthropic 修了 Claude Code 一个 bug：它会自己 spawn 一堆 subagent，把额度飞快烧光。",
+                "summary": "这两天 Anthropic 修了 Claude Code 一个 bug：它会自己 spawn 一堆 subagent，把额度飞快烧光。\n\n我让cc用agentlog数了下：554 个 subagent，一共烧了 580 万 token。有一次它自己开了 75 个 subagent，另一次 66 个烧掉 83 万。\n\n真正贵的是两处：一是偶尔冒一个失控的，我这边最猛的一个 subagent 单独吃了 21 万 token；二是图省事全用 general-purpose 这种万能型，平均一个一万二，其实大部分活派给轻一点的专用 agent（探查的、审查的）就够，一个才四到八千。\n\n所以还是别让它无脑铺 subagent，小范围的活就用小范围的 agent。",
+                "url": "https://x.com/yrzhe_top/status/2061734618894885132",
+                "source": "@yrzhe_top",
+                "date": "Tue Jun 02 09:00:12 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "5"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

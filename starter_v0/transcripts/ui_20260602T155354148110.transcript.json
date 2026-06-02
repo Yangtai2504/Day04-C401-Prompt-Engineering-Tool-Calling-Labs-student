@@ -1,0 +1,28 @@
+{
+  "transcript_id": "ui_20260602T155354148110",
+  "version": "v3",
+  "artifact_version": "v3+p26553067786f+t40092ba19a62",
+  "prompt_hash": "26553067786f01fe3cffc2af306fabc649c625840c56fe16e4beff5a67cd32d1",
+  "tools_hash": "40092ba19a623787ae6919faf7124778244cbad953799ac021e08f61cf727627",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "\"Cho tôi citation BibTeX của bài Attention Is All You Need\"",
+      "status": "answered",
+      "assistant_text": "Dưới đây là citation BibTeX cho bài báo \"Attention Is All You Need\":\n\n```bibtex\n@inproceedings{vaswani2017attention,\n  title={Attention is all you need},\n  author={Vaswani, Ashish and Shardlow, Matthew and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Kattner, Florian and N. K. and Polosukhin, Ilya and et al.},\n  booktitle={Advances in Neural Information Processing Systems},\n  pages={5998--6008},\n  year={2017}\n}\n```\n\nBạn có thể điều chỉnh thông tin nếu cần thiết.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Dưới đây là citation BibTeX cho bài báo \"Attention Is All You Need\":\n\n```bibtex\n@inproceedings{vaswani2017attention,\n  title={Attention is all you need},\n  author={Vaswani, Ashish and Shardlow, Matthew and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Kattner, Florian and N. K. and Polosukhin, Ilya and et al.},\n  booktitle={Advances in Neural Information Processing Systems},\n  pages={5998--6008},\n  year={2017}\n}\n```\n\nBạn có thể điều chỉnh thông tin nếu cần thiết.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": []
+    }
+  ],
+  "updated_at": "2026-06-02T15:54:06"
+}

@@ -1,0 +1,185 @@
+{
+  "transcript_id": "ui_20260602T154156998979",
+  "version": "(current)",
+  "artifact_version": "(current)+pe2c8d1e40e65+te2007a262a00",
+  "prompt_hash": "e2c8d1e40e65b571ac88b9beb1e944e6fd69debedb863eecfca2e7098c1a3d5a",
+  "tools_hash": "e2007a262a001ba244ef540c79e7a08cc97c898280043f1c992827a8c5d2aa61",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Tìm bài báo mới nhất của Yann Lecun và tóm tắt bài báo đó\n\n",
+      "status": "answered",
+      "assistant_text": "The latest paper by Yann LeCun is titled **\"Causal-JEPA: Learning World Models through Object-Level Latent Masking\"**. It was co-authored with Heejeong Nam, Quentin Le Lidec, Lucas Maes, and Randall Balestriero. The paper was published on May 28, 2026, and can be accessed [here](http://arxiv.org/abs/2602.11389v2).\n\n### Summary of the Paper:\nThe paper discusses the development of Causal-JEPA (C-JEPA), an object-centric world model that enhances the learning of world models through object-level latent masking. The authors argue that traditional object-centric representations are insufficient for capturing interaction-dependent dynamics. C-JEPA addresses this by requiring masked object states to be inferred from their context, which creates structured partial observability during training.\n\nKey points include:\n- C-JEPA leads to significant improvements in visual question answering, achieving about a 20% increase in counterfactual reasoning performance compared to architectures without object-level masking.\n- In agent control tasks, C-JEPA allows for more efficient planning, utilizing only 1% of the total latent input features required by patch-based models while maintaining comparable performance.\n- The paper provides a formal analysis showing that object-level masking introduces a useful inductive bias by controlling observability.\n\nThe authors also make their code available for further research and application.\n\nFor more details, you can view the full paper [here](https://arxiv.org/pdf/2602.11389v2.pdf).",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Yann LeCun",
+                "max_results": 1,
+                "sort_by": "lastUpdatedDate"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Yann LeCun",
+                "max_results": 1,
+                "sort_by": "lastUpdatedDate"
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "query": "Yann LeCun",
+                "api_query": "all:Yann AND all:LeCun",
+                "total_results": 222,
+                "items": [
+                  {
+                    "arxiv_id": "2602.11389v2",
+                    "title": "Causal-JEPA: Learning World Models through Object-Level Latent Masking",
+                    "summary": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By masking object-level latents and requiring each masked object state to be inferred from the surrounding context, C-JEPA imposes structured partial observability during training, creating counterfactual-like prediction queries that discourage shortcut solutions and make interaction-dependent prediction necessary under the learning objective. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20% in counterfactual reasoning over the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces useful inductive bias by controlling observability. Our code is available at https://github.com/galilai-group/cjepa.",
+                    "authors": [
+                      "Heejeong Nam",
+                      "Quentin Le Lidec",
+                      "Lucas Maes",
+                      "Yann LeCun",
+                      "Randall Balestriero"
+                    ],
+                    "published": "2026-02-11T21:47:26Z",
+                    "updated": "2026-05-28T17:57:16Z",
+                    "url": "http://arxiv.org/abs/2602.11389v2",
+                    "pdf_url": "https://arxiv.org/pdf/2602.11389v2",
+                    "source": "arxiv.org",
+                    "primary_category": "cs.AI",
+                    "categories": [
+                      "cs.AI"
+                    ]
+                  }
+                ],
+                "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "paper_text",
+              "args": {
+                "arxiv_url": "2602.11389v2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "paper_text",
+              "args": {
+                "arxiv_url": "2602.11389v2"
+              },
+              "result": {
+                "tool": "get_arxiv_paper_text",
+                "arxiv_id": "2602.11389v2",
+                "url": "https://arxiv.org/abs/2602.11389v2",
+                "pdf_url": "https://arxiv.org/pdf/2602.11389v2.pdf",
+                "pdf_path": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2602.11389v2.pdf",
+                "txt_path": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2602.11389v2.txt",
+                "page_count": 25,
+                "pages_read": 5,
+                "chars_returned": 8000,
+                "items": [
+                  {
+                    "title": "arXiv paper 2602.11389v2",
+                    "url": "https://arxiv.org/abs/2602.11389v2",
+                    "source": "arxiv.org",
+                    "summary": "Causal-JEPA: Learning World Models through\nObject-Level Latent Masking\nHeejeong Nam 1 Quentin Le Lidec 2 * Lucas Maes 3 * Yann LeCun2 Randall Balestriero 1\nAbstract\nWorld models require robust relational under-\nstanding to support prediction, reasoning, and con-\ntrol. While object-centric representations provide\na useful abstraction, they are not sufficient to cap-\nture interaction-dependent dynamics. We there-\nfore propose C-JEPA, a simple and flexible object-\ncentric world model that extends masked joint em-\nbedding prediction from image patches to object-\ncentric representations. By masking object-level\nlatents and requiring each masked object state\nto be inferred from the surrounding context, C-\nJEPA imposes structured partial observability dur-\ning training, creating counterfactual-like predic-\ntion queries that discourage shortcut solutions and\nmake interaction-dependent prediction necessary\nunder the learning objective. Empirically, C-JEPA\nleads to consistent gains in visual question an-\nswering, with an absolute improvement of about\n20% in counterfactual reasoning over the same\narchitecture without object-level masking. On\nagent control tasks, C-JEPA enables substantially\nmore efficient planning by using only 1% of the\ntotal latent input features required by patch-based\nworld models, while achieving comparable per-\nformance. Finally, we provide a formal analysis\ndemonstrating that object-level masking induces\nuseful inductive bias by controlling observability.\nOur code is available at https://github.com/galilai-\ngroup/cjepa.\n1. Introduction\nWorld models (Ha & Schmidhuber, 2018) provide a unify-\ning abstraction for learning, predicting, and reasoning about\n*Equal contribution 1Brown University, GalilAI 2New York\nUniversity 3Mila & Université de Montréal. Correspondence to:\nHeejeong Nam <heejeong_nam@brown.edu>, Lucas Maes <lu-\ncas.maes@mila.quebec>.\nProceedings of the 43 rd International Conference on Machine\nLearning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026\nby the author(s).\nfrozen object-centricencoder\npredictor\nC-JEPA Training\nMasking\nAuxiliaryVariables\nObjectRepresentation\nMaskedInputs\nℳ~Uniform({1,…,N})\n>>ℒ!\"#$: Observable slots\n: Masked history / future: Observable auxiliaries\nObject-Level Masking\nS%S&\nS'\nS(\nU%U&\n=ϕ\t +e)\nTemporal positional encoding 𝐞𝛕\n: Identity-anchor: Intervened variable\nslot identity encoding\nt-2t-1tt-3 t+1\nfrozen object-centricencoder\ntt-1t-2t-3 t+1\nraw\nHistory FramesFuture Frame\nSlots\nAuxiliaries\nSlots + Auxiliaries\n>\nFigure 1.C-JEPA training pipeline. A frozen encoder extracts\nobject-centric representations, followed by selective masking\nacross history. The predictor recovers masked history slots and\npredicts future latent states, conditioned on optional auxiliary vari-\nables, via a joint masked-history and forward-prediction objective.\nthe dynamics of complex environments, enabling scalable\nplanning and control directly in latent space from high-\ndimensional observations (Hafner et al., 2019; 2025). At\ntheir core, effective world modeling benefits from represen-\ntations that expose entities and their interactions, avoiding\nreliance on spurious pixel-level correlations (Zholus et al.,\n2022; Nishimoto & Matsubara, 2025; Ferraro et al., 2023;\nFeng et al., 2025; Lei et al., 2025). Inspired by this per-\nspective, object-centric models have been extensively devel-\noped for learning visual dynamics (Kipf et al., 2022; Zada-\nianchuk et al., 2023; Wu et al., 2023; Mosbach et al., 2025;\nVillar-Corrales et al., 2023), and more recently adopted as a\nfoundation for learning world models (Ferraro et al., 2023;\nNishimoto & Matsubara, 2025). However, learning on top of\nobject-centric representations alone is not sufficient. Exist-\ning works have shown that, without explicit mechanisms to\nguide interaction learning, models can easily fall back on ob-\nject self-dynamics or exploit incidental correlations (Villar-\nCorrales et al., 2023; Lei et al., 2025). This realization has\nspurred growing interest in object-centric world models that\nexplicitly learn interactions (Kipf et al., 2020; Feng et al.,\n1\narXiv:2602.11389v2  [cs.AI]  28 May 2026\n\nCausal-JEPA: Learning World Models through Object-Level Latent Masking\n2025; Mosbach et al., 2025) or causal structure (Zholus\net al., 2022; Nishimoto & Matsubara, 2025; Lei et al., 2025).\nThese approaches often enforce interactions by separating\ntemporal dynamics from object interactions (Mosbach et al.,\n2025; Villar-Corrales et al., 2023; Feng et al., 2025), regular-\nizing attention sparsity (Lei et al., 2025), leveraging graph\nstructures (Kipf et al., 2020), or relying on downstream-\nspecific methods (Ferraro et al., 2023; Nishimoto & Matsub-\nara, 2025). Together, these works emphasize the importance\nof interactions in world modeling, while leaving open the\nquestion of how interaction structure can be made function-\nally necessary through the learning objective itself.\nAccordingly, we propose Causal-JEPA (C-JEPA), a simple\nyet effective approach for object-centric world modeling\nwith a causal inductive bias induced by object-level mask-\ning interventions on predictor observability. This design is\nmotivated by the fact that existing patch-based masked pre-\ndiction approaches (He et al., 2022; Fan et al., 2023; Thoker\net al., 2025; Tessler et al., 2024; Tong et al., 2022) optimize\nfor local patch correlations, without enforcing object-level\ninteraction reasoning. We propose an object-level masking\nthat trains the model to infer an object’s latent trajectory\nfrom others’ evolving states, inducing counterfactual-like\ninterventions during learning. Our masking strategy pre-\nvents shortcut solutions such as trivial temporal interpola-\ntion, making interaction reasoning necessary for minimizing\nthe prediction objective. At the same time, C-JEPA remains\narchitecturally flexible and can incorporate auxiliary vari-\nables such as actions and proprioception.\nNotably, the compactness of object-centric representations,\nwhen combined with the Joint Embedding Predictive Ar-\nchitecture (JEPA) (LeCun, 2022), encourages the model to\nconcentrate on the essential factors governing object dynam-\nics within a low-dimensional latent space, thereby reducing\nboth computational and memory overhead. In contrast to\npatch-based predictors, where attention scales quadratically\nwith a large number of patch tokens, entity-level represen-\ntations apply the same quadratic attention mechanism over\na much smaller token set, resulting in significantly lower\ntraining and inference costs.\nIn Sec. 5, we evaluate C-JEPA from two perspectives, vi-\nsual reasoning and predictive control. We first evaluate\nour approach on CLEVRER (Yi et al., 2020), a video QA\nbenchmark involving multi-object interactions, and show\nthat object-level masking leads to consistent improvements.\nIn particular, C-JEPA improves visual question answering,\nwith a roughly 20% absolute gain on counterfactual reason-\ning over the same architecture without object-level masking.\nWe further evaluate C-JEPA in a model predictive control\n(MPC) setting on the Push-T manipulation task. Compared\nto patch-based world models such as DINO-WM (Zhou\net al., 2025), C-JEPA achieves comparable task performance\nwhile using only 1.02% of the total input feature size, which\ntranslates to more than 8× faster model predictive control.\nFinally, in Sec. 6, we formally characterize object-level\nmasked prediction as a inductive bias, showing that object\nmasking make interaction reasoning necessary for minimiz-\ning the training objective. Taken together, this leads to four\nmain contributions:\n• We introduce C-JEPA, an object-centric world model\nthat uses object-level masking as a latent intervention,\nencouraging interaction-dependent prediction.\n• C-JEPA consistently improves visual reasoning over\nmulti-object interactions, with particularly large gains\non counterfactual questions.\n• C-JEPA enables highly efficient predictive control,\nachieving comparable performance to patch-bas"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assistant_text": "The latest paper by Yann LeCun is titled **\"Causal-JEPA: Learning World Models through Object-Level Latent Masking\"**. It was co-authored with Heejeong Nam, Quentin Le Lidec, Lucas Maes, and Randall Balestriero. The paper was published on May 28, 2026, and can be accessed [here](http://arxiv.org/abs/2602.11389v2).\n\n### Summary of the Paper:\nThe paper discusses the development of Causal-JEPA (C-JEPA), an object-centric world model that enhances the learning of world models through object-level latent masking. The authors argue that traditional object-centric representations are insufficient for capturing interaction-dependent dynamics. C-JEPA addresses this by requiring masked object states to be inferred from their context, which creates structured partial observability during training.\n\nKey points include:\n- C-JEPA leads to significant improvements in visual question answering, achieving about a 20% increase in counterfactual reasoning performance compared to architectures without object-level masking.\n- In agent control tasks, C-JEPA allows for more efficient planning, utilizing only 1% of the total latent input features required by patch-based models while maintaining comparable performance.\n- The paper provides a formal analysis showing that object-level masking introduces a useful inductive bias by controlling observability.\n\nThe authors also make their code available for further research and application.\n\nFor more details, you can view the full paper [here](https://arxiv.org/pdf/2602.11389v2.pdf).",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Yann LeCun",
+            "max_results": 1,
+            "sort_by": "lastUpdatedDate"
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "query": "Yann LeCun",
+            "api_query": "all:Yann AND all:LeCun",
+            "total_results": 222,
+            "items": [
+              {
+                "arxiv_id": "2602.11389v2",
+                "title": "Causal-JEPA: Learning World Models through Object-Level Latent Masking",
+                "summary": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By masking object-level latents and requiring each masked object state to be inferred from the surrounding context, C-JEPA imposes structured partial observability during training, creating counterfactual-like prediction queries that discourage shortcut solutions and make interaction-dependent prediction necessary under the learning objective. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20% in counterfactual reasoning over the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces useful inductive bias by controlling observability. Our code is available at https://github.com/galilai-group/cjepa.",
+                "authors": [
+                  "Heejeong Nam",
+                  "Quentin Le Lidec",
+                  "Lucas Maes",
+                  "Yann LeCun",
+                  "Randall Balestriero"
+                ],
+                "published": "2026-02-11T21:47:26Z",
+                "updated": "2026-05-28T17:57:16Z",
+                "url": "http://arxiv.org/abs/2602.11389v2",
+                "pdf_url": "https://arxiv.org/pdf/2602.11389v2",
+                "source": "arxiv.org",
+                "primary_category": "cs.AI",
+                "categories": [
+                  "cs.AI"
+                ]
+              }
+            ],
+            "rate_limit_note": "arXiv may return 429 if called too frequently; this tool waits at least 3 seconds between requests in-process."
+          }
+        },
+        {
+          "tool": "paper_text",
+          "args": {
+            "arxiv_url": "2602.11389v2"
+          },
+          "result": {
+            "tool": "get_arxiv_paper_text",
+            "arxiv_id": "2602.11389v2",
+            "url": "https://arxiv.org/abs/2602.11389v2",
+            "pdf_url": "https://arxiv.org/pdf/2602.11389v2.pdf",
+            "pdf_path": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2602.11389v2.pdf",
+            "txt_path": "C:\\VinAI\\Lab coding\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2602.11389v2.txt",
+            "page_count": 25,
+            "pages_read": 5,
+            "chars_returned": 8000,
+            "items": [
+              {
+                "title": "arXiv paper 2602.11389v2",
+                "url": "https://arxiv.org/abs/2602.11389v2",
+                "source": "arxiv.org",
+                "summary": "Causal-JEPA: Learning World Models through\nObject-Level Latent Masking\nHeejeong Nam 1 Quentin Le Lidec 2 * Lucas Maes 3 * Yann LeCun2 Randall Balestriero 1\nAbstract\nWorld models require robust relational under-\nstanding to support prediction, reasoning, and con-\ntrol. While object-centric representations provide\na useful abstraction, they are not sufficient to cap-\nture interaction-dependent dynamics. We there-\nfore propose C-JEPA, a simple and flexible object-\ncentric world model that extends masked joint em-\nbedding prediction from image patches to object-\ncentric representations. By masking object-level\nlatents and requiring each masked object state\nto be inferred from the surrounding context, C-\nJEPA imposes structured partial observability dur-\ning training, creating counterfactual-like predic-\ntion queries that discourage shortcut solutions and\nmake interaction-dependent prediction necessary\nunder the learning objective. Empirically, C-JEPA\nleads to consistent gains in visual question an-\nswering, with an absolute improvement of about\n20% in counterfactual reasoning over the same\narchitecture without object-level masking. On\nagent control tasks, C-JEPA enables substantially\nmore efficient planning by using only 1% of the\ntotal latent input features required by patch-based\nworld models, while achieving comparable per-\nformance. Finally, we provide a formal analysis\ndemonstrating that object-level masking induces\nuseful inductive bias by controlling observability.\nOur code is available at https://github.com/galilai-\ngroup/cjepa.\n1. Introduction\nWorld models (Ha & Schmidhuber, 2018) provide a unify-\ning abstraction for learning, predicting, and reasoning about\n*Equal contribution 1Brown University, GalilAI 2New York\nUniversity 3Mila & Université de Montréal. Correspondence to:\nHeejeong Nam <heejeong_nam@brown.edu>, Lucas Maes <lu-\ncas.maes@mila.quebec>.\nProceedings of the 43 rd International Conference on Machine\nLearning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026\nby the author(s).\nfrozen object-centricencoder\npredictor\nC-JEPA Training\nMasking\nAuxiliaryVariables\nObjectRepresentation\nMaskedInputs\nℳ~Uniform({1,…,N})\n>>ℒ!\"#$: Observable slots\n: Masked history / future: Observable auxiliaries\nObject-Level Masking\nS%S&\nS'\nS(\nU%U&\n=ϕ\t +e)\nTemporal positional encoding 𝐞𝛕\n: Identity-anchor: Intervened variable\nslot identity encoding\nt-2t-1tt-3 t+1\nfrozen object-centricencoder\ntt-1t-2t-3 t+1\nraw\nHistory FramesFuture Frame\nSlots\nAuxiliaries\nSlots + Auxiliaries\n>\nFigure 1.C-JEPA training pipeline. A frozen encoder extracts\nobject-centric representations, followed by selective masking\nacross history. The predictor recovers masked history slots and\npredicts future latent states, conditioned on optional auxiliary vari-\nables, via a joint masked-history and forward-prediction objective.\nthe dynamics of complex environments, enabling scalable\nplanning and control directly in latent space from high-\ndimensional observations (Hafner et al., 2019; 2025). At\ntheir core, effective world modeling benefits from represen-\ntations that expose entities and their interactions, avoiding\nreliance on spurious pixel-level correlations (Zholus et al.,\n2022; Nishimoto & Matsubara, 2025; Ferraro et al., 2023;\nFeng et al., 2025; Lei et al., 2025). Inspired by this per-\nspective, object-centric models have been extensively devel-\noped for learning visual dynamics (Kipf et al., 2022; Zada-\nianchuk et al., 2023; Wu et al., 2023; Mosbach et al., 2025;\nVillar-Corrales et al., 2023), and more recently adopted as a\nfoundation for learning world models (Ferraro et al., 2023;\nNishimoto & Matsubara, 2025). However, learning on top of\nobject-centric representations alone is not sufficient. Exist-\ning works have shown that, without explicit mechanisms to\nguide interaction learning, models can easily fall back on ob-\nject self-dynamics or exploit incidental correlations (Villar-\nCorrales et al., 2023; Lei et al., 2025). This realization has\nspurred growing interest in object-centric world models that\nexplicitly learn interactions (Kipf et al., 2020; Feng et al.,\n1\narXiv:2602.11389v2  [cs.AI]  28 May 2026\n\nCausal-JEPA: Learning World Models through Object-Level Latent Masking\n2025; Mosbach et al., 2025) or causal structure (Zholus\net al., 2022; Nishimoto & Matsubara, 2025; Lei et al., 2025).\nThese approaches often enforce interactions by separating\ntemporal dynamics from object interactions (Mosbach et al.,\n2025; Villar-Corrales et al., 2023; Feng et al., 2025), regular-\nizing attention sparsity (Lei et al., 2025), leveraging graph\nstructures (Kipf et al., 2020), or relying on downstream-\nspecific methods (Ferraro et al., 2023; Nishimoto & Matsub-\nara, 2025). Together, these works emphasize the importance\nof interactions in world modeling, while leaving open the\nquestion of how interaction structure can be made function-\nally necessary through the learning objective itself.\nAccordingly, we propose Causal-JEPA (C-JEPA), a simple\nyet effective approach for object-centric world modeling\nwith a causal inductive bias induced by object-level mask-\ning interventions on predictor observability. This design is\nmotivated by the fact that existing patch-based masked pre-\ndiction approaches (He et al., 2022; Fan et al., 2023; Thoker\net al., 2025; Tessler et al., 2024; Tong et al., 2022) optimize\nfor local patch correlations, without enforcing object-level\ninteraction reasoning. We propose an object-level masking\nthat trains the model to infer an object’s latent trajectory\nfrom others’ evolving states, inducing counterfactual-like\ninterventions during learning. Our masking strategy pre-\nvents shortcut solutions such as trivial temporal interpola-\ntion, making interaction reasoning necessary for minimizing\nthe prediction objective. At the same time, C-JEPA remains\narchitecturally flexible and can incorporate auxiliary vari-\nables such as actions and proprioception.\nNotably, the compactness of object-centric representations,\nwhen combined with the Joint Embedding Predictive Ar-\nchitecture (JEPA) (LeCun, 2022), encourages the model to\nconcentrate on the essential factors governing object dynam-\nics within a low-dimensional latent space, thereby reducing\nboth computational and memory overhead. In contrast to\npatch-based predictors, where attention scales quadratically\nwith a large number of patch tokens, entity-level represen-\ntations apply the same quadratic attention mechanism over\na much smaller token set, resulting in significantly lower\ntraining and inference costs.\nIn Sec. 5, we evaluate C-JEPA from two perspectives, vi-\nsual reasoning and predictive control. We first evaluate\nour approach on CLEVRER (Yi et al., 2020), a video QA\nbenchmark involving multi-object interactions, and show\nthat object-level masking leads to consistent improvements.\nIn particular, C-JEPA improves visual question answering,\nwith a roughly 20% absolute gain on counterfactual reason-\ning over the same architecture without object-level masking.\nWe further evaluate C-JEPA in a model predictive control\n(MPC) setting on the Push-T manipulation task. Compared\nto patch-based world models such as DINO-WM (Zhou\net al., 2025), C-JEPA achieves comparable task performance\nwhile using only 1.02% of the total input feature size, which\ntranslates to more than 8× faster model predictive control.\nFinally, in Sec. 6, we formally characterize object-level\nmasked prediction as a inductive bias, showing that object\nmasking make interaction reasoning necessary for minimiz-\ning the training objective. Taken together, this leads to four\nmain contributions:\n• We introduce C-JEPA, an object-centric world model\nthat uses object-level masking as a latent intervention,\nencouraging interaction-dependent prediction.\n• C-JEPA consistently improves visual reasoning over\nmulti-object interactions, with particularly large gains\non counterfactual questions.\n• C-JEPA enables highly efficient predictive control,\nachieving comparable performance to patch-bas"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:42:13"
+}

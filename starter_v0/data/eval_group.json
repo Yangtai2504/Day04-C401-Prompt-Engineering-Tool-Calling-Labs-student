@@ -3,5 +3,109 @@
   "dataset_role": "group",
   "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {
+      "id": "G01_trending_routing",
+      "phase": "B", "suite": "group",
+      "query": "Hôm nay đang trending gì trên mạng?",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "trending", "args": {}}]},
+      "metadata": {"what_it_tests": "Câu hỏi 'trending gì' không có keyword → dùng trending, không phải social_search hay lookup."}
+    },
+    {
+      "id": "G02_cite_bibtex_direct",
+      "phase": "B", "suite": "group",
+      "query": "Cho tôi BibTeX citation của bài arXiv 1706.03762",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "cite", "args": {"arxiv_id": "1706.03762", "style": "bibtex"}}]},
+      "metadata": {"what_it_tests": "Có arxiv_id rõ ràng + yêu cầu BibTeX → gọi cite trực tiếp, không cần gọi papers trước."}
+    },
+    {
+      "id": "G03_cite_missing_id",
+      "phase": "B", "suite": "group",
+      "query": "Cho tôi citation của bài báo này",
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "text"}}]},
+      "metadata": {"what_it_tests": "Nói 'bài báo này' nhưng không có arxiv_id → clarify hỏi ID, không tự đoán."}
+    },
+    {
+      "id": "G04_no_tool_greeting",
+      "phase": "B", "suite": "group",
+      "query": "Cảm ơn bạn nhé!",
+      "failure_type": "unnecessary_tool",
+      "expect": {"no_tool": true, "behavior": "answer_without_tool"},
+      "metadata": {"what_it_tests": "Lời cảm ơn xã giao → không gọi tool, trả lời thẳng."}
+    },
+    {
+      "id": "G05_cite_apa_style",
+      "phase": "B", "suite": "group",
+      "query": "Lấy citation APA của bài arXiv 2501.05729",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "cite", "args": {"arxiv_id": "2501.05729", "style": "apa"}}]},
+      "metadata": {"what_it_tests": "Trích đúng style=apa từ yêu cầu, không dùng style mặc định bibtex."}
+    },
+    {
+      "id": "MG01_papers_then_cite",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tìm bài Attention Is All You Need trên arXiv"},
+        {"role": "user", "content": "arxiv_id của bài đó là 1706.03762, lấy citation đi"},
+        {"role": "user", "content": "Dùng style BibTeX nhé, bài 1706.03762"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "cite", "args": {"arxiv_id": "1706.03762", "style": "bibtex"}}]},
+      "metadata": {"what_it_tests": "3 turns: tìm paper → user cung cấp arxiv_id rõ ràng → xác nhận style bibtex. Eval inject turns dưới dạng text nên arxiv_id phải explicit trong turn."}
+    },
+    {
+      "id": "MG02_trending_then_search_tweets",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Xem trending topics hôm nay"},
+        {"role": "user", "content": "Tìm tweet về AI trong các topic đó đi"},
+        {"role": "user", "content": "Lấy top tweets về AI nhé"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "social_search", "args": {"query": "AI", "search_type": "Top"}}]},
+      "metadata": {"what_it_tests": "3 turns: trending → switch sang social_search với keyword từ context, search_type=Top vì yêu cầu top tweets."}
+    },
+    {
+      "id": "MG03_clarify_then_cite",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Cho tôi citation của bài báo về I-JEPA"},
+        {"role": "user", "content": "ID là 2301.08243"},
+        {"role": "user", "content": "Dùng APA format nhé"}
+      ],
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "cite", "args": {"arxiv_id": "2301.08243", "style": "apa"}}]},
+      "metadata": {"what_it_tests": "3 turns: thiếu ID ban đầu → user cung cấp ID → user xác nhận style APA. Carry arxiv_id và style từ 2 lượt trước."}
+    },
+    {
+      "id": "MG04_correction_cite_style",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Citation của bài 1706.03762"},
+        {"role": "user", "content": "Đổi sang APA đi"},
+        {"role": "user", "content": "Vẫn bài đó nhé, chỉ đổi style thôi"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "cite", "args": {"arxiv_id": "1706.03762", "style": "apa"}}]},
+      "metadata": {"what_it_tests": "3 turns: cite mặc định → user đổi style sang APA → xác nhận giữ arxiv_id cũ. Carry arxiv_id, chỉ update style."}
+    },
+    {
+      "id": "MG05_web_and_twitter_research",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tìm tin tức về Anthropic hôm nay"},
+        {"role": "user", "content": "Thêm cả tweet về Anthropic nữa nhé"},
+        {"role": "user", "content": "Tìm cả web lẫn tweet về Anthropic đi"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [
+        {"name": "lookup", "args": {"query": "Anthropic", "topic": "news"}},
+        {"name": "social_search", "args": {"query": "Anthropic"}}
+      ]},
+      "metadata": {"what_it_tests": "3 turns: news → add twitter → latest turn yêu cầu rõ cả hai nguồn. Agent phải gọi cả lookup + social_search song song với cùng chủ đề Anthropic."}
+    }
+  ]
 }

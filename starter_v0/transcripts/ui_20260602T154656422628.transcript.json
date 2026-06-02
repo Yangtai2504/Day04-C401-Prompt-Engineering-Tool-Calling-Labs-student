@@ -1,0 +1,195 @@
+{
+  "transcript_id": "ui_20260602T154656422628",
+  "version": "v3",
+  "artifact_version": "v3+p26553067786f+t40092ba19a62",
+  "prompt_hash": "26553067786f01fe3cffc2af306fabc649c625840c56fe16e4beff5a67cd32d1",
+  "tools_hash": "40092ba19a623787ae6919faf7124778244cbad953799ac021e08f61cf727627",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Hôm nay trending gì",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số chủ đề đang trending hiện nay:\n\n1. **Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭**\n   - [Xem thêm](https://x.com/ChrisExcel102/status/2030936300648378577) từ @ChrisExcel102\n   - Lượt thích: 5347, Retweets: 637, Lượt xem: 106212\n\n2. **KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following the release of “GNARLY.”**\n   - [Xem thêm](https://x.com/KATSEYEBASE/status/2061432731435946248) từ @KATSEYEBASE\n   - Lượt thích: 818, Retweets: 66, Lượt xem: 43126\n\n3. **BREAKING: 🚨 Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.**\n   - [Xem thêm](https://x.com/911NewsBreaks/status/2061499703540257108) từ @911NewsBreaks\n   - Lượt thích: 509, Retweets: 107, Lượt xem: 35909\n\n4. **They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags.**\n   - [Xem thêm](https://x.com/OnlyRealPJ/status/2061101510558351540) từ @OnlyRealPJ\n   - Lượt thích: 2101, Retweets: 162, Lượt xem: 32499\n\n5. **📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version**\n   - [Xem thêm](https://x.com/stbvnews/status/2061655210322211310) từ @stbvnews\n   - Lượt thích: 115, Retweets: 30, Lượt xem: 966\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chủ đề nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "trending",
+                "search_type": "Top",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "trending",
+                "search_type": "Top",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "query": "trending",
+                "search_type": "Top",
+                "items": [
+                  {
+                    "title": "Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭",
+                    "summary": "Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭\n\n https://t.co/F96Ow9FjcB",
+                    "url": "https://x.com/ChrisExcel102/status/2030936300648378577",
+                    "source": "@ChrisExcel102",
+                    "date": "Mon Mar 09 09:18:41 +0000 2026",
+                    "metrics": {
+                      "favorites": 5347,
+                      "retweets": 637,
+                      "views": "106212"
+                    }
+                  },
+                  {
+                    "title": "KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following ",
+                    "summary": "KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following the release of “GNARLY.” https://t.co/Oq1gTTOf82",
+                    "url": "https://x.com/KATSEYEBASE/status/2061432731435946248",
+                    "source": "@KATSEYEBASE",
+                    "date": "Mon Jun 01 13:00:37 +0000 2026",
+                    "metrics": {
+                      "favorites": 818,
+                      "retweets": 66,
+                      "views": "43126"
+                    }
+                  },
+                  {
+                    "title": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.",
+                    "summary": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on. https://t.co/G3antoc1DJ",
+                    "url": "https://x.com/911NewsBreaks/status/2061499703540257108",
+                    "source": "@911NewsBreaks",
+                    "date": "Mon Jun 01 17:26:44 +0000 2026",
+                    "metrics": {
+                      "favorites": 509,
+                      "retweets": 107,
+                      "views": "35909"
+                    }
+                  },
+                  {
+                    "title": "They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags https://t.co/",
+                    "summary": "They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags https://t.co/3nWenMsUIj",
+                    "url": "https://x.com/OnlyRealPJ/status/2061101510558351540",
+                    "source": "@OnlyRealPJ",
+                    "date": "Sun May 31 15:04:28 +0000 2026",
+                    "metrics": {
+                      "favorites": 2101,
+                      "retweets": 162,
+                      "views": "32499"
+                    }
+                  },
+                  {
+                    "title": "📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version ",
+                    "summary": "📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version \n\n— From spicy fried chicken and Yupdduk to Ddujjonku and Butter Tteok!\n\nWatch the full version on Dispatch:\n🔗 https://t.co/YWFEbCpCMn\n\n★ Don’t forget to watch, like and comment the video.\n\n@santos_bravos https://t.co/DYE0o5zRQ0",
+                    "url": "https://x.com/stbvnews/status/2061655210322211310",
+                    "source": "@stbvnews",
+                    "date": "Tue Jun 02 03:44:40 +0000 2026",
+                    "metrics": {
+                      "favorites": 115,
+                      "retweets": 30,
+                      "views": "966"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số chủ đề đang trending hiện nay:\n\n1. **Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭**\n   - [Xem thêm](https://x.com/ChrisExcel102/status/2030936300648378577) từ @ChrisExcel102\n   - Lượt thích: 5347, Retweets: 637, Lượt xem: 106212\n\n2. **KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following the release of “GNARLY.”**\n   - [Xem thêm](https://x.com/KATSEYEBASE/status/2061432731435946248) từ @KATSEYEBASE\n   - Lượt thích: 818, Retweets: 66, Lượt xem: 43126\n\n3. **BREAKING: 🚨 Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.**\n   - [Xem thêm](https://x.com/911NewsBreaks/status/2061499703540257108) từ @911NewsBreaks\n   - Lượt thích: 509, Retweets: 107, Lượt xem: 35909\n\n4. **They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags.**\n   - [Xem thêm](https://x.com/OnlyRealPJ/status/2061101510558351540) từ @OnlyRealPJ\n   - Lượt thích: 2101, Retweets: 162, Lượt xem: 32499\n\n5. **📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version**\n   - [Xem thêm](https://x.com/stbvnews/status/2061655210322211310) từ @stbvnews\n   - Lượt thích: 115, Retweets: 30, Lượt xem: 966\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chủ đề nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "trending",
+            "search_type": "Top",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "trending",
+            "search_type": "Top",
+            "items": [
+              {
+                "title": "Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭",
+                "summary": "Capitec seeing Standard Bank Trending for wrong reasons in the past few days not them 😭\n\n https://t.co/F96Ow9FjcB",
+                "url": "https://x.com/ChrisExcel102/status/2030936300648378577",
+                "source": "@ChrisExcel102",
+                "date": "Mon Mar 09 09:18:41 +0000 2026",
+                "metrics": {
+                  "favorites": 5347,
+                  "retweets": 637,
+                  "views": "106212"
+                }
+              },
+              {
+                "title": "KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following ",
+                "summary": "KATSEYE has been one of the trending female groups on Google since March 2025, with their momentum taking off following the release of “GNARLY.” https://t.co/Oq1gTTOf82",
+                "url": "https://x.com/KATSEYEBASE/status/2061432731435946248",
+                "source": "@KATSEYEBASE",
+                "date": "Mon Jun 01 13:00:37 +0000 2026",
+                "metrics": {
+                  "favorites": 818,
+                  "retweets": 66,
+                  "views": "43126"
+                }
+              },
+              {
+                "title": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on.",
+                "summary": "BREAKING: 🚨  Retired Col. Douglas Macgregor warns of DIRE ECONOMIC CONDITIONS should the War in the Middle East rage on. https://t.co/G3antoc1DJ",
+                "url": "https://x.com/911NewsBreaks/status/2061499703540257108",
+                "source": "@911NewsBreaks",
+                "date": "Mon Jun 01 17:26:44 +0000 2026",
+                "metrics": {
+                  "favorites": 509,
+                  "retweets": 107,
+                  "views": "35909"
+                }
+              },
+              {
+                "title": "They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags https://t.co/",
+                "summary": "They planned \"Come over\" official release for festa to make it special and you guys were trending hashtags https://t.co/3nWenMsUIj",
+                "url": "https://x.com/OnlyRealPJ/status/2061101510558351540",
+                "source": "@OnlyRealPJ",
+                "date": "Sun May 31 15:04:28 +0000 2026",
+                "metrics": {
+                  "favorites": 2101,
+                  "retweets": 162,
+                  "views": "32499"
+                }
+              },
+              {
+                "title": "📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version ",
+                "summary": "📺| #SANTOSBRAVOS Try Korea's Trending Foods 🥢 | Full Version \n\n— From spicy fried chicken and Yupdduk to Ddujjonku and Butter Tteok!\n\nWatch the full version on Dispatch:\n🔗 https://t.co/YWFEbCpCMn\n\n★ Don’t forget to watch, like and comment the video.\n\n@santos_bravos https://t.co/DYE0o5zRQ0",
+                "url": "https://x.com/stbvnews/status/2061655210322211310",
+                "source": "@stbvnews",
+                "date": "Tue Jun 02 03:44:40 +0000 2026",
+                "metrics": {
+                  "favorites": 115,
+                  "retweets": 30,
+                  "views": "966"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-06-02T15:47:21"
+}
